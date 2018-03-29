@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;XMLCreators.java&apos; to &apos;converter.PartElement.java&apos;&#x0A;- Original project: &apos;converter&apos;&#x0A;- Destination element: &apos;converter.PartElement.java&apos;&#x0A;- Original element: &apos;converter.XMLCreators.java&apos;" description="Copy compilation unit" destination="/src&lt;converter{PartElement.java" element1="/src&lt;converter{XMLCreators.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1522286994607" units="1" version="1.0"/>
+</session>
