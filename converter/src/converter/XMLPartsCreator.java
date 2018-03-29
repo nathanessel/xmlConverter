@@ -96,7 +96,10 @@ public class XMLPartsCreator {
                 	if (part == null)
                 		part = new Part();
                 	else
+                	{
                 		partExists = true;
+                		part.clearPartElements();
+                	}
                 	
                     int col = 0;
                     for (String value : nextLine) 
@@ -124,25 +127,25 @@ public class XMLPartsCreator {
                         	readCSVToPartData(part.partDataElement, header, value);
                         
                         else if (col >= 42 && col < 47)
-                        	readCSVToNestedPartData(part.manufacturerPartElement, header, value, partExists, masterPartNumber);
+                        	readCSVToNestedPartData(part.manufacturerPartElement, header, value, masterPartNumber);
                         
                         else if (col >= 47 && col < 51)
-                        	readCSVToNestedPartData(part.vendorPartElement, header, value, partExists, masterPartNumber);
+                        	readCSVToNestedPartData(part.vendorPartElement, header, value, masterPartNumber);
 
                         else if (col >= 51 && col < 55)
-                        	readCSVToNestedPartData(part.customerElement, header, value, partExists, masterPartNumber);
+                        	readCSVToNestedPartData(part.customerPartElement, header, value, masterPartNumber);
 
                         else if (col >= 55 && col < 57)
-                        	readCSVToNestedPartData(part.alternatePartElement, header, value, partExists, masterPartNumber);
+                        	readCSVToNestedPartData(part.alternatePartElement, header, value, masterPartNumber);
 
                         else if (col >= 57 && col < 59)
-                        	readCSVToNestedPartData(part.customFieldsElement, header, value, partExists, masterPartNumber);
+                        	readCSVToNestedPartData(part.entryElement, header, value, masterPartNumber);
                         
                         else if (col >= 59 && col < 69 && !partExists)
                         	readCSVToPartData(part.electronicPartElement, header, value);
                         	
                         else if (col >= 69 && col < 74)
-                        	readCSVToNestedPartData(part.machineElement, header, value, partExists, masterPartNumber);
+                        	readCSVToNestedPartData(part.machineElement, header, value, masterPartNumber);
                         	
                         // System.out.println("col " + col);
                         col++;
@@ -154,12 +157,19 @@ public class XMLPartsCreator {
                 {
                 	if (!partExists)
                 		partsMap.put(masterPartNumber, part);
+                	else
+                	{
+                		part.manufacturerPartsElement.add(part.manufacturerPartElement);
+                		part.vendorPartsElement.add(part.vendorPartElement);
+                		part.alternatePartsElement.add(part.alternatePartElement);
+                		part.customerPartsElement.add(part.customerPartElement);
+                		part.customFieldsElement.add(part.entryElement);
+                		part.machineSpecificAttributes.add(part.machineElement);
+                	}
                 }
                 
                 line++;
             }
-            
-            
             
             for (Map.Entry<String, Part> entry : partsMap.entrySet()) {
                 String key = entry.getKey();
@@ -174,17 +184,17 @@ public class XMLPartsCreator {
                 		addToPartDataElement(newDoc, partDataElement, part.customerElement, "Customer");
                 		addToPartDataElement(newDoc, partDataElement, part.customerElement, "ComponentHandling");
 
-                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.manufacturerPartElement, part, 
+                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.manufacturerPartsElement, part, 
                 				"ManufacturerParts", "ManufacturerPart"));
                 		
-                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.vendorPartElement, part, "VendorParts", "VendorPart"));
-                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.customerPartElement, part, "CustomerParts", "CustomerPart"));
-                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.alternatePartElement, part, "AlternateParts", "AlternatePart"));
+                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.vendorPartsElement, part, "VendorParts", "VendorPart"));
+                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.customerPartsElement, part, "CustomerParts", "CustomerPart"));
+                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.alternatePartsElement, part, "AlternateParts", "AlternatePart"));
                 		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry"));
                 		
                 		addToPartDataElement(newDoc, partDataElement, part.electronicPartElement, "ElectronicPart");
                 		
-                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.machineElement, part, 
+                		partDataElement.appendChild(addNestedPartDataElement(newDoc, partDataElement, part.machineSpecificAttributes, part, 
                 				"MachineSpecificAttributes", "Machine"));
             }
 
@@ -227,24 +237,20 @@ public class XMLPartsCreator {
         // "XLM Document has been created" + rowsCount;
     }
     
-    public Element addNestedPartDataElement(Document newDoc, Element partDataElement, List<PartElement> elementList, Part part, String parentTag, String childTag) {
+    public Element addNestedPartDataElement(Document newDoc, Element partDataElement, List<List<PartElement>> elementList, Part part, String parentTag, String childTag) {
     	Element parentElement = newDoc.createElement(parentTag);
-		Element childElement = newDoc.createElement(childTag);
 
-    	for (PartElement partElement : elementList)
+    	for (List<PartElement> partElements : elementList)
     	{
-        	Element currentElement = newDoc.createElement(partElement.getHeader());
-        	currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
-        	
-        	System.out.println("appending to child " + childTag + "\r\n");
-        	System.out.println("header " + partElement.getHeader() + " value " + partElement.getValue() + "\r\n");
-        	
-        	childElement.appendChild(currentElement);
+    		Element childElement = newDoc.createElement(childTag);
+    		for (PartElement partElement : partElements)
+    		{
+    			Element currentElement = newDoc.createElement(partElement.getHeader());
+    			currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
+    			childElement.appendChild(currentElement);
+    		}
+    		parentElement.appendChild(childElement);
     	}
-    	parentElement.appendChild(childElement);
-    	System.out.println("appending to parent " + parentTag + "\r\n\r\n");
-
-    	
     	return parentElement;
     }
     
@@ -274,13 +280,9 @@ public class XMLPartsCreator {
 		partElementList.add(currentElement);
     }
     
-    public void readCSVToNestedPartData(List<PartElement> partElementList, String header, String value, boolean partExists, String masterPartNumber) {
+    public void readCSVToNestedPartData(List<PartElement> partElementList, String header, String value, String masterPartNumber) {
     	PartElement currentElement = new PartElement (header,value);
-    	
-    	if (partExists)
-    		partElementList.add(currentElement);
-    	else	
-    		partElementList.add(currentElement);
+   		partElementList.add(currentElement);
     }
     
     
