@@ -1,0 +1,40 @@
+package converter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Part {
+	//private String item.item = "";
+	
+	String masterPartNumber = "";
+	
+	Map<String, PartElement> componentHandlingElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> manufacturerPartElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> vendorPartElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> customerPartElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> alternatePartElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> entryElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> electronicPartElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> machineElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> partDataElement = new HashMap<String, PartElement>();
+	Map<String, PartElement> customerElement = new HashMap<String, PartElement>();
+	
+	List<List<PartElement>> manufacturerPartsElement = new ArrayList<List<PartElement>>();
+	List<List<PartElement>> machineSpecificAttributes = new ArrayList<List<PartElement>>();
+	List<List<PartElement>> vendorPartsElement = new ArrayList<List<PartElement>>();
+	List<List<PartElement>> customerPartsElement = new ArrayList<List<PartElement>>();
+	List<List<PartElement>> alternatePartsElement = new ArrayList<List<PartElement>>();
+	List<List<PartElement>> customFieldsElement = new ArrayList<List<PartElement>>();
+	
+	public void clearPartElements() {
+		manufacturerPartElement = new ArrayList<PartElement>();
+		machineElement = new ArrayList<PartElement>();
+		vendorPartElement = new ArrayList<PartElement>();
+		customerPartElement = new ArrayList<PartElement>();
+		alternatePartElement = new ArrayList<PartElement>();
+		entryElement = new ArrayList<PartElement>();
+	}
+
+}

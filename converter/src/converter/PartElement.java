@@ -9,6 +9,9 @@ public class PartElement {
 		this.header = header;
 		this.value = value;
 	}
+
+	public PartElement () {
+	}
 	
 	public String getHeader() {
 		return header;
