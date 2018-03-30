@@ -156,15 +156,17 @@ public class XMLPartsCreator {
 
                 if (line != 0)
                 {
-            		part.manufacturerPartsElement.add(part.manufacturerPartElement);
-            		part.vendorPartsElement.add(part.vendorPartElement);
-            		part.alternatePartsElement.add(part.alternatePartElement);
-            		part.customerPartsElement.add(part.customerPartElement);
-            		part.customFieldsElement.add(part.entryElement);
-            		part.machineSpecificAttributes.add(part.machineElement);
-                	
                 	if (!partExists)
                 		partsMap.put(masterPartNumber, part);
+                	else
+                	{
+                		part.manufacturerPartsElement.add(part.manufacturerPartElement);
+                		part.vendorPartsElement.add(part.vendorPartElement);
+                		part.alternatePartsElement.add(part.alternatePartElement);
+                		part.customerPartsElement.add(part.customerPartElement);
+                		part.customFieldsElement.add(part.entryElement);
+                		part.machineSpecificAttributes.add(part.machineElement);
+                	}
                 }
                 
                 line++;
