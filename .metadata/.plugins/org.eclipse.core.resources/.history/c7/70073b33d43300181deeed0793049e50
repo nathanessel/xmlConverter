@@ -37,7 +37,6 @@ public class XMLPartsCreator {
     protected DocumentBuilder domBuilder = null;
 
     Map<String, Part> partsMap = new HashMap<String,Part>();
-	HashSet<String> partSet = new HashSet<String>();
     
     public XMLPartsCreator() {
         try {
@@ -68,6 +67,8 @@ public class XMLPartsCreator {
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
 
+            List<String> partNumberList = new ArrayList<String>();
+            
             String[] nextLine;
             int line = 0;
             List<String> headers = new ArrayList<String>();
@@ -92,7 +93,6 @@ public class XMLPartsCreator {
                		masterPartNumber = nextLine[2];
                 	
                 	part = partsMap.get(masterPartNumber);
-                	partSet.add(masterPartNumber);
                 	
                 	if (part == null)
                 		part = new Part();
@@ -219,7 +219,7 @@ public class XMLPartsCreator {
                 }
             }
 
-            // Testing
+            // Output to console for testing
             // Result result = new StreamResult(System.out);
 
         } catch (IOException exp) {
@@ -228,8 +228,29 @@ public class XMLPartsCreator {
             System.err.println(exp.toString());
         }
         return rowsCount;
+        // "XLM Document has been created" + rowsCount;
     }
     
+//    public void addNestedPartDataElement(Document newDoc, Element partDataElement, List<List<PartElement>> elementList, Part part, String parentTag, String childTag) {
+//    	if (elementList.size() == 0)
+//    		return;
+//    	
+//    	Element parentElement = newDoc.createElement(parentTag);
+//
+//    	for (List<PartElement> partElements : elementList)
+//    	{
+//    		Element childElement = newDoc.createElement(childTag);
+//    		for (PartElement partElement : partElements)
+//    		{
+//    			Element currentElement = newDoc.createElement(partElement.getHeader());
+//    			currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
+//    			childElement.appendChild(currentElement);
+//    		}
+//    		parentElement.appendChild(childElement);
+//    	}
+//    	partDataElement.appendChild(parentElement);
+//    }
+
     public void addNestedPartDataElement(Document newDoc, Element partDataElement, List<Map<String, PartElement>> elementList, Part part, String parentTag, String childTag) {
     	if (elementList.size() == 0)
     		return;
@@ -254,20 +275,11 @@ public class XMLPartsCreator {
     				entrySet.add(name+value);
     		}
     		
-    		else if (parentTag.contains("Parts"))
-    		{
+    		if (addToXML)
     			if (partElements.get("PartNumber") != null && partElements.get("PartNumber").value.isEmpty())
     				addToXML = false;
-    			
-    			String partNumber = partElements.get("PartNumber") != null ? partElements.get("PartNumber").getValue() : "";
-    			
-    			if (partSet.contains(partNumber))
-    				addToXML = false;
-    			else
-    				partSet.add(partNumber);
-    		}
-    		
-			if (addToXML)
+
+			else if (addToXML)
 			{
 				Element childElement = newDoc.createElement(childTag);
 				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
