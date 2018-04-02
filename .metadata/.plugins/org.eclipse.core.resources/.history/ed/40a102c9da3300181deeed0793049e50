@@ -185,7 +185,7 @@ public class XMLPartsCreator {
                 addNestedPartDataElement(newDoc, partDataElement, part.vendorPartsElement, part, "VendorParts", "VendorPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.customerPartsElement, part, "CustomerParts", "CustomerPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.alternatePartsElement, part, "AlternateParts", "AlternatePart");
-//              addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry");
+                addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry");
                 addToPartDataElement(newDoc, partDataElement, part.electronicPartElement, "ElectronicPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.machineSpecificAttributes, part, "MachineSpecificAttributes", "Machine");
             }
@@ -273,6 +273,10 @@ public class XMLPartsCreator {
 				Element childElement = newDoc.createElement(childTag);
 				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
 					PartElement partElement = entry.getValue();
+
+					if (childTag.equalsIgnoreCase("Machine"))
+						System.out.println("test");
+
 					data += partElement.getValue();
 
 					Element currentElement = newDoc.createElement(partElement.getHeader());

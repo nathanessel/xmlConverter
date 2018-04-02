@@ -4,8 +4,8 @@ public class CsvConverter {
 
     public static void main(String[] args) throws Exception {
 
-        String startFile = "/Users/nathanessel/DeV/xml/blank_to_1_Paul_Item_Test_TXT_03-31-18_2350_part.txt";
-        String outFile = "/Users/nathanessel/DeV/xml/blank_to_1_Paul_Item_Test_TXT_03-31-18_2350_part.xml";
+        String startFile = "/Users/nathanessel/DeV/xml/A-267_Sample_TXT_File_02_Nathan_2018_03-19-18.txt";
+        String outFile = "/Users/nathanessel/DeV/xml/test3.xml";
 
         XMLPartsCreator creator = new XMLPartsCreator();
     	creator.convertFile(startFile, outFile, '|');
