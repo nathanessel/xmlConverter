@@ -107,6 +107,9 @@ public class XMLPartsCreator {
                     {
                         String header = headers.get(col);
                         
+                        if (value.isEmpty())
+                        	continue;
+
                         if (value.equalsIgnoreCase("Y") || value.equalsIgnoreCase("yes"))
                         	value = "true";
                         else if (value.equalsIgnoreCase("N") || value.equalsIgnoreCase("no"))
@@ -277,7 +280,7 @@ public class XMLPartsCreator {
 				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
 					PartElement partElement = entry.getValue();
 					
-					if (partElement.getValue().isEmpty())
+					if (partElement.getHeader().equalsIgnoreCase("revision") && partElement.getValue().isEmpty())
 						continue;
 					
 					data += partElement.getValue();
@@ -312,7 +315,7 @@ public class XMLPartsCreator {
         for (Map.Entry<String, PartElement> entry : elementMap.entrySet()) {
         	PartElement partData = entry.getValue();
         	
-			if (partData.getValue().isEmpty())
+			if (partData.getHeader().equalsIgnoreCase("revision") && partData.getValue().isEmpty())
 				continue;
         	
             Element currentElement = newDoc.createElement(partData.getHeader());
@@ -327,7 +330,7 @@ public class XMLPartsCreator {
         for (Map.Entry<String, PartElement> entry : elementMap.entrySet()) {
         	PartElement partElement = entry.getValue();
         	
-			if (partElement.getValue().isEmpty())
+			if (partElement.getHeader().equalsIgnoreCase("revision") && partElement.getValue().isEmpty())
 				continue;
         	
             Element currentElement = newDoc.createElement(partElement.getHeader());

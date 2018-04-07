@@ -277,7 +277,7 @@ public class XMLPartsCreator {
 				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
 					PartElement partElement = entry.getValue();
 					
-					if (partElement.getValue().isEmpty())
+					if (partElement.getHeader().equalsIgnoreCase("revision") && partElement.getValue().isEmpty())
 						continue;
 					
 					data += partElement.getValue();
@@ -327,7 +327,7 @@ public class XMLPartsCreator {
         for (Map.Entry<String, PartElement> entry : elementMap.entrySet()) {
         	PartElement partElement = entry.getValue();
         	
-			if (partElement.getValue().isEmpty())
+			if (partElement.getHeader().equalsIgnoreCase("revision") && partElement.getValue().isEmpty())
 				continue;
         	
             Element currentElement = newDoc.createElement(partElement.getHeader());

@@ -5,7 +5,7 @@ public class CsvConverter {
     public static void main(String[] args) throws Exception {
 
         String startFile = "/Users/nathanessel/DeV/xml/blank_to_1_Paul_Item_Test_TXT_03-31-18_2350_part.txt";
-        String outFile = "/Users/nathanessel/DeV/xml/omit_blank_tags_Test_TXT_04-07-18_part.xml";
+        String outFile = "/Users/nathanessel/DeV/xml/omit_blank_revision_Test_TXT_04-07-18_part.xml";
 
         XMLPartsCreator creator = new XMLPartsCreator();
     	creator.convertFile(startFile, outFile, '|');

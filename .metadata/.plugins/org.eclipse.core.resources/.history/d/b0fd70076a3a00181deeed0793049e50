@@ -106,14 +106,11 @@ public class XMLPartsCreator {
                     for (String value : nextLine) 
                     {
                         String header = headers.get(col);
-                        
+
                         if (value.equalsIgnoreCase("Y") || value.equalsIgnoreCase("yes"))
                         	value = "true";
                         else if (value.equalsIgnoreCase("N") || value.equalsIgnoreCase("no"))
                         	value = "false";
-                        
-                        //if (header.equalsIgnoreCase("revision") && value.isEmpty())
-                        	//value = "A";
                         
                         if (col < 7 && !partExists)
                         	readCSVToPartData(part.partDataElement, header, value);
@@ -136,8 +133,8 @@ public class XMLPartsCreator {
                         else if (col >= 47 && col < 51)
                         	readCSVToNestedPartData(part.vendorPartElement, header, value, masterPartNumber);
 
-                        else if (col >= 51 && col < 55)
-                        	readCSVToNestedPartData(part.customerPartElement, header, value, masterPartNumber);
+//                        else if (col >= 51 && col < 55)
+//                        	readCSVToNestedPartData(part.customerPartElement, header, value, masterPartNumber);
 
                         else if (col >= 55 && col < 57)
                         	readCSVToNestedPartData(part.alternatePartElement, header, value, masterPartNumber);
@@ -162,7 +159,7 @@ public class XMLPartsCreator {
             		part.manufacturerPartsElement.add(part.manufacturerPartElement);
             		part.vendorPartsElement.add(part.vendorPartElement);
             		part.alternatePartsElement.add(part.alternatePartElement);
-            		part.customerPartsElement.add(part.customerPartElement);
+//            		part.customerPartsElement.add(part.customerPartElement);
             		part.customFieldsElement.add(part.entryElement);
             		part.machineSpecificAttributes.add(part.machineElement);
                 	
@@ -276,10 +273,6 @@ public class XMLPartsCreator {
 				Element childElement = newDoc.createElement(childTag);
 				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
 					PartElement partElement = entry.getValue();
-					
-					if (partElement.getValue().isEmpty())
-						continue;
-					
 					data += partElement.getValue();
 
 					Element currentElement = newDoc.createElement(partElement.getHeader());
@@ -299,9 +292,6 @@ public class XMLPartsCreator {
     public void addToPartDataElement(Document newDoc, Element partDataElement, List<PartElement> elementList) {
     	for (PartElement partData : elementList)
     	{
-			if (partData.getHeader().equalsIgnoreCase("revision") && partData.getValue().isEmpty())
-				continue;
-			
             Element currentElement = newDoc.createElement(partData.getHeader());
             currentElement.appendChild(newDoc.createTextNode(partData.getValue().trim()));
             partDataElement.appendChild(currentElement);
@@ -311,10 +301,6 @@ public class XMLPartsCreator {
     public void addToPartDataElement(Document newDoc, Element partDataElement, Map<String, PartElement> elementMap) {
         for (Map.Entry<String, PartElement> entry : elementMap.entrySet()) {
         	PartElement partData = entry.getValue();
-        	
-			if (partData.getValue().isEmpty())
-				continue;
-        	
             Element currentElement = newDoc.createElement(partData.getHeader());
             currentElement.appendChild(newDoc.createTextNode(partData.getValue().trim()));
             partDataElement.appendChild(currentElement);
@@ -326,10 +312,6 @@ public class XMLPartsCreator {
     	
         for (Map.Entry<String, PartElement> entry : elementMap.entrySet()) {
         	PartElement partElement = entry.getValue();
-        	
-			if (partElement.getValue().isEmpty())
-				continue;
-        	
             Element currentElement = newDoc.createElement(partElement.getHeader());
             currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
         	taggedElement.appendChild(currentElement);
@@ -342,9 +324,6 @@ public class XMLPartsCreator {
     	
     	for (PartElement partElement : elementList)
     	{
-			if (partElement.getHeader().equalsIgnoreCase("revision") && partElement.getValue().isEmpty())
-				continue;
-    		
         	Element currentElement = newDoc.createElement(partElement.getHeader());
         	currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
         	taggedElement.appendChild(currentElement);
