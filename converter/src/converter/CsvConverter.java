@@ -4,10 +4,12 @@ public class CsvConverter {
 
     public static void main(String[] args) throws Exception {
 
-        String startFile = "/Users/nathanessel/DeV/xml/blank_to_1_Paul_Item_Test_TXT_03-31-18_2350_part.txt";
-        String outFile = "/Users/nathanessel/DeV/xml/omit_blank_tags_Test_TXT_04-07-18_part.xml";
+        String startFile = "/Users/nathanessel/DeV/xml/301365-MM_Paul_BOM_Test_TXT_04-11-18_2102_bom.txt";
+        String outFile = "/Users/nathanessel/DeV/xml/bom_test_06_05_18_bom.xml";
 
-        XMLPartsCreator creator = new XMLPartsCreator();
+        //XMLPartsCreator creator = new XMLPartsCreator();
+        
+        XMLBomCreator creator = new XMLBomCreator();
     	creator.convertFile(startFile, outFile, '|');
     	
     

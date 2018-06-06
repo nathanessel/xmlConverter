@@ -24,6 +24,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -60,19 +62,20 @@ public class XMLBomCreator {
             Document newDoc = domBuilder.newDocument();
             // Root element
             
-            Element assembliesElement = newDoc.createElement("Assemblies");
-            Element assemblieElement = newDoc.createElement("Assembly");
-            Element bomItemsElement = newDoc.createElement("BOMItems");
-            Element amiElement = newDoc.createElement("AMIElement");
-            Element altlPNElement = newDoc.createElement("AltlPN");
-            Element customFieldsElement = newDoc.createElement("CustomFields");
+//            Element assembliesElement = newDoc.createElement("Assemblies");
+//            Element assemblyElement = newDoc.createElement("Assembly");
+//            Element bomItemsElement = newDoc.createElement("BOMItems");
+//            Element amiElement = newDoc.createElement("AMIElement");
+//            Element altlPNElement = newDoc.createElement("AltlPN");
+//            Element customFieldsElement = newDoc.createElement("CustomFields");
 
             
             
-            Element partsElement = newDoc.createElement("BOMItem");
-            
-            
-            newDoc.appendChild(partsElement);
+            Element assembliesElement = newDoc.createElement("Assemblies");
+            Element assemblyElement = newDoc.createElement("Assembly");
+            Element bomItemsElement = newDoc.createElement("BOMItems");
+
+            newDoc.appendChild(assembliesElement);
 
             CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).build();
         	
@@ -80,14 +83,29 @@ public class XMLBomCreator {
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
 
+        	HashSet<String> entrySet = new HashSet<String>();
+            
             String[] nextLine;
             int line = 0;
             List<String> headers = new ArrayList<String>();
             
             Part part = null;
             
+            boolean customerExists = false;
+            boolean nameExists = false;
+            boolean revisionExists = false;
+            boolean configurableExists = false;
+            
             while ((nextLine = reader.readNext()) != null) 
             {
+                Element bomItemElement = newDoc.createElement("BOMItem");
+                Element amlElement = newDoc.createElement("AMLElement");
+                Element amlEntryElement = newDoc.createElement("Entry");
+                Element altlPNElement = newDoc.createElement("AltlPN");
+                Element altlPNEntryElement = newDoc.createElement("Entry");
+                Element customFieldsElement = newDoc.createElement("CustomFields");
+                Element customFieldElement = newDoc.createElement("CustomField");
+            	
             	String masterPartNumber = "";
             	boolean partExists = false;
 
@@ -101,64 +119,164 @@ public class XMLBomCreator {
                 
                 else 
                 { 
-               		masterPartNumber = nextLine[2];
-                	
-                	part = partsMap.get(masterPartNumber);
-                	partSet.add(masterPartNumber);
-                	
-                	if (part == null)
-                		part = new Part();
-                	else
-                	{
-                		partExists = true;
-                		part.clearPartElements();
-                	}
-                	
                     int col = 0;
                     for (String value : nextLine) 
                     {
                         String header = headers.get(col);
+                        
+                        if (!header.equalsIgnoreCase("ConfigurationOption") && !header.equalsIgnoreCase("ConsolidatedReferences") && !header.equalsIgnoreCase("CustomerPartNumber") && !header.equalsIgnoreCase("InternalPartNumber") && !header.equalsIgnoreCase("IsSubAssembly") && 
+                        		!header.equalsIgnoreCase("IsSubAssembly") && !header.equalsIgnoreCase("ItemNumber") && !header.equalsIgnoreCase("OptionCode") && !header.equalsIgnoreCase("PartRevision") && !header.equalsIgnoreCase("RevisionMode") && !header.equalsIgnoreCase("RevisionMode") 
+                        		&& !header.equalsIgnoreCase("UnitOfIssue") && !header.equalsIgnoreCase("PartType"))
+                        header = StringUtils.remove(WordUtils.capitalizeFully(header, '_'), "_");
 
-                        if (value.equalsIgnoreCase("Y"))
+                        if (value.equalsIgnoreCase("yes"))
                         	value = "true";
-                        else if (value.equalsIgnoreCase("N"))
+                        else if (value.equalsIgnoreCase("no"))
                         	value = "false";
                         
                         //Assembly
                         if (col < 4 && !partExists)
-                        	readCSVToPartData(part.partDataElement, header, value);
+                        {
+                        //	readCSVToPartData(part.partDataElement, header, value);
+                        	if (!value.isEmpty())
+                        	{
+                        		if (header.equalsIgnoreCase("customer") && !customerExists)
+                        		{
+                        			Element currentElement = newDoc.createElement(header);
+                        			currentElement.appendChild(newDoc.createTextNode(value));
+                        			assemblyElement.appendChild(currentElement);
+                        			customerExists = true;
+                        		}
+                        		
+                        		else if (header.equalsIgnoreCase("name") && !nameExists)
+                        		{
+                        			Element currentElement = newDoc.createElement(header);
+                        			currentElement.appendChild(newDoc.createTextNode(value));
+                        			assemblyElement.appendChild(currentElement);
+                        			nameExists = true;
+                        		}
+                        		else if (header.equalsIgnoreCase("revision") && !revisionExists)
+                        		{
+                        			Element currentElement = newDoc.createElement(header);
+                        			currentElement.appendChild(newDoc.createTextNode(value));
+                        			assemblyElement.appendChild(currentElement);
+                        			revisionExists = true;
+                        		}
+                        		
+                        		else if (header.equalsIgnoreCase("configurable") && !configurableExists)
+                        		{
+                        			Element currentElement = newDoc.createElement(header);
+                        			currentElement.appendChild(newDoc.createTextNode(value));
+                        			assemblyElement.appendChild(currentElement);
+                        			configurableExists = true;
+                        		}
+                        	}
+                        }
                         
                         //BOMItem
-                        //AMI
+                        //AML
                         
                         //Entry
                         else if (col >= 4 && col < 9 && !partExists)
-                        	readCSVToPartData(part.partDataElement, header, value);
-                        
+                        {
+                        	if (!value.isEmpty())
+                        	{
+                        		Element currentElement = newDoc.createElement(header);
+                        		currentElement.appendChild(newDoc.createTextNode(value));
+                        		amlEntryElement.appendChild(currentElement);
+                        	}
+                        	//readCSVToPartData(part.partDataElement, header, value);
+                        }
                         //AltlPN
                         //Entry
                         else if (col >= 9 && col < 13 && !partExists)
-                        	readCSVToPartData(part.componentHandlingElement, header, value);
+                        {
+                        	if (col == 9)
+                        	{
+                        		if (amlEntryElement.getChildNodes().getLength() > 0)
+                        		{
+                        			amlElement.appendChild(amlEntryElement);
+                        			bomItemElement.appendChild(amlElement);
+                        		}
+                        	}
+                        	if (!value.isEmpty())
+                        	{
+                        		Element currentElement = newDoc.createElement(header);
+                        		currentElement.appendChild(newDoc.createTextNode(value));
+                        		altlPNEntryElement.appendChild(currentElement);
+                        	}
+                        	//readCSVToPartData(part.componentHandlingElement, header, value);
+                        }
 
                         //BOMItem
                         else if (col >= 13 && col < 16 && !partExists)
-                        	readCSVToPartData(part.partDataElement, header, value);
+                        {
+                        	if (col == 13)
+                        	{
+                        		if (altlPNEntryElement.getChildNodes().getLength() > 0)
+                        		{
+                        			altlPNElement.appendChild(altlPNEntryElement);
+                        			bomItemElement.appendChild(altlPNEntryElement);
+                        		}
+                        		
+                        	}
+                        	
+                        	if (!value.isEmpty())
+                        	{
+                        		Element currentElement = newDoc.createElement(header);
+                        		currentElement.appendChild(newDoc.createTextNode(value));
+                        		bomItemElement.appendChild(currentElement);
+                        	}
+                        	
+                        	//readCSVToPartData(part.partDataElement, header, value);
+                        }
                         
                         //CustomFields
                         //CustomField
                         else if (col >= 16 && col < 18)
-                        	readCSVToNestedPartData(part.manufacturerPartElement, header, value, masterPartNumber);
+                        {
+                        	if (!value.isEmpty())
+                        	{
+                        		Element currentElement = newDoc.createElement(header);
+                        		currentElement.appendChild(newDoc.createTextNode(value));
+                        		customFieldElement.appendChild(currentElement);
+                        	}
+
+                        	//readCSVToNestedPartData(part.manufacturerPartElement, header, value, masterPartNumber);
+                        }
                         
                         //BOMItem
                         else if (col >= 18 && col < 34)
-                        	readCSVToNestedPartData(part.vendorPartElement, header, value, masterPartNumber);
-
-                        // System.out.println("col " + col);
+                        {
+                        	if (col == 18)
+                        	{
+                        		if (customFieldElement.getChildNodes().getLength() > 0)
+                        		{
+                        			customFieldsElement.appendChild(customFieldElement);
+                        			bomItemElement.appendChild(customFieldsElement);
+                        		}
+                        	}
+                        	
+                        	if (!value.isEmpty())
+                        	{
+                        		Element currentElement = newDoc.createElement(header);
+                        		currentElement.appendChild(newDoc.createTextNode(value));
+                        		bomItemElement.appendChild(currentElement);
+                        	}
+                        	//readCSVToNestedPartData(part.vendorPartElement, header, value, masterPartNumber);
+                        }
+                        
+                        bomItemsElement.appendChild(bomItemElement);
+                        
+                        System.out.println("col " + col);
                         col++;
                     }
                 }
+                line++;
                 System.out.println("line " + line);
 
+                /*
+                
                 if (line != 0)
                 {
             		part.manufacturerPartsElement.add(part.manufacturerPartElement);
@@ -193,7 +311,12 @@ public class XMLBomCreator {
 //              addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry");
                 addToPartDataElement(newDoc, partDataElement, part.electronicPartElement, "ElectronicPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.machineSpecificAttributes, part, "MachineSpecificAttributes", "Machine");
+                */
             }
+
+            assemblyElement.appendChild(bomItemsElement);
+            assembliesElement.appendChild(assemblyElement);
+
 
             FileWriter writer = null;
 
