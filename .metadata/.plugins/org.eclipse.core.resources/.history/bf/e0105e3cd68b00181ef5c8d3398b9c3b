@@ -83,16 +83,23 @@ public class XMLProcessCreator {
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
 
+        	HashSet<String> entrySet = new HashSet<String>();
+            
             String[] nextLine;
             int line = 0;
             List<String> headers = new ArrayList<String>();
             
             String currentPart = "";
-
-        	boolean assemblyExists = false;
+            
+            boolean customerExists = false;
+            boolean nameExists = false;
+            boolean revisionExists = false;
+            boolean configurableExists = false;
             
             while ((nextLine = reader.readNext()) != null) 
             {
+            	String masterPartNumber = "";
+            	boolean assemblyExists = false;
 
                 if (line == 0) 
                     for (String col : nextLine) 
@@ -105,6 +112,8 @@ public class XMLProcessCreator {
                     {
                     	if (col > 32)
                     		break;
+                    	
+
                     	
                         String header = headers.get(col);
                         
@@ -124,7 +133,6 @@ public class XMLProcessCreator {
                             activitiesElement = newDoc.createElement("Activities");
                             exitPathwaysElement = newDoc.createElement("ExitPathways");
                             assemblyExists = false;
-                            currentPart = value;
                     	}
 
                         if (value.equalsIgnoreCase("yes"))
@@ -179,6 +187,9 @@ public class XMLProcessCreator {
                         	}
                         }
                         
+                        if (col == 24)
+                        	stepElement.appendChild(documentsElement);
+                        
                         //Activity
                         if (col >= 24 && col < 27)
                         {
@@ -190,6 +201,13 @@ public class XMLProcessCreator {
                         	}
                         }
                         
+                        if (col == 27)
+                        {
+                        	activitiesElement.appendChild(activityElement);
+                        	stepElement.appendChild(documentsElement);
+                        	stepElement.appendChild(activitiesElement);
+                        	operationElement.appendChild(stepsElement);
+                        }
                         //ExitPathway
                         if (col >= 27 && col < 33)
                         {
@@ -203,16 +221,9 @@ public class XMLProcessCreator {
                         
                         if (col == 32)
                         {
-                        	activitiesElement.appendChild(activityElement);
                         	exitPathwaysElement.appendChild(exitPathwayElement);
-
-                        	if (documentsElement.getChildNodes().getLength() > 0)
-                        		stepElement.appendChild(documentsElement);
-                        	stepElement.appendChild(activitiesElement);
                         	stepsElement.appendChild(stepElement);
-                        	
-                        	operationElement.appendChild(stepsElement);
-                        	operationElement.appendChild(exitPathwaysElement);
+                        	operationElement.appendChild(exitPathwayElement);
                         	operationsElement.appendChild(operationElement);
                         	
                             operationElement = newDoc.createElement("Operation");
@@ -220,10 +231,6 @@ public class XMLProcessCreator {
                             stepsElement = newDoc.createElement("Steps");
                             activityElement = newDoc.createElement("Activity");
                             exitPathwayElement = newDoc.createElement("ExitPathway");
-                            documentsElement = newDoc.createElement("Documents");
-                            activitiesElement = newDoc.createElement("Activities");
-                            exitPathwaysElement = newDoc.createElement("ExitPathways");
-
 
                         }
                         

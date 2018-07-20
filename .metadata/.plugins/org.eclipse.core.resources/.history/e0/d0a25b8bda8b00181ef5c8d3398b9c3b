@@ -212,7 +212,7 @@ public class XMLProcessCreator {
                         	stepsElement.appendChild(stepElement);
                         	
                         	operationElement.appendChild(stepsElement);
-                        	operationElement.appendChild(exitPathwaysElement);
+                        	operationElement.appendChild(exitPathwayElement);
                         	operationsElement.appendChild(operationElement);
                         	
                             operationElement = newDoc.createElement("Operation");

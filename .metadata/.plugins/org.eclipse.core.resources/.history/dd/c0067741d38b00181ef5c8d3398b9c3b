@@ -69,12 +69,6 @@ public class XMLProcessCreator {
             Element activitiesElement = newDoc.createElement("Activities");
             Element exitPathwaysElement = newDoc.createElement("ExitPathways");
             
-            Element operationElement = newDoc.createElement("Operation");
-            Element stepElement = newDoc.createElement("Step");
-            Element activityElement = newDoc.createElement("Activity");
-            Element exitPathwayElement = newDoc.createElement("ExitPathway");
-
-            
             newDoc.appendChild(processRevisionElement);
 
             CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).build();
@@ -83,16 +77,28 @@ public class XMLProcessCreator {
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
 
+        	HashSet<String> entrySet = new HashSet<String>();
+            
             String[] nextLine;
             int line = 0;
             List<String> headers = new ArrayList<String>();
             
             String currentPart = "";
-
-        	boolean assemblyExists = false;
+            
+            boolean customerExists = false;
+            boolean nameExists = false;
+            boolean revisionExists = false;
+            boolean configurableExists = false;
             
             while ((nextLine = reader.readNext()) != null) 
             {
+                Element operationElement = newDoc.createElement("Operation");
+                Element stepElement = newDoc.createElement("Step");
+                Element activityElement = newDoc.createElement("Activity");
+                Element exitPathwayElement = newDoc.createElement("ExitPathway");
+            	
+            	String masterPartNumber = "";
+            	boolean assemblyExists = false;
 
                 if (line == 0) 
                     for (String col : nextLine) 
@@ -114,17 +120,15 @@ public class XMLProcessCreator {
                     	{
                     		//Append all child elements to their parent elements, then append to the master ProcessRevision element before moving on to the next assembly.  The elements need to be cleared as well.
                     		processRevisionDataElement.appendChild(operationsElement);
+                    		
                     		processRevisionElement.appendChild(processRevisionDataElement);
-
-                    		//Clear
-                    		processRevisionDataElement = newDoc.createElement("ProcessRevisionData");
+                            processRevisionDataElement = newDoc.createElement("ProcessRevisionData");
                             operationsElement = newDoc.createElement("Operations");
                             stepsElement = newDoc.createElement("Steps");
                             documentsElement = newDoc.createElement("Documents");
                             activitiesElement = newDoc.createElement("Activities");
                             exitPathwaysElement = newDoc.createElement("ExitPathways");
                             assemblyExists = false;
-                            currentPart = value;
                     	}
 
                         if (value.equalsIgnoreCase("yes"))
@@ -180,7 +184,7 @@ public class XMLProcessCreator {
                         }
                         
                         //Activity
-                        if (col >= 24 && col < 27)
+                        if (col >= 24 && col < 26)
                         {
                         	if (!value.isEmpty())
                         	{
@@ -190,8 +194,16 @@ public class XMLProcessCreator {
                         	}
                         }
                         
+                        if (col == 26)
+                        {
+                        	activitiesElement.appendChild(activityElement);
+                        	stepElement.appendChild(documentsElement);
+                        	stepElement.appendChild(activitiesElement);
+                        	stepsElement.appendChild(stepElement);
+                        	operationElement.appendChild(stepsElement);
+                        }
                         //ExitPathway
-                        if (col >= 27 && col < 33)
+                        if (col >= 26 && col < 33)
                         {
                         	if (!value.isEmpty())
                         	{
@@ -203,28 +215,9 @@ public class XMLProcessCreator {
                         
                         if (col == 32)
                         {
-                        	activitiesElement.appendChild(activityElement);
                         	exitPathwaysElement.appendChild(exitPathwayElement);
-
-                        	if (documentsElement.getChildNodes().getLength() > 0)
-                        		stepElement.appendChild(documentsElement);
-                        	stepElement.appendChild(activitiesElement);
-                        	stepsElement.appendChild(stepElement);
-                        	
-                        	operationElement.appendChild(stepsElement);
-                        	operationElement.appendChild(exitPathwaysElement);
+                        	operationElement.appendChild(exitPathwayElement);
                         	operationsElement.appendChild(operationElement);
-                        	
-                            operationElement = newDoc.createElement("Operation");
-                            stepElement = newDoc.createElement("Step");
-                            stepsElement = newDoc.createElement("Steps");
-                            activityElement = newDoc.createElement("Activity");
-                            exitPathwayElement = newDoc.createElement("ExitPathway");
-                            documentsElement = newDoc.createElement("Documents");
-                            activitiesElement = newDoc.createElement("Activities");
-                            exitPathwaysElement = newDoc.createElement("ExitPathways");
-
-
                         }
                         
                         System.out.println("col " + col);
@@ -234,9 +227,6 @@ public class XMLProcessCreator {
                 line++;
                 System.out.println("line " + line);
             }
-
-    		processRevisionDataElement.appendChild(operationsElement);
-    		processRevisionElement.appendChild(processRevisionDataElement);
 
             FileWriter writer = null;
 

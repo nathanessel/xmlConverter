@@ -88,11 +88,10 @@ public class XMLProcessCreator {
             List<String> headers = new ArrayList<String>();
             
             String currentPart = "";
-
-        	boolean assemblyExists = false;
             
             while ((nextLine = reader.readNext()) != null) 
             {
+            	boolean assemblyExists = false;
 
                 if (line == 0) 
                     for (String col : nextLine) 
@@ -105,6 +104,8 @@ public class XMLProcessCreator {
                     {
                     	if (col > 32)
                     		break;
+                    	
+
                     	
                         String header = headers.get(col);
                         
@@ -124,7 +125,6 @@ public class XMLProcessCreator {
                             activitiesElement = newDoc.createElement("Activities");
                             exitPathwaysElement = newDoc.createElement("ExitPathways");
                             assemblyExists = false;
-                            currentPart = value;
                     	}
 
                         if (value.equalsIgnoreCase("yes"))
@@ -206,13 +206,12 @@ public class XMLProcessCreator {
                         	activitiesElement.appendChild(activityElement);
                         	exitPathwaysElement.appendChild(exitPathwayElement);
 
-                        	if (documentsElement.getChildNodes().getLength() > 0)
-                        		stepElement.appendChild(documentsElement);
+                        	stepElement.appendChild(documentsElement);
                         	stepElement.appendChild(activitiesElement);
                         	stepsElement.appendChild(stepElement);
                         	
                         	operationElement.appendChild(stepsElement);
-                        	operationElement.appendChild(exitPathwaysElement);
+                        	operationElement.appendChild(exitPathwayElement);
                         	operationsElement.appendChild(operationElement);
                         	
                             operationElement = newDoc.createElement("Operation");
