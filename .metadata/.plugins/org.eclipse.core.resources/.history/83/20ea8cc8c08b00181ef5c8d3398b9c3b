@@ -34,14 +34,14 @@ import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 
-public class XMLBomCreator {
+public class XMLProcessCreator {
     protected DocumentBuilderFactory domFactory = null;
     protected DocumentBuilder domBuilder = null;
 
     Map<String, Part> partsMap = new HashMap<String,Part>();
 	HashSet<String> partSet = new HashSet<String>();
     
-    public XMLBomCreator() {
+    public XMLProcessCreator() {
         try {
             domFactory = DocumentBuilderFactory.newInstance();
             domBuilder = domFactory.newDocumentBuilder();
@@ -61,11 +61,8 @@ public class XMLBomCreator {
         try {
             Document newDoc = domBuilder.newDocument();
             
-            Element assembliesElement = newDoc.createElement("Assemblies");
-            Element assemblyElement = newDoc.createElement("Assembly");
-            Element bomItemsElement = newDoc.createElement("BOMItems");
-
-            newDoc.appendChild(assembliesElement);
+            Element processRevision = newDoc.createElement("ProcessRevision");
+            Element processRevisionData = newDoc.createElement("ProcessRevisionData");
 
             CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).build();
         	
@@ -73,9 +70,13 @@ public class XMLBomCreator {
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
 
+        	HashSet<String> entrySet = new HashSet<String>();
+            
             String[] nextLine;
             int line = 0;
             List<String> headers = new ArrayList<String>();
+            
+            Part part = null;
             
             boolean customerExists = false;
             boolean nameExists = false;
@@ -92,6 +93,7 @@ public class XMLBomCreator {
                 Element customFieldsElement = newDoc.createElement("CustomFields");
                 Element customFieldElement = newDoc.createElement("CustomField");
             	
+            	String masterPartNumber = "";
             	boolean partExists = false;
 
                 if (line == 0) 
@@ -259,10 +261,49 @@ public class XMLBomCreator {
                 }
                 line++;
                 System.out.println("line " + line);
+
+                /*
+                
+                if (line != 0)
+                {
+            		part.manufacturerPartsElement.add(part.manufacturerPartElement);
+            		part.vendorPartsElement.add(part.vendorPartElement);
+            		part.alternatePartsElement.add(part.alternatePartElement);
+//            		part.customerPartsElement.add(part.customerPartElement);
+            		part.customFieldsElement.add(part.entryElement);
+            		part.machineSpecificAttributes.add(part.machineElement);
+                	
+                	if (!partExists)
+                		partsMap.put(masterPartNumber, part);
+                }
+                
+                line++;
+            }
+            
+            for (Map.Entry<String, Part> entry : partsMap.entrySet()) {
+                String key = entry.getKey();
+                System.out.println("key " + key);
+                
+                Element partDataElement = newDoc.createElement("PartData");
+                partsElement.appendChild(partDataElement);
+                part = entry.getValue();
+
+                addToPartDataElement(newDoc, partDataElement, part.partDataElement);
+                addToPartDataElement(newDoc, partDataElement, part.customerElement, "Customer");
+                addToPartDataElement(newDoc, partDataElement, part.componentHandlingElement, "ComponentHandling");
+                addNestedPartDataElement(newDoc, partDataElement, part.manufacturerPartsElement, part, "ManufacturerParts", "ManufacturerPart");
+                addNestedPartDataElement(newDoc, partDataElement, part.vendorPartsElement, part, "VendorParts", "VendorPart");
+                addNestedPartDataElement(newDoc, partDataElement, part.customerPartsElement, part, "CustomerParts", "CustomerPart");
+                addNestedPartDataElement(newDoc, partDataElement, part.alternatePartsElement, part, "AlternateParts", "AlternatePart");
+//              addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry");
+                addToPartDataElement(newDoc, partDataElement, part.electronicPartElement, "ElectronicPart");
+                addNestedPartDataElement(newDoc, partDataElement, part.machineSpecificAttributes, part, "MachineSpecificAttributes", "Machine");
+                */
             }
 
             assemblyElement.appendChild(bomItemsElement);
             assembliesElement.appendChild(assemblyElement);
+
 
             FileWriter writer = null;
 
@@ -301,4 +342,130 @@ public class XMLBomCreator {
         }
         return rowsCount;
     }
+    
+    public void addNestedPartDataElement(Document newDoc, Element partDataElement, List<Map<String, PartElement>> elementList, Part part, String parentTag, String childTag) {
+    	if (elementList.size() == 0)
+    		return;
+
+    	if (parentTag.equalsIgnoreCase("ManufacturerParts"))
+    		System.out.println("test");
+    	
+    	boolean addToXML = true;
+    	String data = "";
+    	
+    	Element parentElement = newDoc.createElement(parentTag);
+
+    	HashSet<String> entrySet = new HashSet<String>();
+    	
+    	for (Map<String, PartElement> partElements : elementList)
+    	{
+    		if (parentTag.equalsIgnoreCase("CustomFields"))
+    		{
+    			String name = partElements.get("Name").getValue();
+    			String value = partElements.get("Value").getValue();
+    			
+    			if (entrySet.contains(name+value))
+    				addToXML = false;
+    			else
+    				entrySet.add(name+value);
+    		}
+    		
+    		else if (parentTag.contains("Parts"))
+    		{
+    			if (partElements.get("PartNumber") != null && partElements.get("PartNumber").value.isEmpty())
+    				addToXML = false;
+    			
+    			String partNumber = partElements.get("PartNumber") != null ? partElements.get("PartNumber").getValue() : "";
+    			
+    			if (partSet.contains(partNumber))
+    				addToXML = false;
+    			else
+    				partSet.add(partNumber);
+    		}
+    		
+			if (addToXML)
+			{
+				Element childElement = newDoc.createElement(childTag);
+				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
+					PartElement partElement = entry.getValue();
+					data += partElement.getValue();
+
+					Element currentElement = newDoc.createElement(partElement.getHeader());
+					currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
+					childElement.appendChild(currentElement);
+				}
+
+				if (addToXML && !data.isEmpty())
+					parentElement.appendChild(childElement);
+			}
+       
+    	if (addToXML && !data.isEmpty())
+        	partDataElement.appendChild(parentElement);
+    	}
+    }
+    
+    public void addToPartDataElement(Document newDoc, Element partDataElement, List<PartElement> elementList) {
+    	for (PartElement partData : elementList)
+    	{
+            Element currentElement = newDoc.createElement(partData.getHeader());
+            currentElement.appendChild(newDoc.createTextNode(partData.getValue().trim()));
+            partDataElement.appendChild(currentElement);
+    	}
+    }
+
+    public void addToPartDataElement(Document newDoc, Element partDataElement, Map<String, PartElement> elementMap) {
+        for (Map.Entry<String, PartElement> entry : elementMap.entrySet()) {
+        	PartElement partData = entry.getValue();
+            Element currentElement = newDoc.createElement(partData.getHeader());
+            currentElement.appendChild(newDoc.createTextNode(partData.getValue().trim()));
+            partDataElement.appendChild(currentElement);
+    	}
+    }
+    
+    public void addToPartDataElement(Document newDoc, Element partDataElement, Map<String, PartElement> elementMap, String tag) {
+    	Element taggedElement = newDoc.createElement(tag);
+    	
+        for (Map.Entry<String, PartElement> entry : elementMap.entrySet()) {
+        	PartElement partElement = entry.getValue();
+            Element currentElement = newDoc.createElement(partElement.getHeader());
+            currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
+        	taggedElement.appendChild(currentElement);
+            partDataElement.appendChild(taggedElement);
+        }
+    }
+    
+    public void addToPartDataElement(Document newDoc, Element partDataElement, List<PartElement> elementList, String tag) {
+    	Element taggedElement = newDoc.createElement(tag);
+    	
+    	for (PartElement partElement : elementList)
+    	{
+        	Element currentElement = newDoc.createElement(partElement.getHeader());
+        	currentElement.appendChild(newDoc.createTextNode(partElement.getValue().trim()));
+        	taggedElement.appendChild(currentElement);
+            partDataElement.appendChild(taggedElement);
+    	}
+    }
+    
+    public void readCSVToPartData(List<PartElement> partElementList, String header, String value) {
+		PartElement currentElement = new PartElement(header,value);
+		partElementList.add(currentElement);
+    }
+
+    public void readCSVToPartData(Map<String, PartElement> partElementList, String header, String value) {
+		PartElement currentElement = new PartElement(header,value);
+		partElementList.put(header, currentElement);
+    }
+    
+    public void readCSVToNestedPartData(List<PartElement> partElementList, String header, String value, String masterPartNumber) {
+    	PartElement currentElement = new PartElement (header,value);
+   		partElementList.add(currentElement);
+    }
+
+    public void readCSVToNestedPartData(Map<String, PartElement> partElementList, String header, String value, String masterPartNumber) {
+    	PartElement currentElement = new PartElement (header,value);
+   		partElementList.put(header, currentElement);
+    }
+
+    
+
 }
