@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="HashSet" key="selection"/>
+		<item value="assembliesElement" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="assembliesElement"/>
 			<item value="hashset"/>
 			<item value="entr"/>
 			<item value="91100"/>
@@ -22,7 +23,6 @@
 			<item value="componentHandlingElement"/>
 			<item value="contin"/>
 			<item value="XMLCreators"/>
-			<item value="convertFile"/>
 		</list>
 		<list key="replacehistory">
 			<item value="new PartElement();"/>

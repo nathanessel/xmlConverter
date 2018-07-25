@@ -1,0 +1,14 @@
+package converter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Steps {
+	String name = "";
+	List<ProcessRevisionDataElement> stepsList = new ArrayList<ProcessRevisionDataElement>();
+	Map <String, List<ProcessRevisionDataElement>> documentsElement = new HashMap<String, List<ProcessRevisionDataElement>>();
+	List<ProcessRevisionDataElement> activitiesElement = new ArrayList<ProcessRevisionDataElement>();
+
+}

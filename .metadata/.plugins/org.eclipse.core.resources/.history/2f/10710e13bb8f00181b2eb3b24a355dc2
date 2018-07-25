@@ -1,0 +1,12 @@
+package converter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class Operations {
+	List<ProcessRevisionDataElement> operationsList = new ArrayList<ProcessRevisionDataElement>();
+	Map<String, Steps> stepsElement = HashMap<String, Steps>();
+	Map<String, ProcessRevisionDataElement> exitPathwaysElement = HashMap<String, ProcessRevisionDataElement>();
+	
+}

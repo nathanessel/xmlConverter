@@ -1,0 +1,15 @@
+package converter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class Operations extends ProcessRevision {
+	public Operations(String assemblyName) {
+		super(assemblyName);
+		// TODO Auto-generated constructor stub
+	}
+	List<ProcessRevisionDataElement> operationsList = new ArrayList<ProcessRevisionDataElement>();
+	List<Map<String, ProcessRevisionDataElement>> stepsElement = new ArrayList<Map<String, ProcessRevisionDataElement>>();
+	List<Map<String, ProcessRevisionDataElement>> exitPathwaysElement = new ArrayList<Map<String, ProcessRevisionDataElement>>();
+}
