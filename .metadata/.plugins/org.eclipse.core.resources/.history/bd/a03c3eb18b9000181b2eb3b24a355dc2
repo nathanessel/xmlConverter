@@ -211,14 +211,17 @@ public class XMLProcessImportCreator {
                         }
                         
                         Element documentsElement = newDoc.createElement("Documents");
+                        Element documentElement = newDoc.createElement("Document");
                         
                         for (ProcessRevisionDataElement documentTag : step.getValue().documentsElement)
                         {
                     		Element currentElement = newDoc.createElement(documentTag.getHeader());
                     		currentElement.appendChild(newDoc.createTextNode(documentTag.getValue()));
-                    		documentsElement.appendChild(currentElement);
+                    		documentElement.appendChild(currentElement);
                         }
                         
+                        documentsElement.appendChild(documentElement);
+
                         Element activitiesElement = newDoc.createElement("Activities");
                         Element activityElement = newDoc.createElement("Activity");
                         

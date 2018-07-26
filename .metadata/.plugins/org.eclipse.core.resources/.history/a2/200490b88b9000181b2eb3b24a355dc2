@@ -216,9 +216,11 @@ public class XMLProcessImportCreator {
                         {
                     		Element currentElement = newDoc.createElement(documentTag.getHeader());
                     		currentElement.appendChild(newDoc.createTextNode(documentTag.getValue()));
-                    		documentsElement.appendChild(currentElement);
+                    		documentElement.appendChild(currentElement);
                         }
                         
+                        documentsElement.appendChild(documentElement);
+
                         Element activitiesElement = newDoc.createElement("Activities");
                         Element activityElement = newDoc.createElement("Activity");
                         
