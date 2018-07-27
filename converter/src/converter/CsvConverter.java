@@ -19,10 +19,10 @@ public class CsvConverter {
     			XMLProcessImportCreator creator = new XMLProcessImportCreator();
     	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), '|'); 
         		
-    	    	File processed = new File(folder.getPath() + "\\processed_" + LocalDateTime.now().toString().replace(":", ""));
+    	    	File processed = new File(folder.getAbsolutePath() + "\\processed_" + LocalDateTime.now().toString().replace(":", ""));
        			processed.mkdir();
        			
-       			file.renameTo(new File(processed.getPath() + "\\" + filename));
+       			file.renameTo(new File(processed.getAbsolutePath() + "\\" + filename));
        			
     	    }
     		
