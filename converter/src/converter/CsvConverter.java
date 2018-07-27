@@ -1,6 +1,9 @@
 package converter;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
 
 public class CsvConverter {     
 
@@ -18,10 +21,10 @@ public class CsvConverter {
     			XMLProcessImportCreator creator = new XMLProcessImportCreator();
     	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), '|'); 
         		
-//    	    	File processed = new File(folder.getPath() + "\\processed_" + LocalDateTime.now().toString().replace(":", ""));
-//       			processed.mkdir();
+    	    	File processed = new File(folder.getPath() + "\\processed_" + LocalDateTime.now().toString().replace(":", ""));
+       			processed.mkdir();
        			
-       			//Files.move(Paths.get(folder.getPath() + "\\" + filename), Paths.get(processed.getPath() + "\\" + filename));
+       			Files.move(Paths.get(folder.getPath() + "\\" + filename), Paths.get(processed.getPath() + "\\" + filename));
        			
        			//file.renameTo(new File(processed.getPath() + "/" + filename));
        			
