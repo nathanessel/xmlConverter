@@ -24,7 +24,7 @@ public class CsvConverter {
     	    	File processed = new File(folder.getPath() + "\\processed_" + LocalDateTime.now().toString().replace(":", ""));
        			processed.mkdir();
        			
-       			Files.move(Paths.get(file.getPath()), Paths.get(processed.getPath() + "\\" + filename));
+       			Files.move(Paths.get(folder.getPath() + "\\" + filename), Paths.get(processed.getPath() + "\\" + filename));
        			
        			//file.renameTo(new File(processed.getPath() + "/" + filename));
        			
