@@ -22,9 +22,9 @@ public class CsvConverter {
     			
     			System.out.println("Converting " + filename + " to " + filename.replace(".txt", ".xml"));
     			
-    			//XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
+    			XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
     			//XMLPartsCreator creator = new XMLPartsCreator();
-    			XMLBomCreator creator = new XMLBomCreator();
+    			//XMLBomCreator creator = new XMLBomCreator();
     			
     	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), '|'); 
        			
