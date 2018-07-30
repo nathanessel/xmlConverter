@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -56,10 +55,8 @@ public class XMLBomCreator {
 
     }
 
-    public int convertFile(String txtFileName, String xmlFileName, String processedFolder, char delimiter) throws Exception
+    public int convertFile(String txtFileName, String xmlFileName, char delimiter) throws Exception
     {
-        PrintWriter errWriter = new PrintWriter(processedFolder + "\\" + txtFileName.replace(".txt", ".err"), "UTF-8");
-    	
         int rowsCount = -1;
         try {
             Document newDoc = domBuilder.newDocument();
@@ -85,8 +82,6 @@ public class XMLBomCreator {
             boolean revisionExists = false;
             boolean configurableExists = false;
             
-            PrintWriter logWriter = new PrintWriter(processedFolder + "\\" + txtFileName.replace(".txt", ".log"), "UTF-8");
-            
             while ((nextLine = reader.readNext()) != null) 
             {
                 Element bomItemElement = newDoc.createElement("BOMItem");
@@ -102,7 +97,9 @@ public class XMLBomCreator {
                 if (line == 0) 
                 { 
                     for (String col : nextLine) 
+                    {
                         headers.add(col);
+                    }
                 } 
                 
                 else 
@@ -125,6 +122,7 @@ public class XMLBomCreator {
                         //Assembly
                         if (col < 4 && !partExists)
                         {
+                        //	readCSVToPartData(part.partDataElement, header, value);
                         	if (!value.isEmpty())
                         	{
                         		if (header.equalsIgnoreCase("customer") && !customerExists)
@@ -172,6 +170,7 @@ public class XMLBomCreator {
                         		currentElement.appendChild(newDoc.createTextNode(value));
                         		amlEntryElement.appendChild(currentElement);
                         	}
+                        	//readCSVToPartData(part.partDataElement, header, value);
                         }
                         //AltlPN
                         //Entry
@@ -191,6 +190,7 @@ public class XMLBomCreator {
                         		currentElement.appendChild(newDoc.createTextNode(value));
                         		altlPNEntryElement.appendChild(currentElement);
                         	}
+                        	//readCSVToPartData(part.componentHandlingElement, header, value);
                         }
 
                         //BOMItem
@@ -212,6 +212,8 @@ public class XMLBomCreator {
                         		currentElement.appendChild(newDoc.createTextNode(value));
                         		bomItemElement.appendChild(currentElement);
                         	}
+                        	
+                        	//readCSVToPartData(part.partDataElement, header, value);
                         }
                         
                         //CustomFields
@@ -224,6 +226,8 @@ public class XMLBomCreator {
                         		currentElement.appendChild(newDoc.createTextNode(value));
                         		customFieldElement.appendChild(currentElement);
                         	}
+
+                        	//readCSVToNestedPartData(part.manufacturerPartElement, header, value, masterPartNumber);
                         }
                         
                         //BOMItem
@@ -244,6 +248,7 @@ public class XMLBomCreator {
                         		currentElement.appendChild(newDoc.createTextNode(value));
                         		bomItemElement.appendChild(currentElement);
                         	}
+                        	//readCSVToNestedPartData(part.vendorPartElement, header, value, masterPartNumber);
                         }
                         
                         bomItemsElement.appendChild(bomItemElement);
@@ -253,7 +258,7 @@ public class XMLBomCreator {
                     }
                 }
                 line++;
-                logWriter.println("Processing line " + line);
+                System.out.println("line " + line);
             }
 
             assemblyElement.appendChild(bomItemsElement);
@@ -263,7 +268,7 @@ public class XMLBomCreator {
 
             try {
 
-                writer = new FileWriter(new File(processedFolder + "\\" + xmlFileName));
+                writer = new FileWriter(new File(xmlFileName));
 
                 TransformerFactory tranFactory = TransformerFactory.newInstance();
                 Transformer aTransformer = tranFactory.newTransformer();
@@ -279,30 +284,21 @@ public class XMLBomCreator {
 
             } catch (Exception exp) {
                 exp.printStackTrace();
-                errWriter.println(exp.toString());
             } finally {
                 try {
                     writer.close();
                 } catch (Exception e) {
-                    errWriter.println(e.toString());
                 }
             }
 
             // Testing
             // Result result = new StreamResult(System.out);
-            
-            logWriter.println("Coversion Completed");
-            logWriter.close();
-            reader.close();
 
         } catch (IOException exp) {
             System.err.println(exp.toString());
-            errWriter.println(exp.toString());
         } catch (Exception exp) {
             System.err.println(exp.toString());
-            errWriter.println(exp.toString());
         }
-        errWriter.close();
         return rowsCount;
     }
 }

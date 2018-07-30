@@ -6,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -54,10 +53,8 @@ public class XMLPartsCreator {
 
     }
 
-    public int convertFile(String txtFileName, String xmlFileName, String processedFolder, char delimiter) throws Exception
+    public int convertFile(String txtFileName, String xmlFileName, char delimiter) throws Exception
     {
-        PrintWriter errWriter = new PrintWriter(processedFolder + "\\" + txtFileName.replace(".txt", ".err"), "UTF-8");
-    	
         int rowsCount = -1;
         try {
             Document newDoc = domBuilder.newDocument();
@@ -77,8 +74,6 @@ public class XMLPartsCreator {
             
             Part part = null;
             
-            PrintWriter logWriter = new PrintWriter(processedFolder + "\\" + txtFileName.replace(".txt", ".log"), "UTF-8");
-            
             while ((nextLine = reader.readNext()) != null) 
             {
             	String masterPartNumber = "";
@@ -87,7 +82,9 @@ public class XMLPartsCreator {
                 if (line == 0) 
                 { 
                     for (String col : nextLine) 
+                    {
                         headers.add(col);
+                    }
                 } 
                 
                 else 
@@ -158,9 +155,8 @@ public class XMLPartsCreator {
                         col++;
                     }
                 }
+                System.out.println("line " + line);
 
-                logWriter.println("Processing line " + line);
-                
                 if (line != 0)
                 {
             		part.manufacturerPartsElement.add(part.manufacturerPartElement);
@@ -179,8 +175,7 @@ public class XMLPartsCreator {
             
             for (Map.Entry<String, Part> entry : partsMap.entrySet()) {
                 String key = entry.getKey();
-                
-                logWriter.println("XML creating for Part " + key + "...");
+                System.out.println("key " + key);
                 
                 Element partDataElement = newDoc.createElement("PartData");
                 partsElement.appendChild(partDataElement);
@@ -196,16 +191,13 @@ public class XMLPartsCreator {
 //              addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry");
                 addToPartDataElement(newDoc, partDataElement, part.electronicPartElement, "ElectronicPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.machineSpecificAttributes, part, "MachineSpecificAttributes", "Machine");
-                
-                logWriter.println("Done");
-                
             }
 
             FileWriter writer = null;
 
             try {
 
-                writer = new FileWriter(new File(processedFolder + "\\" + xmlFileName));
+                writer = new FileWriter(new File(xmlFileName));
 
                 TransformerFactory tranFactory = TransformerFactory.newInstance();
                 Transformer aTransformer = tranFactory.newTransformer();
@@ -221,30 +213,21 @@ public class XMLPartsCreator {
 
             } catch (Exception exp) {
                 exp.printStackTrace();
-                errWriter.println(exp.toString());
             } finally {
                 try {
                     writer.close();
                 } catch (Exception e) {
-                    errWriter.println(e.toString());
                 }
             }
 
             // Testing
             // Result result = new StreamResult(System.out);
-            
-            logWriter.println("Conversion Completed");
-            logWriter.close();
-            reader.close();
 
         } catch (IOException exp) {
             System.err.println(exp.toString());
-            errWriter.println(exp.toString());
         } catch (Exception exp) {
             System.err.println(exp.toString());
-            errWriter.println(exp.toString());
         }
-        errWriter.close();
         return rowsCount;
     }
     
