@@ -56,9 +56,9 @@ public class XMLBomCreator {
 
     }
 
-    public int convertFile(String txtFileName, String xmlFileName, String processedFolder, String operatingSystemSeparator, char delimiter) throws Exception
+    public int convertFile(String txtFileName, String xmlFileName, String processedFolder, char delimiter) throws Exception
     {
-        PrintWriter errWriter = new PrintWriter(processedFolder + operatingSystemSeparator + txtFileName.replace(".txt", ".err"), "UTF-8");
+        PrintWriter errWriter = new PrintWriter(processedFolder + "\\" + txtFileName.replace(".txt", ".err"), "UTF-8");
     	
         int rowsCount = -1;
         try {
@@ -70,13 +70,12 @@ public class XMLBomCreator {
 
             newDoc.appendChild(assembliesElement);
 
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withIgnoreQuotations(true).build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
-            
-            
+
             String[] nextLine;
             int line = 0;
             List<String> headers = new ArrayList<String>();
@@ -86,7 +85,7 @@ public class XMLBomCreator {
             boolean revisionExists = false;
             boolean configurableExists = false;
             
-            PrintWriter logWriter = new PrintWriter(processedFolder + operatingSystemSeparator + txtFileName.replace(".txt", ".log"), "UTF-8");
+            PrintWriter logWriter = new PrintWriter(processedFolder + "\\" + txtFileName.replace(".txt", ".log"), "UTF-8");
             
             while ((nextLine = reader.readNext()) != null) 
             {
@@ -118,8 +117,6 @@ public class XMLBomCreator {
                         		&& !header.equalsIgnoreCase("UnitOfIssue") && !header.equalsIgnoreCase("PartType"))
                         header = StringUtils.remove(WordUtils.capitalizeFully(header, '_'), "_");
 
-                        
-                        
                         if (value.equalsIgnoreCase("yes"))
                         	value = "true";
                         else if (value.equalsIgnoreCase("no"))
@@ -266,7 +263,7 @@ public class XMLBomCreator {
 
             try {
 
-                writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
+                writer = new FileWriter(new File(processedFolder + "\\" + xmlFileName));
 
                 TransformerFactory tranFactory = TransformerFactory.newInstance();
                 Transformer aTransformer = tranFactory.newTransformer();

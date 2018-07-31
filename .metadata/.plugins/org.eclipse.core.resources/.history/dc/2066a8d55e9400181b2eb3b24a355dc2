@@ -296,7 +296,7 @@ public class XMLProcessRevisionCreator {
 
             try {
 
-                writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
+                writer = new FileWriter(new File(processedFolder + "\\" + xmlFileName));
 
                 TransformerFactory tranFactory = TransformerFactory.newInstance();
                 Transformer aTransformer = tranFactory.newTransformer();

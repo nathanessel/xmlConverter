@@ -39,7 +39,9 @@ skip custom field
 7-19-2018 9:00 PM - 1:00 AM 4 hours Started working on A-270, Process Import. Created XMLProcessCreator.jav and completed coding based on spec. Tested functionality and corrected bugs where necessary.  
  
 
+————————
 
+7-30-2018 9:00 PM Reviewing BOM issues with Paul
 
 
 

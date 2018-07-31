@@ -17,9 +17,9 @@ public class CsvConverter {
     	
     		if (filename.endsWith(".txt") || filename.endsWith(".TXT"))
     		{
-    			//XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
+    			XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
     			//XMLPartsCreator creator = new XMLPartsCreator();
-    			XMLBomCreator creator = new XMLBomCreator();
+    			//XMLBomCreator creator = new XMLBomCreator();
     		
     			
     			//----------------Windows------------------------------

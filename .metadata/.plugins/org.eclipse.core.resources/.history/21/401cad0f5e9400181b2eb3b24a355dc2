@@ -17,34 +17,34 @@ public class CsvConverter {
     	
     		if (filename.endsWith(".txt") || filename.endsWith(".TXT"))
     		{
-    			//XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
-    			//XMLPartsCreator creator = new XMLPartsCreator();
-    			XMLBomCreator creator = new XMLBomCreator();
-    		
-    			
-    			//----------------Windows------------------------------
-    			
+    	    	//Windows
     			//File processed = new File(folder.getPath() + "\\processed_" + filename.replace(".txt", ""));
-    			//processed.mkdir();
 
-    			//System.out.println("Converting " + filename + " to " + filename.replace(".txt", ".xml"));
-    			
-    	    	//creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "\\", '|');
-
-       			//Path path1 = Paths.get(folder.getPath() + "\\" + filename);
-       			//Path path2 = Paths.get(processed.getPath() + "\\" + filename);
-    			
-    			// -------------------Unix-----------------------
+    			//Unix
     			File processed = new File(folder.getPath() + "/processed_" + filename.replace(".txt", ""));
+       			
     			processed.mkdir();
     			
     			System.out.println("Converting " + filename + " to " + filename.replace(".txt", ".xml"));
-    	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "/", '|');
+    			
+    			XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
+    			//XMLPartsCreator creator = new XMLPartsCreator();
+    			//XMLBomCreator creator = new XMLBomCreator();
+    			
+    	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), '|'); 
        			
+    	    	//Windows
+       			//Path path1 = Paths.get(folder.getPath() + "\\" + filename);
+       			//Path path2 = Paths.get(processed.getPath() + "\\" + filename);
+       			
+       			//Unix
        			Path path1 = Paths.get(folder.getPath() + "/" + filename);
        			Path path2 = Paths.get(processed.getPath() + "/" + filename);
        			
        			Files.move(path1, path2);
+       			
+       			//file.renameTo(new File(processed.getPath() + "/" + filename));
+       			
     	    }
     		
     		

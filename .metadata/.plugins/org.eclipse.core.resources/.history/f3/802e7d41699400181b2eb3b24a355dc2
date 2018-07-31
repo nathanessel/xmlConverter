@@ -70,13 +70,12 @@ public class XMLBomCreator {
 
             newDoc.appendChild(assembliesElement);
 
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withIgnoreQuotations(true).build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
-            
-            
+
             String[] nextLine;
             int line = 0;
             List<String> headers = new ArrayList<String>();
