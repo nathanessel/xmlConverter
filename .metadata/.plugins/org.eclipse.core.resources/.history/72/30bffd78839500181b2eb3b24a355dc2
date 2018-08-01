@@ -206,7 +206,9 @@ public class XMLBomImportCreator {
                         else if (col >= 18 && col < 34)
                         	readCSVToBomItem(bomItem.bomItemList, header, value);
 
-//                        System.out.println("col " + col);
+                        if (col == 33)
+                        	System.out.println("test");;
+                        System.out.println("col " + col);
                         col++;
                     }
                 }

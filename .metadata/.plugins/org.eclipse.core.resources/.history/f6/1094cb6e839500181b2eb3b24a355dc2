@@ -206,10 +206,15 @@ public class XMLBomImportCreator {
                         else if (col >= 18 && col < 34)
                         	readCSVToBomItem(bomItem.bomItemList, header, value);
 
-//                        System.out.println("col " + col);
+                        if (col == 33)
+                        	System.out.println("test");;
+                        System.out.println("col " + col);
                         col++;
                     }
                 }
+                
+                if (line == 390)
+                System.out.println("line " + line);
                 
                 logWriter.println("Processing line " + line);
 
@@ -252,6 +257,9 @@ public class XMLBomImportCreator {
                 if (amlMap.get(key.split("_")[0]) != null && amlMap.get(key.split("_")[0]).size() > 0)
                 {
                 	Element amlElement = newDoc.createElement("AML");
+                	
+                	if (key.equalsIgnoreCase("1-640456-0"))
+                		System.out.println("test");
 
                 	for (Map.Entry<String, AML> aml : amlMap.get(key.split("_")[0]).entrySet())
                 	{
