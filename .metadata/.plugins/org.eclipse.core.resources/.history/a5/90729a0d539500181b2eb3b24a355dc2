@@ -1,0 +1,12 @@
+package converter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class CustomFields {
+	String name = "";
+	List<BOMItemElement> customFieldList = new ArrayList<BOMItemElement>();
+
+}

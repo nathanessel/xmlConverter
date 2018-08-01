@@ -1,0 +1,14 @@
+package converter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BomItem {
+	String name = "";
+	List<BOMItemElement> bomItemList = new ArrayList<BOMItemElement>();
+	Map<String, AML> amlElement = new HashMap<String, AML>();
+	Map<String, altlPN> altlPNElement = new HashMap<String, AltlPN>();
+	
+}

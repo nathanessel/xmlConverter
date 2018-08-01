@@ -1,0 +1,14 @@
+package converter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class AltlPN {
+	String name = "";
+	List<ProcessRevisionDataElement> stepsList = new ArrayList<ProcessRevisionDataElement>();
+	Map<String, Documents> documentsElement = new HashMap<String, Documents>();
+	Map<String, Activities> activitiesElement = new HashMap<String, Activities>();
+
+}

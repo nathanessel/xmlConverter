@@ -43,7 +43,9 @@ skip custom field
 
 7-30-2018 9:00 - 11:00 PM Reviewing BOM issues with Paul.  Fixed issue with quotations.  Created new .exe file.
 
-7-31-2018 8:30 
+7-31-2018 8:30 - 8:45 PM Renamed AMLEntry tag to AML and compiled new .exe file
+
+7-31-2018 10:15 - Paul called explaining which Tags need to be repeating for the BOM conversion.
 
 
 

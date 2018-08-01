@@ -8,7 +8,7 @@ import java.util.Map;
 public class Operations {
 	String name = "";
 	List<ProcessRevisionDataElement> operationsList = new ArrayList<ProcessRevisionDataElement>();
-	Map<String, Steps> stepsElement = new HashMap<String, Steps>();
-	Map<String, ExitPathways> exitPathwaysElement = new HashMap<String, ExitPathways>();
+	Map<String, Steps> stepsMap = new HashMap<String, Steps>();
+	Map<String, ExitPathways> exitPathwaysMap = new HashMap<String, ExitPathways>();
 	
 }

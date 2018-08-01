@@ -16,8 +16,4 @@ public class ProcessRevision {
 	public ProcessRevision(String assemblyName) {
 		this.assemblyName = assemblyName;
 	}
-	
-	public void clearProcessRevisionDataElements() {
-	}
-
 }
