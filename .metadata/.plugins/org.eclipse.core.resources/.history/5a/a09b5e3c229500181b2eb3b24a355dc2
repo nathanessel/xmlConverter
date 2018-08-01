@@ -91,7 +91,7 @@ public class XMLBomCreator {
             while ((nextLine = reader.readNext()) != null) 
             {
                 Element bomItemElement = newDoc.createElement("BOMItem");
-                Element amlElement = newDoc.createElement("AML");
+                Element amlElement = newDoc.createElement("AMLElement");
                 Element amlEntryElement = newDoc.createElement("Entry");
                 Element altlPNElement = newDoc.createElement("AltlPN");
                 Element altlPNEntryElement = newDoc.createElement("Entry");

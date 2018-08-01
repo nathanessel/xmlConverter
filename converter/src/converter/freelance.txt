@@ -41,7 +41,9 @@ skip custom field
 
 ————————
 
-7-30-2018 9:00 PM Reviewing BOM issues with Paul
+7-30-2018 9:00 - 11:00 PM Reviewing BOM issues with Paul.  Fixed issue with quotations.  Created new .exe file.
+
+7-31-2018 8:30 
 
 
 
