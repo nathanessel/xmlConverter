@@ -25,6 +25,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -111,10 +113,10 @@ public class XMLBomCreator {
                     {
                         String header = headers.get(col);
                         
-//                        if (!header.equalsIgnoreCase("ConfigurationOption") && !header.equalsIgnoreCase("ConsolidatedReferences") && !header.equalsIgnoreCase("CustomerPartNumber") && !header.equalsIgnoreCase("InternalPartNumber") && !header.equalsIgnoreCase("IsSubAssembly") && 
-//                        		!header.equalsIgnoreCase("IsSubAssembly") && !header.equalsIgnoreCase("ItemNumber") && !header.equalsIgnoreCase("OptionCode") && !header.equalsIgnoreCase("PartRevision") && !header.equalsIgnoreCase("RevisionMode") && !header.equalsIgnoreCase("RevisionMode") 
-//                        		&& !header.equalsIgnoreCase("UnitOfIssue") && !header.equalsIgnoreCase("PartType"))
-//                        header = StringUtils.remove(WordUtils.capitalizeFully(header, '_'), "_");
+                        if (!header.equalsIgnoreCase("ConfigurationOption") && !header.equalsIgnoreCase("ConsolidatedReferences") && !header.equalsIgnoreCase("CustomerPartNumber") && !header.equalsIgnoreCase("InternalPartNumber") && !header.equalsIgnoreCase("IsSubAssembly") && 
+                        		!header.equalsIgnoreCase("IsSubAssembly") && !header.equalsIgnoreCase("ItemNumber") && !header.equalsIgnoreCase("OptionCode") && !header.equalsIgnoreCase("PartRevision") && !header.equalsIgnoreCase("RevisionMode") && !header.equalsIgnoreCase("RevisionMode") 
+                        		&& !header.equalsIgnoreCase("UnitOfIssue") && !header.equalsIgnoreCase("PartType"))
+                        header = StringUtils.remove(WordUtils.capitalizeFully(header, '_'), "_");
 
                         
                         
