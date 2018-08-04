@@ -329,6 +329,8 @@ public class XMLProcessRevisionCreator {
             } finally {
             	try {
             		writer.close();
+            		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
+            				new File(xmlDestination).toPath(), StandardCopyOption.REPLACE_EXISTING);
             	} catch (Exception e) {
             		errWriter.println(e.toString());
             	}
@@ -340,9 +342,6 @@ public class XMLProcessRevisionCreator {
             logWriter.println("Conversion Completed");
             logWriter.close();
             reader.close();
-            
-    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File(xmlDestination).toPath(), StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
             System.err.println(exp.toString());

@@ -55,7 +55,9 @@ skip custom field
 
 8-4-2018 2:30 PM - 3:00 PM .5 hrs -  A-267 Reorder tags and Part Numbers to match the order in the .txt file
 
-8-4-2018 3:00 PM
+8-4-2018 3:00 PM - 4:00 PM 1 hr - A-269 completed coding for the Job Import and sent followup to Paul.
+
+8-4-2018 5:00 PM - 
 
 
 
