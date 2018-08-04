@@ -296,7 +296,7 @@ public class XMLProcessRevisionCreator {
             
             try {
 
-            	File file = new File(new File("").getAbsoluteFile() + "ProcessRevisionConverter.ini");
+            	File file = new File(txtFileName.replace(".txt", ".ini"));
 
             	Scanner input = new Scanner(file);
             	
