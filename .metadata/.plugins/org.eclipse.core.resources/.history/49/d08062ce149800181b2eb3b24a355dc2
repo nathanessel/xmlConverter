@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -37,7 +37,7 @@ public class XMLPartsCreator {
     protected DocumentBuilderFactory domFactory = null;
     protected DocumentBuilder domBuilder = null;
 
-    Map<String, Part> partsMap = new LinkedHashMap<String,Part>();
+    Map<String, Part> partsMap = new HashMap<String,Part>();
 	HashSet<String> partSet = new HashSet<String>();
     
     public XMLPartsCreator() {
@@ -121,7 +121,7 @@ public class XMLPartsCreator {
                         if (col < 7 && !partExists)
                         	readCSVToPartData(part.partDataElement, header, value);
                         
-                        else if (col == 7 && !partExists)
+                        else if (col == 7 && partExists)
                         	readCSVToPartData(part.customerElement, header, value);
                         
                         else if (col > 7 && col < 12 && !partExists)

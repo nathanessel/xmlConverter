@@ -24,29 +24,29 @@ public class CsvConverter {
     			
     			//----------------Windows------------------------------
     			
-    			File processed = new File(folder.getPath() + "\\processed_" + filename.replace(".txt", ""));
-    			processed.mkdir();
-
-    			System.out.println("Converting " + filename + " to " + filename.replace(".txt", ".xml"));
-    			
-    	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "\\", '|');
-
-       			Path path1 = Paths.get(folder.getPath() + "\\" + filename);
-       			Path path2 = Paths.get(processed.getPath() + "\\" + filename);
-    			
-    			Files.move(path1, path2);
-    			
-    			// -------------------Unix-----------------------
-//    			File processed = new File(folder.getPath() + "/processed_" + filename.replace(".txt", ""));
+//    			File processed = new File(folder.getPath() + "\\processed_" + filename.replace(".txt", ""));
 //    			processed.mkdir();
 //
 //    			System.out.println("Converting " + filename + " to " + filename.replace(".txt", ".xml"));
-//    			creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "/", '|');
+//    			
+//    	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "\\", '|');
 //
-//    			Path path1 = Paths.get(folder.getPath() + "/" + filename);
-//    			Path path2 = Paths.get(processed.getPath() + "/" + filename);
-//
+//       			Path path1 = Paths.get(folder.getPath() + "\\" + filename);
+//       			Path path2 = Paths.get(processed.getPath() + "\\" + filename);
+//    			
 //    			Files.move(path1, path2);
+    			
+    			// -------------------Unix-----------------------
+    			File processed = new File(folder.getPath() + "/processed_" + filename.replace(".txt", ""));
+    			processed.mkdir();
+
+    			System.out.println("Converting " + filename + " to " + filename.replace(".txt", ".xml"));
+    			creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "/", '|');
+
+    			Path path1 = Paths.get(folder.getPath() + "/" + filename);
+    			Path path2 = Paths.get(processed.getPath() + "/" + filename);
+
+    			Files.move(path1, path2);
     	    }
     		
     		

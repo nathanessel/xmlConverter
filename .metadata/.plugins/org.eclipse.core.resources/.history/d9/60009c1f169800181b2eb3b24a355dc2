@@ -121,7 +121,7 @@ public class XMLPartsCreator {
                         if (col < 7 && !partExists)
                         	readCSVToPartData(part.partDataElement, header, value);
                         
-                        else if (col == 7 && !partExists)
+                        else if (col == 7 && partExists)
                         	readCSVToPartData(part.customerElement, header, value);
                         
                         else if (col > 7 && col < 12 && !partExists)
