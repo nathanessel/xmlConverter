@@ -63,7 +63,7 @@ public class XMLProcessRevisionCreator {
             Element processRevisionElement = newDoc.createElement("ProcessRevision");
             newDoc.appendChild(processRevisionElement);
 
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withIgnoreQuotations(true).build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             

@@ -45,7 +45,15 @@ skip custom field
 
 7-31-2018 8:30 - 8:45 PM Renamed AMLEntry tag to AML and compiled new .exe file
 
-7-31-2018 10:15 - Paul called explaining which Tags need to be repeating for the BOM conversion.
+7-31-2018 10:15 - 2:30 AM 4.25 hours Paul called explaining which Tags need to be repeating for the BOM conversion.
+
+8-3-2018 8:30 PM 9:10 PM Talked to Paul about re-ordering tags in order to match spec and starting the A-269 import
+
+8-4-2018 11:30 AM - 12:00 PM A-268 - Reordered tags to match spec order.
+
+
+
+
 
 
 

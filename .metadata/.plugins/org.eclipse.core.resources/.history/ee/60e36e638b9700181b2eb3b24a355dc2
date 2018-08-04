@@ -247,6 +247,8 @@ public class XMLBomImportCreator {
                 Element bomItemElement = newDoc.createElement("BOMItem");
                 bomItem = entry.getValue();
 
+                addToBomItemElement(newDoc, bomItemElement, bomItem.bomItemList);
+
                 if (amlMap.get(key.split("_")[0]) != null && amlMap.get(key.split("_")[0]).size() > 0)
                 {
                 	Element amlElement = newDoc.createElement("AML");
@@ -304,8 +306,6 @@ public class XMLBomImportCreator {
                     bomItemElement.appendChild(customFieldsElement);
                 }
 
-                addToBomItemElement(newDoc, bomItemElement, bomItem.bomItemList);
-                
                 bomItemsElement.appendChild(bomItemElement);
 
                 
