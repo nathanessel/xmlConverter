@@ -255,9 +255,10 @@ public class XMLProcessRevisionCreator {
                             }
                             activitiesElement.appendChild(activityElement);
                         }
-
-                        stepElement.appendChild(documentsElement);
+                        
                         stepElement.appendChild(activitiesElement);
+                        stepElement.appendChild(documentsElement);
+                        
                         stepsElement.appendChild(stepElement);
                     }
                     

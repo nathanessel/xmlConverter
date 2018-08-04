@@ -1,0 +1,3438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProcessRevision>
+    <ProcessRevisionData>
+        <Assembly>117167-REV1-REI</Assembly>
+        <AssemblyRevision>1_1</AssemblyRevision>
+        <Name>A01</Name>
+        <TrackingMode>Non-Serialized</TrackingMode>
+        <RouteEnforcement>Disabled</RouteEnforcement>
+        <ApprovalProcess>Approval Process</ApprovalProcess>
+        <ReleaseToProduction>false</ReleaseToProduction>
+        <Operations>
+            <Operation>
+                <Name>5 SERIAL</Name>
+                <Sequence>1</Sequence>
+                <Description>SERIALIZATION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>15.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>5 SERIAL</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>5 SERIAL
+
+SERIALIZE.
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+0123456789012345678901234567890123456789
+AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD
+AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD
+AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD
+AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD
+AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD
+AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD
+AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD 
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 5 SERIAL</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 5 SERIAL</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>10 PICK</Name>
+                <Sequence>2</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>9360</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>10 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>10 PICK
+
+PICK SMT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 10 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 10 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>30 PICK</Name>
+                <Sequence>3</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>1548</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>30 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>30 PICK
+
+PICK THT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 30 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 30 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>40 PICK</Name>
+                <Sequence>4</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>720</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>40 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>40 PICK
+
+PICK POSTWAVE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 40 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 40 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>60 SMTLD</Name>
+                <Sequence>5</Sequence>
+                <Description>SMT LOAD</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>23616</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>60 SMTLD</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>60 SMTLD
+
+SMT LOAD AND SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 60 SMTLD</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 60 SMTLD</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>80 SMTR1</Name>
+                <Sequence>6</Sequence>
+                <Description>SMT RUN LINE 1</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>90.324</EstCycleTime>
+                <SetupTime>900</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>80 SMTR1</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>80 SMTR1
+
+SMT RUN TIME.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 80 SMTR1</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 80 SMTR1</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>95 CLEANA</Name>
+                <Sequence>7</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>29.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>95 CLEANA</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>95 CLEANA
+
+AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 95 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 95 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>110 INSSMT</Name>
+                <Sequence>8</Sequence>
+                <Description>INSPECTION - SMT</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>451.656</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>110 INSSMT</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>110 INSSMT
+
+AOI INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 110 INSSMT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 110 INSSMT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>120 XRAY3D</Name>
+                <Sequence>9</Sequence>
+                <Description>3-D XRAY INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>299.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>120 XRAY3D</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>120 XRAY3D
+
+X-RAY INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 120 XRAY3D</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 120 XRAY3D</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>140 PREP</Name>
+                <Sequence>10</Sequence>
+                <Description>THT COMPONENT PREP</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>65.988</EstCycleTime>
+                <SetupTime>2556</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>140 PREP</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>140 PREP
+
+THT PREP / SL SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 140 PREP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 140 PREP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>150 PREWAV</Name>
+                <Sequence>11</Sequence>
+                <Description>THT PREWAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>176.004</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>150 PREWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>150 PREWAV
+
+SLIDE LINE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 150 PREWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 150 PREWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>157 SOLDRW</Name>
+                <Sequence>12</Sequence>
+                <Description>WAVE SOLDER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>90</EstCycleTime>
+                <SetupTime>180</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>157 SOLDRW</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>157 SOLDRW
+
+WAVE SOLDER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 157 SOLDRW</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 157 SOLDRW</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>160 CLEANA</Name>
+                <Sequence>13</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>29.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>160 CLEANA</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>160 CLEANA
+
+AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 160 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 160 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>170 POSWAV</Name>
+                <Sequence>14</Sequence>
+                <Description>POST WAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>215.388</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>170 POSWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>170 POSWAV
+
+POSTWAVE ELECTRICAL ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 170 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 170 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>190 CONCOT</Name>
+                <Sequence>15</Sequence>
+                <Description>CONFORMAL COAT</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>235.836</EstCycleTime>
+                <SetupTime>900</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>190 CONCOT</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>190 CONCOT
+
+CONFORMAL COAT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 190 CONCOT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 190 CONCOT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>195 CCDMSK</Name>
+                <Sequence>16</Sequence>
+                <Description>CONFRMAL COAT DEMASK</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>299.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>195 CCDMSK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>195 CCDMSK
+
+CONFORMAL COAT (DE-MASK IDENTIFIED
+PARTS).
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 195 CCDMSK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 195 CCDMSK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>197 POSWAV</Name>
+                <Sequence>17</Sequence>
+                <Description>POST WAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>237.6</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>197 POSWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>197 POSWAV
+
+POSTWAVE ELECTRICAL ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 197 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 197 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>200 TESTF</Name>
+                <Sequence>18</Sequence>
+                <Description>FUNCTIONAL TEST</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>450</EstCycleTime>
+                <SetupTime>288</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>200 TESTF</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>200 TESTF
+
+FUNCTIONAL TEST.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 200 TESTF</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 200 TESTF</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>210 INSPIP</Name>
+                <Sequence>19</Sequence>
+                <Description>INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>260.568</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>210 INSPIP</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>210 INSPIP
+
+FINAL INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 210 INSPIP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 210 INSPIP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>220 PACKSR</Name>
+                <Sequence>20</Sequence>
+                <Description>PACKAGE - STOCKROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>60.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>220 PACKSR</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>220 PACKSR
+
+FINAL PACKAGE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 220 PACKSR</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 220 PACKSR</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>230 DOCSTG</Name>
+                <Sequence>21</Sequence>
+                <Description>DOCUMENT STORAGE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>230 DOCSTG</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>230 DOCSTG
+
+DOCUMENT STORAGE.
+SCAN ROUTER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 230 DOCSTG</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 230 DOCSTG</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>Rework</Name>
+                <Sequence>-1</Sequence>
+                <Description>Rework</Description>
+                <AllowProductScrapping>true</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>Rework</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents/>
+                        <Activities>
+                            <Activity>
+                                <Instruction>Rework</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Rework</Name>
+                        <ActivitiesCompleted>true</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+        </Operations>
+    </ProcessRevisionData>
+    <ProcessRevisionData>
+        <Assembly>117167-REV2-REI</Assembly>
+        <AssemblyRevision>2_1</AssemblyRevision>
+        <Name>A01</Name>
+        <TrackingMode>Non-Serialized</TrackingMode>
+        <RouteEnforcement>Disabled</RouteEnforcement>
+        <ApprovalProcess>Approval Process</ApprovalProcess>
+        <ReleaseToProduction>false</ReleaseToProduction>
+        <Operations>
+            <Operation>
+                <Name>5 SERIAL</Name>
+                <Sequence>1</Sequence>
+                <Description>SERIALIZATION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>15.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>5 SERIAL</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>5 SERIAL
+
+SERIALIZE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 5 SERIAL</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 5 SERIAL</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>10 PICK</Name>
+                <Sequence>2</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>9360</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>10 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>10 PICK
+
+PICK SMT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 10 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 10 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>30 PICK</Name>
+                <Sequence>3</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>1548</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>30 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>30 PICK
+
+PICK THT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 30 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 30 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>40 PICK</Name>
+                <Sequence>4</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>720</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>40 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>40 PICK
+
+PICK POSTWAVE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 40 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 40 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>60 SMTLD</Name>
+                <Sequence>5</Sequence>
+                <Description>SMT LOAD</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>23616</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>60 SMTLD</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>60 SMTLD
+
+SMT LOAD AND SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 60 SMTLD</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 60 SMTLD</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>80 SMTR1</Name>
+                <Sequence>6</Sequence>
+                <Description>SMT RUN LINE 1</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>90.324</EstCycleTime>
+                <SetupTime>900</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>80 SMTR1</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>80 SMTR1
+
+SMT RUN TIME.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 80 SMTR1</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 80 SMTR1</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>95 CLEANA</Name>
+                <Sequence>7</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>29.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>95 CLEANA</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>95 CLEANA
+
+AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 95 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 95 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>110 INSSMT</Name>
+                <Sequence>8</Sequence>
+                <Description>INSPECTION - SMT</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>451.656</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>110 INSSMT</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>110 INSSMT
+
+AOI INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 110 INSSMT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 110 INSSMT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>120 XRAY3D</Name>
+                <Sequence>9</Sequence>
+                <Description>3-D XRAY INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>299.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>120 XRAY3D</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>120 XRAY3D
+
+X-RAY INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 120 XRAY3D</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 120 XRAY3D</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>140 PREP</Name>
+                <Sequence>10</Sequence>
+                <Description>THT COMPONENT PREP</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>65.988</EstCycleTime>
+                <SetupTime>2556</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>140 PREP</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>140 PREP
+
+THT PREP / SL SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 140 PREP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 140 PREP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>150 PREWAV</Name>
+                <Sequence>11</Sequence>
+                <Description>THT PREWAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>176.004</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>150 PREWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>150 PREWAV
+
+SLIDE LINE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 150 PREWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 150 PREWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>157 SOLDRW</Name>
+                <Sequence>12</Sequence>
+                <Description>WAVE SOLDER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>90</EstCycleTime>
+                <SetupTime>180</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>157 SOLDRW</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>157 SOLDRW
+
+WAVE SOLDER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 157 SOLDRW</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 157 SOLDRW</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>160 CLEANA</Name>
+                <Sequence>13</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>29.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>160 CLEANA</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>160 CLEANA
+
+AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 160 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 160 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>170 POSWAV</Name>
+                <Sequence>14</Sequence>
+                <Description>POST WAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>215.388</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>170 POSWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>170 POSWAV
+
+POSTWAVE ELECTRICAL ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 170 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 170 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>190 CONCOT</Name>
+                <Sequence>15</Sequence>
+                <Description>CONFORMAL COAT</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>235.836</EstCycleTime>
+                <SetupTime>900</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>190 CONCOT</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>190 CONCOT
+
+CONFORMAL COAT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 190 CONCOT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 190 CONCOT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>195 CCDMSK</Name>
+                <Sequence>16</Sequence>
+                <Description>CONFRMAL COAT DEMASK</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>299.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>195 CCDMSK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>195 CCDMSK
+
+CONFORMAL COAT (DE-MASK IDENTIFIED
+PARTS).
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 195 CCDMSK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 195 CCDMSK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>197 POSWAV</Name>
+                <Sequence>17</Sequence>
+                <Description>POST WAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>237.6</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>197 POSWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>197 POSWAV
+
+POSTWAVE ELECTRICAL ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 197 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 197 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>200 TESTF</Name>
+                <Sequence>18</Sequence>
+                <Description>FUNCTIONAL TEST</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>450</EstCycleTime>
+                <SetupTime>288</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>200 TESTF</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>200 TESTF
+
+FUNCTIONAL TEST.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 200 TESTF</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 200 TESTF</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>210 INSPIP</Name>
+                <Sequence>19</Sequence>
+                <Description>INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>260.568</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>210 INSPIP</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>210 INSPIP
+
+FINAL INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 210 INSPIP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 210 INSPIP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>220 PACKSR</Name>
+                <Sequence>20</Sequence>
+                <Description>PACKAGE - STOCKROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>60.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>220 PACKSR</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>220 PACKSR
+
+FINAL PACKAGE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 220 PACKSR</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 220 PACKSR</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>230 DOCSTG</Name>
+                <Sequence>21</Sequence>
+                <Description>DOCUMENT STORAGE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>230 DOCSTG</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>230 DOCSTG
+
+DOCUMENT STORAGE.
+SCAN ROUTER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 230 DOCSTG</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 230 DOCSTG</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>Rework</Name>
+                <Sequence>-1</Sequence>
+                <Description>Rework</Description>
+                <AllowProductScrapping>true</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>Rework</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents/>
+                        <Activities>
+                            <Activity>
+                                <Instruction>Rework</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Rework</Name>
+                        <ActivitiesCompleted>true</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+        </Operations>
+    </ProcessRevisionData>
+    <ProcessRevisionData>
+        <Assembly>117167-REV3-REI</Assembly>
+        <AssemblyRevision>3_2</AssemblyRevision>
+        <Name>A01</Name>
+        <TrackingMode>Non-Serialized</TrackingMode>
+        <RouteEnforcement>Disabled</RouteEnforcement>
+        <ApprovalProcess>Approval Process</ApprovalProcess>
+        <ReleaseToProduction>false</ReleaseToProduction>
+        <Operations>
+            <Operation>
+                <Name>5 SERIAL</Name>
+                <Sequence>1</Sequence>
+                <Description>SERIALIZATION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>15.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>5 SERIAL</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>5 SERIAL
+
+SERIALIZE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 5 SERIAL</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 5 SERIAL</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>10 PICK</Name>
+                <Sequence>2</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>9360</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>10 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>10 PICK
+
+PICK SMT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 10 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 10 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>30 PICK</Name>
+                <Sequence>3</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>468</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>30 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>30 PICK
+
+PICK THT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 30 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 30 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>35 PICK</Name>
+                <Sequence>4</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>1080</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>35 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>35 PICK
+
+PICK THT PART-BIN.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 35 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 35 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>40 PICK</Name>
+                <Sequence>5</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>720</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>40 PICK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>40 PICK
+
+PICK POSTWAVE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 40 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 40 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>60 SMTLD</Name>
+                <Sequence>6</Sequence>
+                <Description>SMT LOAD</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>23616</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>60 SMTLD</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>60 SMTLD
+
+SMT LOAD AND SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 60 SMTLD</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 60 SMTLD</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>80 SMTR1</Name>
+                <Sequence>7</Sequence>
+                <Description>SMT RUN LINE 1</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>90.324</EstCycleTime>
+                <SetupTime>900</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>80 SMTR1</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>80 SMTR1
+
+SMT RUN TIME.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 80 SMTR1</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 80 SMTR1</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>95 CLEANA</Name>
+                <Sequence>8</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>29.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>95 CLEANA</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>95 CLEANA
+
+AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 95 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 95 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>110 INSSMT</Name>
+                <Sequence>9</Sequence>
+                <Description>INSPECTION - SMT</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>451.656</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>110 INSSMT</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>110 INSSMT
+
+AOI INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 110 INSSMT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 110 INSSMT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>120 XRAY3D</Name>
+                <Sequence>10</Sequence>
+                <Description>3-D XRAY INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>299.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>120 XRAY3D</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>120 XRAY3D
+
+X-RAY INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 120 XRAY3D</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 120 XRAY3D</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>140 PREP</Name>
+                <Sequence>11</Sequence>
+                <Description>THT COMPONENT PREP</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>65.988</EstCycleTime>
+                <SetupTime>2556</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>140 PREP</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>140 PREP
+
+THT PREP / SL SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 140 PREP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 140 PREP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>150 PREWAV</Name>
+                <Sequence>12</Sequence>
+                <Description>THT PREWAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>176.004</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>150 PREWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>150 PREWAV
+
+SLIDE LINE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 150 PREWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 150 PREWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>157 SOLDRW</Name>
+                <Sequence>13</Sequence>
+                <Description>WAVE SOLDER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>90</EstCycleTime>
+                <SetupTime>180</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>157 SOLDRW</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>157 SOLDRW
+
+WAVE SOLDER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 157 SOLDRW</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 157 SOLDRW</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>160 CLEANA</Name>
+                <Sequence>14</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>29.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>160 CLEANA</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>160 CLEANA
+
+AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 160 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 160 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>170 POSWAV</Name>
+                <Sequence>15</Sequence>
+                <Description>POST WAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>215.388</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>170 POSWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>170 POSWAV
+
+POSTWAVE ELECTRICAL ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 170 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 170 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>190 CONCOT</Name>
+                <Sequence>16</Sequence>
+                <Description>CONFORMAL COAT</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>235.836</EstCycleTime>
+                <SetupTime>900</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>190 CONCOT</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>190 CONCOT
+
+CONFORMAL COAT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 190 CONCOT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 190 CONCOT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>195 CCDMSK</Name>
+                <Sequence>17</Sequence>
+                <Description>CONFRMAL COAT DEMASK</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>299.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>195 CCDMSK</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>195 CCDMSK
+
+CONFORMAL COAT (DE-MASK IDENTIFIED
+PARTS).
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 195 CCDMSK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 195 CCDMSK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>197 POSWAV</Name>
+                <Sequence>18</Sequence>
+                <Description>POST WAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>237.6</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>197 POSWAV</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>197 POSWAV
+
+POSTWAVE ELECTRICAL ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 197 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 197 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>200 TESTF</Name>
+                <Sequence>19</Sequence>
+                <Description>FUNCTIONAL TEST</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>450</EstCycleTime>
+                <SetupTime>288</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>200 TESTF</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>200 TESTF
+
+FUNCTIONAL TEST.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 200 TESTF</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 200 TESTF</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>210 INSPIP</Name>
+                <Sequence>20</Sequence>
+                <Description>INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>260.568</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>210 INSPIP</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>210 INSPIP
+
+FINAL INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 210 INSPIP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 210 INSPIP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>220 PACKSR</Name>
+                <Sequence>21</Sequence>
+                <Description>PACKAGE - STOCKROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>60.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>220 PACKSR</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>220 PACKSR
+
+FINAL PACKAGE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 220 PACKSR</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 220 PACKSR</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>230 DOCSTG</Name>
+                <Sequence>22</Sequence>
+                <Description>DOCUMENT STORAGE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>230 DOCSTG</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\UNC Path\</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>230 DOCSTG
+
+DOCUMENT STORAGE.
+SCAN ROUTER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>REWORK 230 DOCSTG</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 230 DOCSTG</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>Rework</Name>
+                <Sequence>-1</Sequence>
+                <Description>Rework</Description>
+                <AllowProductScrapping>true</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>Rework</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>false</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents/>
+                        <Activities>
+                            <Activity>
+                                <Instruction>Rework</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template with BOM Block</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Rework</Name>
+                        <ActivitiesCompleted>true</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+        </Operations>
+    </ProcessRevisionData>
+</ProcessRevision>

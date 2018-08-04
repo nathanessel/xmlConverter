@@ -1,0 +1,260 @@
+Assembly|AssemblyRevision|Name|TrackingMode|RouteEnforcement|ApprovalProcess|ReleaseToProduction|Name|Sequence|Description|AllowProductScrapping|AllowOperationRepeat|OperationMode|AllowBarcodeRanges|AllowMultipleUnits|EstCycleTime|SetupTime|ERPRoutePointName|Name|WorkInstructionTemplate|OperatorInterfaceTemplate|AnyOrderMode|Required|Document|Instruction|WorkInstructionTemplate|Required|Name|ActivitiesCompleted|ChangeProductStatus|Status|RouteTo|ReturnTo
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|5 SERIAL|1|SERIALIZATION|no|yes|FullTracking|no|no|15.012|0||5 SERIAL|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"5 SERIAL
+SERIALIZE.01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD "|Fitted Work Instruction Template with BOM Block|no|REWORK 5 SERIAL|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|10 PICK|2|PICK - STOREROOM|no|yes|FullTracking|no|no|0|9360||10 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"10 PICK
+PICK SMT PARTS."|Fitted Work Instruction Template with BOM Block|no|REWORK 10 PICK|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|30 PICK|3|PICK - STOREROOM|no|yes|FullTracking|no|no|0|1548||30 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"30 PICK
+PICK THT PARTS."|Fitted Work Instruction Template with BOM Block|no|REWORK 30 PICK|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|40 PICK|4|PICK - STOREROOM|no|yes|FullTracking|no|no|0|720||40 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"40 PICK
+PICK POSTWAVE."|Fitted Work Instruction Template with BOM Block|no|REWORK 40 PICK|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|60 SMTLD|5|SMT LOAD|no|yes|FullTracking|no|no|0|23616||60 SMTLD|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"60 SMTLD
+SMT LOAD AND SETUP."|Fitted Work Instruction Template with BOM Block|no|REWORK 60 SMTLD|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|80 SMTR1|6|SMT RUN LINE 1|no|yes|FullTracking|no|no|90.324|900||80 SMTR1|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"80 SMTR1
+SMT RUN TIME."|Fitted Work Instruction Template with BOM Block|no|REWORK 80 SMTR1|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|95 CLEANA|7|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||95 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"95 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|REWORK 95 CLEANA|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|110 INSSMT|8|INSPECTION - SMT|no|yes|FullTracking|no|no|451.656|0||110 INSSMT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"110 INSSMT
+AOI INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 110 INSSMT|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|120 XRAY3D|9|3-D XRAY INSPECTION|no|yes|FullTracking|no|no|299.988|0||120 XRAY3D|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"120 XRAY3D
+X-RAY INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 120 XRAY3D|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|140 PREP|10|THT COMPONENT PREP|no|yes|FullTracking|no|no|65.988|2556||140 PREP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"140 PREP
+THT PREP / SL SETUP."|Fitted Work Instruction Template with BOM Block|no|REWORK 140 PREP|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|150 PREWAV|11|THT PREWAVE|no|yes|FullTracking|no|no|176.004|0||150 PREWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"150 PREWAV
+SLIDE LINE."|Fitted Work Instruction Template with BOM Block|no|REWORK 150 PREWAV|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|157 SOLDRW|12|WAVE SOLDER|no|yes|FullTracking|no|no|90|180||157 SOLDRW|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"157 SOLDRW
+WAVE SOLDER."|Fitted Work Instruction Template with BOM Block|no|REWORK 157 SOLDRW|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|160 CLEANA|13|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||160 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"160 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|REWORK 160 CLEANA|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|170 POSWAV|14|POST WAVE|no|yes|FullTracking|no|no|215.388|0||170 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"170 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|REWORK 170 POSWAV|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|190 CONCOT|15|CONFORMAL COAT|no|yes|FullTracking|no|no|235.836|900||190 CONCOT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"190 CONCOT
+CONFORMAL COAT."|Fitted Work Instruction Template with BOM Block|no|REWORK 190 CONCOT|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|195 CCDMSK|16|CONFRMAL COAT DEMASK|no|yes|FullTracking|no|no|299.988|0||195 CCDMSK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"195 CCDMSK
+CONFORMAL COAT (DE-MASK IDENTIFIEDPARTS)."|Fitted Work Instruction Template with BOM Block|no|REWORK 195 CCDMSK|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|197 POSWAV|17|POST WAVE|no|yes|FullTracking|no|no|237.6|0||197 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"197 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|REWORK 197 POSWAV|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|200 TESTF|18|FUNCTIONAL TEST|no|yes|FullTracking|no|no|450|288||200 TESTF|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"200 TESTF
+FUNCTIONAL TEST."|Fitted Work Instruction Template with BOM Block|no|REWORK 200 TESTF|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|210 INSPIP|19|INSPECTION|no|yes|FullTracking|no|no|260.568|0||210 INSPIP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"210 INSPIP
+FINAL INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 210 INSPIP|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|220 PACKSR|20|PACKAGE - STOCKROOM|no|yes|FullTracking|no|no|60.012|0||220 PACKSR|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"220 PACKSR
+FINAL PACKAGE."|Fitted Work Instruction Template with BOM Block|no|REWORK 220 PACKSR|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|230 DOCSTG|21|DOCUMENT STORAGE|no|yes|FullTracking|no|no|0|0||230 DOCSTG|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"230 DOCSTG
+DOCUMENT STORAGE.SCAN ROUTER."|Fitted Work Instruction Template with BOM Block|no|REWORK 230 DOCSTG|no|yes|passed|Rework|Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|5 SERIAL|22|SERIALIZATION|no|yes|FullTracking|no|no|15.012|0||5 SERIAL|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"5 SERIAL
+SERIALIZE.01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789AAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDDAAAAAAAAA BBBBBBBBB CCCCCCCCC DDDDDDDDD "|Fitted Work Instruction Template with BOM Block|no|JIT 5 SERIAL|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|10 PICK|23|PICK - STOREROOM|no|yes|FullTracking|no|no|0|9360||10 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"10 PICK
+PICK SMT PARTS."|Fitted Work Instruction Template with BOM Block|no|JIT 10 PICK|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|30 PICK|24|PICK - STOREROOM|no|yes|FullTracking|no|no|0|1548||30 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"30 PICK
+PICK THT PARTS."|Fitted Work Instruction Template with BOM Block|no|JIT 30 PICK|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|40 PICK|25|PICK - STOREROOM|no|yes|FullTracking|no|no|0|720||40 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"40 PICK
+PICK POSTWAVE."|Fitted Work Instruction Template with BOM Block|no|JIT 40 PICK|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|60 SMTLD|26|SMT LOAD|no|yes|FullTracking|no|no|0|23616||60 SMTLD|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"60 SMTLD
+SMT LOAD AND SETUP."|Fitted Work Instruction Template with BOM Block|no|JIT 60 SMTLD|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|80 SMTR1|27|SMT RUN LINE 1|no|yes|FullTracking|no|no|90.324|900||80 SMTR1|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"80 SMTR1
+SMT RUN TIME."|Fitted Work Instruction Template with BOM Block|no|JIT 80 SMTR1|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|95 CLEANA|28|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||95 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"95 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|JIT 95 CLEANA|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|110 INSSMT|29|INSPECTION - SMT|no|yes|FullTracking|no|no|451.656|0||110 INSSMT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"110 INSSMT
+AOI INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 110 INSSMT|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|120 XRAY3D|30|3-D XRAY INSPECTION|no|yes|FullTracking|no|no|299.988|0||120 XRAY3D|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"120 XRAY3D
+X-RAY INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 120 XRAY3D|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|140 PREP|31|THT COMPONENT PREP|no|yes|FullTracking|no|no|65.988|2556||140 PREP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"140 PREP
+THT PREP / SL SETUP."|Fitted Work Instruction Template with BOM Block|no|JIT 140 PREP|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|150 PREWAV|32|THT PREWAVE|no|yes|FullTracking|no|no|176.004|0||150 PREWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"150 PREWAV
+SLIDE LINE."|Fitted Work Instruction Template with BOM Block|no|JIT 150 PREWAV|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|157 SOLDRW|33|WAVE SOLDER|no|yes|FullTracking|no|no|90|180||157 SOLDRW|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"157 SOLDRW
+WAVE SOLDER."|Fitted Work Instruction Template with BOM Block|no|JIT 157 SOLDRW|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|160 CLEANA|34|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||160 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"160 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|JIT 160 CLEANA|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|170 POSWAV|35|POST WAVE|no|yes|FullTracking|no|no|215.388|0||170 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"170 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|JIT 170 POSWAV|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|190 CONCOT|36|CONFORMAL COAT|no|yes|FullTracking|no|no|235.836|900||190 CONCOT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"190 CONCOT
+CONFORMAL COAT."|Fitted Work Instruction Template with BOM Block|no|JIT 190 CONCOT|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|195 CCDMSK|37|CONFRMAL COAT DEMASK|no|yes|FullTracking|no|no|299.988|0||195 CCDMSK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"195 CCDMSK
+CONFORMAL COAT (DE-MASK IDENTIFIEDPARTS)."|Fitted Work Instruction Template with BOM Block|no|JIT 195 CCDMSK|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|197 POSWAV|38|POST WAVE|no|yes|FullTracking|no|no|237.6|0||197 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"197 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|JIT 197 POSWAV|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|200 TESTF|39|FUNCTIONAL TEST|no|yes|FullTracking|no|no|450|288||200 TESTF|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"200 TESTF
+FUNCTIONAL TEST."|Fitted Work Instruction Template with BOM Block|no|JIT 200 TESTF|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|210 INSPIP|40|INSPECTION|no|yes|FullTracking|no|no|260.568|0||210 INSPIP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"210 INSPIP
+FINAL INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 210 INSPIP|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|220 PACKSR|41|PACKAGE - STOCKROOM|no|yes|FullTracking|no|no|60.012|0||220 PACKSR|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"220 PACKSR
+FINAL PACKAGE."|Fitted Work Instruction Template with BOM Block|no|JIT 220 PACKSR|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|230 DOCSTG|42|DOCUMENT STORAGE|no|yes|FullTracking|no|no|0|0||230 DOCSTG|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"230 DOCSTG
+DOCUMENT STORAGE.SCAN ROUTER."|Fitted Work Instruction Template with BOM Block|no|JIT 230 DOCSTG|no|yes|passed||Current|
+117167-REV1-REI|1_1|A01|Non-Serialized|Disabled|Approval Process|no|Rework|-1|Rework|yes|yes|FullTracking|no|no|0|0||Rework|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||Rework|Fitted Work Instruction Template with BOM Block|no|Rework|yes|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|5 SERIAL|1|SERIALIZATION|no|yes|FullTracking|no|no|15.012|0||5 SERIAL|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"5 SERIAL
+SERIALIZE."|Fitted Work Instruction Template with BOM Block|no|REWORK 5 SERIAL|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|10 PICK|2|PICK - STOREROOM|no|yes|FullTracking|no|no|0|9360||10 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"10 PICK
+PICK SMT PARTS."|Fitted Work Instruction Template with BOM Block|no|REWORK 10 PICK|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|30 PICK|3|PICK - STOREROOM|no|yes|FullTracking|no|no|0|1548||30 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"30 PICK
+PICK THT PARTS."|Fitted Work Instruction Template with BOM Block|no|REWORK 30 PICK|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|40 PICK|4|PICK - STOREROOM|no|yes|FullTracking|no|no|0|720||40 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"40 PICK
+PICK POSTWAVE."|Fitted Work Instruction Template with BOM Block|no|REWORK 40 PICK|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|60 SMTLD|5|SMT LOAD|no|yes|FullTracking|no|no|0|23616||60 SMTLD|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"60 SMTLD
+SMT LOAD AND SETUP."|Fitted Work Instruction Template with BOM Block|no|REWORK 60 SMTLD|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|80 SMTR1|6|SMT RUN LINE 1|no|yes|FullTracking|no|no|90.324|900||80 SMTR1|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"80 SMTR1
+SMT RUN TIME."|Fitted Work Instruction Template with BOM Block|no|REWORK 80 SMTR1|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|95 CLEANA|7|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||95 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"95 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|REWORK 95 CLEANA|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|110 INSSMT|8|INSPECTION - SMT|no|yes|FullTracking|no|no|451.656|0||110 INSSMT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"110 INSSMT
+AOI INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 110 INSSMT|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|120 XRAY3D|9|3-D XRAY INSPECTION|no|yes|FullTracking|no|no|299.988|0||120 XRAY3D|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"120 XRAY3D
+X-RAY INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 120 XRAY3D|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|140 PREP|10|THT COMPONENT PREP|no|yes|FullTracking|no|no|65.988|2556||140 PREP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"140 PREP
+THT PREP / SL SETUP."|Fitted Work Instruction Template with BOM Block|no|REWORK 140 PREP|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|150 PREWAV|11|THT PREWAVE|no|yes|FullTracking|no|no|176.004|0||150 PREWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"150 PREWAV
+SLIDE LINE."|Fitted Work Instruction Template with BOM Block|no|REWORK 150 PREWAV|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|157 SOLDRW|12|WAVE SOLDER|no|yes|FullTracking|no|no|90|180||157 SOLDRW|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"157 SOLDRW
+WAVE SOLDER."|Fitted Work Instruction Template with BOM Block|no|REWORK 157 SOLDRW|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|160 CLEANA|13|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||160 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"160 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|REWORK 160 CLEANA|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|170 POSWAV|14|POST WAVE|no|yes|FullTracking|no|no|215.388|0||170 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"170 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|REWORK 170 POSWAV|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|190 CONCOT|15|CONFORMAL COAT|no|yes|FullTracking|no|no|235.836|900||190 CONCOT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"190 CONCOT
+CONFORMAL COAT."|Fitted Work Instruction Template with BOM Block|no|REWORK 190 CONCOT|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|195 CCDMSK|16|CONFRMAL COAT DEMASK|no|yes|FullTracking|no|no|299.988|0||195 CCDMSK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"195 CCDMSK
+CONFORMAL COAT (DE-MASK IDENTIFIEDPARTS)."|Fitted Work Instruction Template with BOM Block|no|REWORK 195 CCDMSK|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|197 POSWAV|17|POST WAVE|no|yes|FullTracking|no|no|237.6|0||197 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"197 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|REWORK 197 POSWAV|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|200 TESTF|18|FUNCTIONAL TEST|no|yes|FullTracking|no|no|450|288||200 TESTF|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"200 TESTF
+FUNCTIONAL TEST."|Fitted Work Instruction Template with BOM Block|no|REWORK 200 TESTF|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|210 INSPIP|19|INSPECTION|no|yes|FullTracking|no|no|260.568|0||210 INSPIP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"210 INSPIP
+FINAL INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 210 INSPIP|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|220 PACKSR|20|PACKAGE - STOCKROOM|no|yes|FullTracking|no|no|60.012|0||220 PACKSR|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"220 PACKSR
+FINAL PACKAGE."|Fitted Work Instruction Template with BOM Block|no|REWORK 220 PACKSR|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|230 DOCSTG|21|DOCUMENT STORAGE|no|yes|FullTracking|no|no|0|0||230 DOCSTG|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"230 DOCSTG
+DOCUMENT STORAGE.SCAN ROUTER."|Fitted Work Instruction Template with BOM Block|no|REWORK 230 DOCSTG|no|yes|passed|Rework|Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|5 SERIAL|22|SERIALIZATION|no|yes|FullTracking|no|no|15.012|0||5 SERIAL|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"5 SERIAL
+SERIALIZE."|Fitted Work Instruction Template with BOM Block|no|JIT 5 SERIAL|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|10 PICK|23|PICK - STOREROOM|no|yes|FullTracking|no|no|0|9360||10 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"10 PICK
+PICK SMT PARTS."|Fitted Work Instruction Template with BOM Block|no|JIT 10 PICK|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|30 PICK|24|PICK - STOREROOM|no|yes|FullTracking|no|no|0|1548||30 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"30 PICK
+PICK THT PARTS."|Fitted Work Instruction Template with BOM Block|no|JIT 30 PICK|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|40 PICK|25|PICK - STOREROOM|no|yes|FullTracking|no|no|0|720||40 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"40 PICK
+PICK POSTWAVE."|Fitted Work Instruction Template with BOM Block|no|JIT 40 PICK|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|60 SMTLD|26|SMT LOAD|no|yes|FullTracking|no|no|0|23616||60 SMTLD|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"60 SMTLD
+SMT LOAD AND SETUP."|Fitted Work Instruction Template with BOM Block|no|JIT 60 SMTLD|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|80 SMTR1|27|SMT RUN LINE 1|no|yes|FullTracking|no|no|90.324|900||80 SMTR1|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"80 SMTR1
+SMT RUN TIME."|Fitted Work Instruction Template with BOM Block|no|JIT 80 SMTR1|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|95 CLEANA|28|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||95 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"95 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|JIT 95 CLEANA|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|110 INSSMT|29|INSPECTION - SMT|no|yes|FullTracking|no|no|451.656|0||110 INSSMT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"110 INSSMT
+AOI INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 110 INSSMT|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|120 XRAY3D|30|3-D XRAY INSPECTION|no|yes|FullTracking|no|no|299.988|0||120 XRAY3D|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"120 XRAY3D
+X-RAY INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 120 XRAY3D|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|140 PREP|31|THT COMPONENT PREP|no|yes|FullTracking|no|no|65.988|2556||140 PREP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"140 PREP
+THT PREP / SL SETUP."|Fitted Work Instruction Template with BOM Block|no|JIT 140 PREP|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|150 PREWAV|32|THT PREWAVE|no|yes|FullTracking|no|no|176.004|0||150 PREWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"150 PREWAV
+SLIDE LINE."|Fitted Work Instruction Template with BOM Block|no|JIT 150 PREWAV|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|157 SOLDRW|33|WAVE SOLDER|no|yes|FullTracking|no|no|90|180||157 SOLDRW|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"157 SOLDRW
+WAVE SOLDER."|Fitted Work Instruction Template with BOM Block|no|JIT 157 SOLDRW|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|160 CLEANA|34|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||160 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"160 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|JIT 160 CLEANA|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|170 POSWAV|35|POST WAVE|no|yes|FullTracking|no|no|215.388|0||170 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"170 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|JIT 170 POSWAV|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|190 CONCOT|36|CONFORMAL COAT|no|yes|FullTracking|no|no|235.836|900||190 CONCOT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"190 CONCOT
+CONFORMAL COAT."|Fitted Work Instruction Template with BOM Block|no|JIT 190 CONCOT|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|195 CCDMSK|37|CONFRMAL COAT DEMASK|no|yes|FullTracking|no|no|299.988|0||195 CCDMSK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"195 CCDMSK
+CONFORMAL COAT (DE-MASK IDENTIFIEDPARTS)."|Fitted Work Instruction Template with BOM Block|no|JIT 195 CCDMSK|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|197 POSWAV|38|POST WAVE|no|yes|FullTracking|no|no|237.6|0||197 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"197 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|JIT 197 POSWAV|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|200 TESTF|39|FUNCTIONAL TEST|no|yes|FullTracking|no|no|450|288||200 TESTF|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"200 TESTF
+FUNCTIONAL TEST."|Fitted Work Instruction Template with BOM Block|no|JIT 200 TESTF|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|210 INSPIP|40|INSPECTION|no|yes|FullTracking|no|no|260.568|0||210 INSPIP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"210 INSPIP
+FINAL INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 210 INSPIP|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|220 PACKSR|41|PACKAGE - STOCKROOM|no|yes|FullTracking|no|no|60.012|0||220 PACKSR|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"220 PACKSR
+FINAL PACKAGE."|Fitted Work Instruction Template with BOM Block|no|JIT 220 PACKSR|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|230 DOCSTG|42|DOCUMENT STORAGE|no|yes|FullTracking|no|no|0|0||230 DOCSTG|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"230 DOCSTG
+DOCUMENT STORAGE.SCAN ROUTER."|Fitted Work Instruction Template with BOM Block|no|JIT 230 DOCSTG|no|yes|passed||Current|
+117167-REV2-REI|2_1|A01|Non-Serialized|Disabled|Approval Process|no|Rework|-1|Rework|yes|yes|FullTracking|no|no|0|0||Rework|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||Rework|Fitted Work Instruction Template with BOM Block|no|Rework|yes|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|5 SERIAL|1|SERIALIZATION|no|yes|FullTracking|no|no|15.012|0||5 SERIAL|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"5 SERIAL
+SERIALIZE."|Fitted Work Instruction Template with BOM Block|no|REWORK 5 SERIAL|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|10 PICK|2|PICK - STOREROOM|no|yes|FullTracking|no|no|0|9360||10 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"10 PICK
+PICK SMT PARTS."|Fitted Work Instruction Template with BOM Block|no|REWORK 10 PICK|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|30 PICK|3|PICK - STOREROOM|no|yes|FullTracking|no|no|0|468||30 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"30 PICK
+PICK THT PARTS."|Fitted Work Instruction Template with BOM Block|no|REWORK 30 PICK|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|35 PICK|4|PICK - STOREROOM|no|yes|FullTracking|no|no|0|1080||35 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"35 PICK
+PICK THT PART-BIN."|Fitted Work Instruction Template with BOM Block|no|REWORK 35 PICK|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|40 PICK|5|PICK - STOREROOM|no|yes|FullTracking|no|no|0|720||40 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"40 PICK
+PICK POSTWAVE."|Fitted Work Instruction Template with BOM Block|no|REWORK 40 PICK|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|60 SMTLD|6|SMT LOAD|no|yes|FullTracking|no|no|0|23616||60 SMTLD|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"60 SMTLD
+SMT LOAD AND SETUP."|Fitted Work Instruction Template with BOM Block|no|REWORK 60 SMTLD|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|80 SMTR1|7|SMT RUN LINE 1|no|yes|FullTracking|no|no|90.324|900||80 SMTR1|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"80 SMTR1
+SMT RUN TIME."|Fitted Work Instruction Template with BOM Block|no|REWORK 80 SMTR1|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|95 CLEANA|8|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||95 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"95 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|REWORK 95 CLEANA|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|110 INSSMT|9|INSPECTION - SMT|no|yes|FullTracking|no|no|451.656|0||110 INSSMT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"110 INSSMT
+AOI INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 110 INSSMT|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|120 XRAY3D|10|3-D XRAY INSPECTION|no|yes|FullTracking|no|no|299.988|0||120 XRAY3D|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"120 XRAY3D
+X-RAY INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 120 XRAY3D|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|140 PREP|11|THT COMPONENT PREP|no|yes|FullTracking|no|no|65.988|2556||140 PREP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"140 PREP
+THT PREP / SL SETUP."|Fitted Work Instruction Template with BOM Block|no|REWORK 140 PREP|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|150 PREWAV|12|THT PREWAVE|no|yes|FullTracking|no|no|176.004|0||150 PREWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"150 PREWAV
+SLIDE LINE."|Fitted Work Instruction Template with BOM Block|no|REWORK 150 PREWAV|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|157 SOLDRW|13|WAVE SOLDER|no|yes|FullTracking|no|no|90|180||157 SOLDRW|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"157 SOLDRW
+WAVE SOLDER."|Fitted Work Instruction Template with BOM Block|no|REWORK 157 SOLDRW|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|160 CLEANA|14|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||160 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"160 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|REWORK 160 CLEANA|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|170 POSWAV|15|POST WAVE|no|yes|FullTracking|no|no|215.388|0||170 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"170 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|REWORK 170 POSWAV|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|190 CONCOT|16|CONFORMAL COAT|no|yes|FullTracking|no|no|235.836|900||190 CONCOT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"190 CONCOT
+CONFORMAL COAT."|Fitted Work Instruction Template with BOM Block|no|REWORK 190 CONCOT|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|195 CCDMSK|17|CONFRMAL COAT DEMASK|no|yes|FullTracking|no|no|299.988|0||195 CCDMSK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"195 CCDMSK
+CONFORMAL COAT (DE-MASK IDENTIFIEDPARTS)."|Fitted Work Instruction Template with BOM Block|no|REWORK 195 CCDMSK|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|197 POSWAV|18|POST WAVE|no|yes|FullTracking|no|no|237.6|0||197 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"197 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|REWORK 197 POSWAV|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|200 TESTF|19|FUNCTIONAL TEST|no|yes|FullTracking|no|no|450|288||200 TESTF|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"200 TESTF
+FUNCTIONAL TEST."|Fitted Work Instruction Template with BOM Block|no|REWORK 200 TESTF|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|210 INSPIP|20|INSPECTION|no|yes|FullTracking|no|no|260.568|0||210 INSPIP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"210 INSPIP
+FINAL INSPECT."|Fitted Work Instruction Template with BOM Block|no|REWORK 210 INSPIP|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|220 PACKSR|21|PACKAGE - STOCKROOM|no|yes|FullTracking|no|no|60.012|0||220 PACKSR|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"220 PACKSR
+FINAL PACKAGE."|Fitted Work Instruction Template with BOM Block|no|REWORK 220 PACKSR|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|230 DOCSTG|22|DOCUMENT STORAGE|no|yes|FullTracking|no|no|0|0||230 DOCSTG|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no|"\\UNC Path\"|"230 DOCSTG
+DOCUMENT STORAGE.SCAN ROUTER."|Fitted Work Instruction Template with BOM Block|no|REWORK 230 DOCSTG|no|yes|passed|Rework|Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|5 SERIAL|23|SERIALIZATION|no|yes|FullTracking|no|no|15.012|0||5 SERIAL|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"5 SERIAL
+SERIALIZE."|Fitted Work Instruction Template with BOM Block|no|JIT 5 SERIAL|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|10 PICK|24|PICK - STOREROOM|no|yes|FullTracking|no|no|0|9360||10 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"10 PICK
+PICK SMT PARTS."|Fitted Work Instruction Template with BOM Block|no|JIT 10 PICK|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|30 PICK|25|PICK - STOREROOM|no|yes|FullTracking|no|no|0|468||30 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"30 PICK
+PICK THT PARTS."|Fitted Work Instruction Template with BOM Block|no|JIT 30 PICK|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|35 PICK|26|PICK - STOREROOM|no|yes|FullTracking|no|no|0|1080||35 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"35 PICK
+PICK THT PART-BIN."|Fitted Work Instruction Template with BOM Block|no|JIT 35 PICK|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|40 PICK|27|PICK - STOREROOM|no|yes|FullTracking|no|no|0|720||40 PICK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"40 PICK
+PICK POSTWAVE."|Fitted Work Instruction Template with BOM Block|no|JIT 40 PICK|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|60 SMTLD|28|SMT LOAD|no|yes|FullTracking|no|no|0|23616||60 SMTLD|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"60 SMTLD
+SMT LOAD AND SETUP."|Fitted Work Instruction Template with BOM Block|no|JIT 60 SMTLD|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|80 SMTR1|29|SMT RUN LINE 1|no|yes|FullTracking|no|no|90.324|900||80 SMTR1|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"80 SMTR1
+SMT RUN TIME."|Fitted Work Instruction Template with BOM Block|no|JIT 80 SMTR1|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|95 CLEANA|30|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||95 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"95 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|JIT 95 CLEANA|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|110 INSSMT|31|INSPECTION - SMT|no|yes|FullTracking|no|no|451.656|0||110 INSSMT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"110 INSSMT
+AOI INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 110 INSSMT|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|120 XRAY3D|32|3-D XRAY INSPECTION|no|yes|FullTracking|no|no|299.988|0||120 XRAY3D|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"120 XRAY3D
+X-RAY INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 120 XRAY3D|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|140 PREP|33|THT COMPONENT PREP|no|yes|FullTracking|no|no|65.988|2556||140 PREP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"140 PREP
+THT PREP / SL SETUP."|Fitted Work Instruction Template with BOM Block|no|JIT 140 PREP|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|150 PREWAV|34|THT PREWAVE|no|yes|FullTracking|no|no|176.004|0||150 PREWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"150 PREWAV
+SLIDE LINE."|Fitted Work Instruction Template with BOM Block|no|JIT 150 PREWAV|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|157 SOLDRW|35|WAVE SOLDER|no|yes|FullTracking|no|no|90|180||157 SOLDRW|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"157 SOLDRW
+WAVE SOLDER."|Fitted Work Instruction Template with BOM Block|no|JIT 157 SOLDRW|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|160 CLEANA|36|AQEOUS CLEANER|no|yes|FullTracking|no|no|29.988|0||160 CLEANA|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"160 CLEANA
+AQUEOUS WASH."|Fitted Work Instruction Template with BOM Block|no|JIT 160 CLEANA|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|170 POSWAV|37|POST WAVE|no|yes|FullTracking|no|no|215.388|0||170 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"170 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|JIT 170 POSWAV|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|190 CONCOT|38|CONFORMAL COAT|no|yes|FullTracking|no|no|235.836|900||190 CONCOT|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"190 CONCOT
+CONFORMAL COAT."|Fitted Work Instruction Template with BOM Block|no|JIT 190 CONCOT|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|195 CCDMSK|39|CONFRMAL COAT DEMASK|no|yes|FullTracking|no|no|299.988|0||195 CCDMSK|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"195 CCDMSK
+CONFORMAL COAT (DE-MASK IDENTIFIEDPARTS)."|Fitted Work Instruction Template with BOM Block|no|JIT 195 CCDMSK|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|197 POSWAV|40|POST WAVE|no|yes|FullTracking|no|no|237.6|0||197 POSWAV|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"197 POSWAV
+POSTWAVE ELECTRICAL ASSEMBLY."|Fitted Work Instruction Template with BOM Block|no|JIT 197 POSWAV|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|200 TESTF|41|FUNCTIONAL TEST|no|yes|FullTracking|no|no|450|288||200 TESTF|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"200 TESTF
+FUNCTIONAL TEST."|Fitted Work Instruction Template with BOM Block|no|JIT 200 TESTF|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|210 INSPIP|42|INSPECTION|no|yes|FullTracking|no|no|260.568|0||210 INSPIP|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"210 INSPIP
+FINAL INSPECT."|Fitted Work Instruction Template with BOM Block|no|JIT 210 INSPIP|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|220 PACKSR|43|PACKAGE - STOCKROOM|no|yes|FullTracking|no|no|60.012|0||220 PACKSR|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"220 PACKSR
+FINAL PACKAGE."|Fitted Work Instruction Template with BOM Block|no|JIT 220 PACKSR|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|230 DOCSTG|44|DOCUMENT STORAGE|no|yes|FullTracking|no|no|0|0||230 DOCSTG|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||"230 DOCSTG
+DOCUMENT STORAGE.SCAN ROUTER."|Fitted Work Instruction Template with BOM Block|no|JIT 230 DOCSTG|no|yes|passed||Current|
+117167-REV3-REI|3_2|A01|Non-Serialized|Disabled|Approval Process|no|Rework|-1|Rework|yes|yes|FullTracking|no|no|0|0||Rework|Fitted Work Instruction Template with BOM Block|Assembly Operator Interface Template (Tracked)|no|no||Rework|Fitted Work Instruction Template with BOM Block|no|Rework|yes|yes|passed||Current|

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +36,7 @@ public class XMLProcessRevisionCreator {
     protected DocumentBuilderFactory domFactory = null;
     protected DocumentBuilder domBuilder = null;
 
-    Map<String, ProcessRevision> processRevisionMap = new LinkedHashMap<String,ProcessRevision>();
+    Map<String, ProcessRevision> processRevisionMap = new HashMap<String,ProcessRevision>();
     
     public XMLProcessRevisionCreator() {
         try {
@@ -63,7 +63,7 @@ public class XMLProcessRevisionCreator {
             Element processRevisionElement = newDoc.createElement("ProcessRevision");
             newDoc.appendChild(processRevisionElement);
 
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withEscapeChar('`').build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withIgnoreQuotations(true).build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             
@@ -255,9 +255,10 @@ public class XMLProcessRevisionCreator {
                             }
                             activitiesElement.appendChild(activityElement);
                         }
-
-                        stepElement.appendChild(documentsElement);
+                        
                         stepElement.appendChild(activitiesElement);
+                        stepElement.appendChild(documentsElement);
+                        
                         stepsElement.appendChild(stepElement);
                     }
                     
