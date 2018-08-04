@@ -7,11 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -150,22 +147,7 @@ public class XMLJobCreator {
 
             FileWriter writer = null;
 
-        	String xmlDestination = "";
-            
             try {
-
-            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "JobConverter.ini");
-
-            	Scanner input = new Scanner(file);
-            	
-            	while (input.hasNextLine()) 
-            	{
-            		String iniLine = input.nextLine();
-            		if (iniLine.startsWith("xml_destination="))
-            			xmlDestination = iniLine.replace("xml_destination=", "");
-            	}
-            	
-            	input.close();
 
                 writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
 
@@ -199,10 +181,6 @@ public class XMLJobCreator {
             logWriter.close();
             reader.close();
 
-    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
-            
         } catch (IOException exp) {
             System.err.println(exp.toString());
             errWriter.println(exp.toString());

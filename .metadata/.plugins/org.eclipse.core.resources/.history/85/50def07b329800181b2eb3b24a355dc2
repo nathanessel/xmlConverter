@@ -342,8 +342,7 @@ public class XMLProcessRevisionCreator {
             reader.close();
             
     		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
+    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath(), StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
             System.err.println(exp.toString());

@@ -324,7 +324,7 @@ public class XMLBomImportCreator {
             
             try {
 
-            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "BOMConverter.ini");
+            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
 
             	Scanner input = new Scanner(file);
             	

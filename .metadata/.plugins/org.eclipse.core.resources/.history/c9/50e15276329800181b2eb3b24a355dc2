@@ -296,7 +296,7 @@ public class XMLProcessRevisionCreator {
             
             try {
 
-            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "ProcessRevisionConverter.ini");
+            	File file = new File(new File("").getAbsoluteFile() + "ProcessRevisionConverter.ini");
 
             	Scanner input = new Scanner(file);
             	
@@ -304,7 +304,7 @@ public class XMLProcessRevisionCreator {
             	{
             		String iniLine = input.nextLine();
             		if (iniLine.startsWith("xml_destination="))
-            			xmlDestination = iniLine.replace("xml_destination=", "");
+            			xmlDestination = iniLine.replace("xml_destination", "");
             	}
             	
             	input.close();
@@ -342,8 +342,7 @@ public class XMLProcessRevisionCreator {
             reader.close();
             
     		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
+    				new File(xmlDestination).toPath(), StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
             System.err.println(exp.toString());

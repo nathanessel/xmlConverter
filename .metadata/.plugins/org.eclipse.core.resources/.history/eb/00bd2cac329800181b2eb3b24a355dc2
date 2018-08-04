@@ -7,14 +7,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -196,7 +193,7 @@ public class XMLPartsCreator {
                 addNestedPartDataElement(newDoc, partDataElement, part.vendorPartsElement, part, "VendorParts", "VendorPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.customerPartsElement, part, "CustomerParts", "CustomerPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.alternatePartsElement, part, "AlternateParts", "AlternatePart");
-                addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry");
+//              addNestedPartDataElement(newDoc, partDataElement, part.customFieldsElement, part, "CustomFields", "Entry");
                 addToPartDataElement(newDoc, partDataElement, part.electronicPartElement, "ElectronicPart");
                 addNestedPartDataElement(newDoc, partDataElement, part.machineSpecificAttributes, part, "MachineSpecificAttributes", "Machine");
                 
@@ -206,22 +203,7 @@ public class XMLPartsCreator {
 
             FileWriter writer = null;
 
-        	String xmlDestination = "";
-            
             try {
-
-            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
-
-            	Scanner input = new Scanner(file);
-            	
-            	while (input.hasNextLine()) 
-            	{
-            		String iniLine = input.nextLine();
-            		if (iniLine.startsWith("xml_destination="))
-            			xmlDestination = iniLine.replace("xml_destination=", "");
-            	}
-            	
-            	input.close();
 
                 writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
 
@@ -254,10 +236,6 @@ public class XMLPartsCreator {
             logWriter.println("Conversion Completed");
             logWriter.close();
             reader.close();
-            
-    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
             System.err.println(exp.toString());
