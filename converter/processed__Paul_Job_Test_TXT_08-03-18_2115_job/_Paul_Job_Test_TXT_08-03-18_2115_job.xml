@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Batches>
+    <BatchData/>
+    <BatchData>
+        <AssemblyName>MCT-00-002-REVC-JOY</AssemblyName>
+        <AssemblyRevisionName>C</AssemblyRevisionName>
+        <Name>B152075</Name>
+        <Description>PCB ASSY,MCT,COMMON MODE FILTER</Description>
+        <ActivtionDate>07/10/18</ActivtionDate>
+        <ShipDate>08/15/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>24</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>FPE-3-035GR01</AssemblyName>
+        <AssemblyRevisionName>A</AssemblyRevisionName>
+        <Name>B152189</Name>
+        <Description>PCB ASSY,POWER DIP CIRCUIT</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>09/18/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>10</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>PCS-0267GR01</AssemblyName>
+        <Name>B152190</Name>
+        <Description>PCB ASSY,S. S. RELAY ADAPTER ASSY.</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>09/19/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>10</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-01664GR05</AssemblyName>
+        <AssemblyRevisionName>J_2</AssemblyRevisionName>
+        <Name>B152191</Name>
+        <Description>PCB ASSY,DEGREE INDEX MODULE STANDARD</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>5</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>SE-3-012GR05</AssemblyName>
+        <AssemblyRevisionName>K</AssemblyRevisionName>
+        <Name>B152192</Name>
+        <Description>PCB ASSY,LED DRIVER,SVC</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>09/11/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>4</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>E15006790-REVA-VAR</AssemblyName>
+        <AssemblyRevisionName>A_5</AssemblyRevisionName>
+        <Name>B152193</Name>
+        <Description>PCB ASSY,MAGNET PS CONTROL</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>35</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>FPE-3-011GR02</AssemblyName>
+        <AssemblyRevisionName>H</AssemblyRevisionName>
+        <Name>B152194</Name>
+        <Description>PCB ASSY,TRIPLE CHECK - VFP</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/14/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>28</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>CS2-0183G03</AssemblyName>
+        <AssemblyRevisionName>R_1_PREL</AssemblyRevisionName>
+        <Name>B152195</Name>
+        <Description>PCB ASSY,EICOM MAIN,TIE</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/10/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>5</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>MCT-00-002-REVC-JOY</AssemblyName>
+        <AssemblyRevisionName>C</AssemblyRevisionName>
+        <Name>B152196</Name>
+        <Description>PCB ASSY,MCT,COMMON MODE FILTER</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/21/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>48</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>CS2-045GR03</AssemblyName>
+        <AssemblyRevisionName>G</AssemblyRevisionName>
+        <Name>B152197</Name>
+        <Description>PCB ASSY,SYNC BOX MODULE</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>5</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>LNS-07-027-NOREV</AssemblyName>
+        <AssemblyRevisionName>-</AssemblyRevisionName>
+        <Name>B152198</Name>
+        <Description>IC,PROGRAMMED,CS2-0183GR01 (U134)</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/29/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>35</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>E15025550-REVD-VAR</AssemblyName>
+        <AssemblyRevisionName>D_1</AssemblyRevisionName>
+        <Name>B152199</Name>
+        <Description>PCB ASSY,ETHERCAT,eMINI,ADIO</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/06/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>4</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>E15032430-REVB-VAR</AssemblyName>
+        <AssemblyRevisionName>B_1</AssemblyRevisionName>
+        <Name>B152200</Name>
+        <Description>PCB ASSY,TYPE-K,THERMOCOUPLE PROTECTOR</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/06/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>16</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-01888GR01</AssemblyName>
+        <AssemblyRevisionName>A_1</AssemblyRevisionName>
+        <Name>BS04682</Name>
+        <Description>PCB ASSY,PARALLEL INPUT CARD</Description>
+        <ActivtionDate>07/10/18</ActivtionDate>
+        <ShipDate>08/14/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>4</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>113152-REV2-REI</AssemblyName>
+        <AssemblyRevisionName>2_1</AssemblyRevisionName>
+        <Name>BS04812</Name>
+        <Description>PCB ASSY,RELAY BOARD-BWG-MAXI</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>09/05/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>10</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>515AS-410-REVF-DEV</AssemblyName>
+        <AssemblyRevisionName>F</AssemblyRevisionName>
+        <Name>BS04813</Name>
+        <Description>PCB ASSY,HALL EFFECT SENSOR</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>09/10/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>20070</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>E15002453-REVB-VAR</AssemblyName>
+        <AssemblyRevisionName>B_2</AssemblyRevisionName>
+        <Name>BS04814</Name>
+        <Description>PCB ASSY,DIGITAL I/O</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>70</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>E15002453-REVB-VAR</AssemblyName>
+        <AssemblyRevisionName>B_2</AssemblyRevisionName>
+        <Name>BS04815</Name>
+        <Description>PCB ASSY,DIGITAL I/O</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>70</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-02404GR01</AssemblyName>
+        <AssemblyRevisionName>E</AssemblyRevisionName>
+        <Name>BS04816</Name>
+        <Description>PCB ASSY,VB ANALYZER</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/14/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>2</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>E15031380-REVA-VAR</AssemblyName>
+        <AssemblyRevisionName>A_3</AssemblyRevisionName>
+        <Name>BS04817</Name>
+        <Description>PCB ASSY,FEEDTHROUGH</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/07/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>5</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>FTA-4-3</AssemblyName>
+        <AssemblyRevisionName>-</AssemblyRevisionName>
+        <Name>E063303</Name>
+        <Description>MIRROR,CRIZZLE</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/20/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>16</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>FPE-2-013GR03</AssemblyName>
+        <AssemblyRevisionName>M</AssemblyRevisionName>
+        <Name>E063305</Name>
+        <Description>CABLE ASSY,ENCODER,FP INSP,40" LENGTH</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>6</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>SE-4-020GR02</AssemblyName>
+        <AssemblyRevisionName>D</AssemblyRevisionName>
+        <Name>E063306</Name>
+        <Description>CABLE ASSY,3M,LED POWER/SIGNALS</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/14/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>50</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-02254GR02-WIRES</AssemblyName>
+        <AssemblyRevisionName>-</AssemblyRevisionName>
+        <Name>E063307</Name>
+        <Description>WIRES, FOR OIS-02254GR02</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/15/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>5</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>FP20-4-054GR02-T</AssemblyName>
+        <AssemblyRevisionName>C</AssemblyRevisionName>
+        <Name>E063308</Name>
+        <Description>ASSY,OPTICS,VARIABLE FIELD PICK-UP</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/17/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>80</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>MX4-3-694484</AssemblyName>
+        <AssemblyRevisionName>A</AssemblyRevisionName>
+        <Name>EMS0643</Name>
+        <Description>MX4-3,OF18U000765,INTERV004</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/24/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>XE11461441-REVA-VAR</AssemblyName>
+        <Name>QS78819</Name>
+        <Description>KIT,KVM REPLACEMENT FOR 2 AND 4 PORT</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/15/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>XP30B.0100112-REVAF-ANSA</AssemblyName>
+        <AssemblyRevisionName>AF_1</AssemblyRevisionName>
+        <Name>QS78820</Name>
+        <Description>PCB ASSY, MICROLOK V3</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/15/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>4</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>XE11408891-REVF-VAR</AssemblyName>
+        <Name>QS78821</Name>
+        <Description>ASSY,W',DOSE CONTROLLER,XPT FOR XP VPS</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>SVC-2-01GR06-T</AssemblyName>
+        <AssemblyRevisionName>S</AssemblyRevisionName>
+        <Name>SP24570</Name>
+        <Description>ASSY,SVC CAMERA - FPX2</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>5</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>FPX2-4-028GR02</AssemblyName>
+        <AssemblyRevisionName>-</AssemblyRevisionName>
+        <Name>SP24571</Name>
+        <Description>ASSY,SENSOR,CLEAR-OBJECT,DARK OPERATE</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/15/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>2</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>PCS-028GR03</AssemblyName>
+        <AssemblyRevisionName>H</AssemblyRevisionName>
+        <Name>SP24572</Name>
+        <Description>PIGTAIL, 72" OVERHEAD REMOTE SOLENOIDS</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/20/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>20</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>088-000-102CE-REVD-AMF</AssemblyName>
+        <AssemblyRevisionName>D_3</AssemblyRevisionName>
+        <Name>SP24573</Name>
+        <Description>ASSY,THU W/HARDWIRED PIGTAIL</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/07/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>20</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>100272435-REV6-JOY</AssemblyName>
+        <AssemblyRevisionName>6_1</AssemblyRevisionName>
+        <Name>SP24574</Name>
+        <Description>ASSY,SENSOR,CURRENT,RTD UNIT</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>60</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>GAC-8544-A-0</AssemblyName>
+        <AssemblyRevisionName>-</AssemblyRevisionName>
+        <Name>SP24575</Name>
+        <Description>ASSY,DWYER SWITCH</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>10</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>E11297630-REVD-VAR</AssemblyName>
+        <AssemblyRevisionName>D2_3</AssemblyRevisionName>
+        <Name>SP24577</Name>
+        <Description>ASSY,CONTROLLER,PS,D1 SUPP,W/SELF GLITCH</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/01/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>5</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-01369GR08</AssemblyName>
+        <AssemblyRevisionName>T</AssemblyRevisionName>
+        <Name>THS0329</Name>
+        <Description>ASSY,ANTI-DELECTION,E/SF NNP&amp;B W/AXIAL</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>07/31/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>4</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-23-4063-0</AssemblyName>
+        <Name>THS0330</Name>
+        <Description>ASSY,1" NPT VACUUM HOSE ADAPTER</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/23/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>10</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-23-4064-0</AssemblyName>
+        <Name>THS0331</Name>
+        <Description>ASSY,1-1/4" NPT VACUUM HOSE ADAPTER</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/09/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>8</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>OIS-02939GR04</AssemblyName>
+        <AssemblyRevisionName>C_2</AssemblyRevisionName>
+        <Name>THS0332</Name>
+        <Description>ASSY,RESOLVER &amp; HOUSING WITH LITTON OR</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>07/25/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>3</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X117120-EVAL</AssemblyName>
+        <Name>Z308372</Name>
+        <Description>PLATE,FACE,RAMS TOUCH SCREEN</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/23/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X117120-EVAL</AssemblyName>
+        <Name>Z308373</Name>
+        <Description>PLATE,FACE,RAMS TOUCH SCREEN</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/23/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X117120-EVAL</AssemblyName>
+        <Name>Z308374</Name>
+        <Description>PLATE,FACE,RAMS TOUCH SCREEN</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/23/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X117120-EVAL</AssemblyName>
+        <Name>Z308375</Name>
+        <Description>PLATE,FACE,RAMS TOUCH SCREEN</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/23/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100910419</AssemblyName>
+        <AssemblyRevisionName>01_1</AssemblyRevisionName>
+        <Name>Z308376</Name>
+        <Description>ASSY,MODULE,1 COMM,5 DIO,1 AI BLK</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308377</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308378</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308379</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308380</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100591277</AssemblyName>
+        <Name>Z308381</Name>
+        <Description>ASSY,CURRENT BASE SENSOR</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100591277</AssemblyName>
+        <Name>Z308382</Name>
+        <Description>ASSY,CURRENT BASE SENSOR</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100591277</AssemblyName>
+        <Name>Z308383</Name>
+        <Description>ASSY,CURRENT BASE SENSOR</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100591277</AssemblyName>
+        <Name>Z308384</Name>
+        <Description>ASSY,CURRENT BASE SENSOR</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100272435</AssemblyName>
+        <Name>Z308385</Name>
+        <Description>ASSY,SENSOR,CURRENT,RTD UNIT</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100272435</AssemblyName>
+        <Name>Z308386</Name>
+        <Description>ASSY,SENSOR,CURRENT,RTD UNIT</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100272435</AssemblyName>
+        <Name>Z308387</Name>
+        <Description>ASSY,SENSOR,CURRENT,RTD UNIT</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100272435</AssemblyName>
+        <Name>Z308388</Name>
+        <Description>ASSY,SENSOR,CURRENT,RTD UNIT</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100591277</AssemblyName>
+        <Name>Z308389</Name>
+        <Description>ASSY,CURRENT BASE SENSOR</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308390</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308391</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308392</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308393</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308394</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308395</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100910419</AssemblyName>
+        <AssemblyRevisionName>01_1</AssemblyRevisionName>
+        <Name>Z308396</Name>
+        <Description>ASSY,MODULE,1 COMM,5 DIO,1 AI BLK</Description>
+        <ActivtionDate>08/02/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308397</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100591277</AssemblyName>
+        <Name>Z308398</Name>
+        <Description>ASSY,CURRENT BASE SENSOR</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/16/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+    <BatchData>
+        <AssemblyName>X100765314</AssemblyName>
+        <Name>Z308399</Name>
+        <Description>ASSY,SENSOR,CURRENT,ELECTRONICS,MCT TOP</Description>
+        <ActivtionDate>08/03/18</ActivtionDate>
+        <ShipDate>08/13/18</ShipDate>
+        <QuantityEnforcement>Error</QuantityEnforcement>
+        <Quantity>1</Quantity>
+    </BatchData>
+</Batches>
