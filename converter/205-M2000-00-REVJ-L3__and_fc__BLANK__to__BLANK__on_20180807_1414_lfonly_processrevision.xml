@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProcessRevision>
+    <ProcessRevisionData>
+        <Assembly>205-M2000-00-REVJ-L3</Assembly>
+        <AssemblyRevision>J_1</AssemblyRevision>
+        <Name>A01</Name>
+        <TrackingMode>Non-Serialized</TrackingMode>
+        <RouteEnforcement>Disabled</RouteEnforcement>
+        <ApprovalProcess>Approval of - The Process</ApprovalProcess>
+        <ReleaseToProduction>false</ReleaseToProduction>
+        <Operations>
+            <Operation>
+                <Name>5 SERIAL</Name>
+                <Sequence>1</Sequence>
+                <Description>SERIALIZATION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>15.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>5 SERIAL</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>5 SERIALSERIALIZE.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 5 SERIAL</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>10 PICK</Name>
+                <Sequence>2</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>9108</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>10 PICK</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>10 PICKPICK SMT PARTS.
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                            <Activity>
+                                <Instruction>10 PICKPICK SMT PARTS.
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 10 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>30 PICK</Name>
+                <Sequence>3</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>108</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>30 PICK</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>30 PICKPICK THT PARTS.
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH0000011111222223333344444555556666677777
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                            <Activity>
+                                <Instruction>30 PICKPICK THT PARTS.
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGGHHHHH
+0000011111222223333344444555556666677777
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 30 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>40 PICK</Name>
+                <Sequence>4</Sequence>
+                <Description>PICK - STOREROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>108</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>40 PICK</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>40 PICKPICK POSTWAVE.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 40 PICK</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>60 SMTLD</Name>
+                <Sequence>5</Sequence>
+                <Description>SMT LOAD</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>24768</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>60 SMTLD</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>60 SMTLDSMT LOAD AND SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 60 SMTLD</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>80 SMTR1</Name>
+                <Sequence>6</Sequence>
+                <Description>SMT RUN LINE 1</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>78.048</EstCycleTime>
+                <SetupTime>900</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>80 SMTR1</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>80 SMTR1SMT RUN TIME.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 80 SMTR1</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>95 CLEANA</Name>
+                <Sequence>7</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>15.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>95 CLEANA</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>95 CLEANAAQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 95 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>110 INSSMT</Name>
+                <Sequence>8</Sequence>
+                <Description>INSPECTION - SMT</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>78.048</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>110 INSSMT</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>110 INSSMTAOI INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 110 INSSMT</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>120 XRAY3D</Name>
+                <Sequence>9</Sequence>
+                <Description>3-D XRAY INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>11.988</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>120 XRAY3D</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>120 XRAY3DX-RAY INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 120 XRAY3D</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>140 PREP</Name>
+                <Sequence>10</Sequence>
+                <Description>THT COMPONENT PREP</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>96.012</EstCycleTime>
+                <SetupTime>144</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>140 PREP</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>140 PREPTHT PREP / SL SETUP.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 140 PREP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>153 SOLDRS</Name>
+                <Sequence>11</Sequence>
+                <Description>SELECTIVE SOLDER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>32.004</EstCycleTime>
+                <SetupTime>180</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>153 SOLDRS</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>153 SOLDRSSELECTIVE SOLDER (ERSA).
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 153 SOLDRS</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>160 CLEANA</Name>
+                <Sequence>12</Sequence>
+                <Description>AQEOUS CLEANER</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>15.012</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>160 CLEANA</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>160 CLEANAAQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 160 CLEANA</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>170 POSWAV</Name>
+                <Sequence>13</Sequence>
+                <Description>POST WAVE</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>20.016</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>170 POSWAV</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>170 POSWAVPOSTWAVE ELECTRICAL ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 170 POSWAV</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>210 INSPIP</Name>
+                <Sequence>14</Sequence>
+                <Description>INSPECTION</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>10.512</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>210 INSPIP</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>210 INSPIPFINAL INSPECT.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 210 INSPIP</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>220 PACKSR</Name>
+                <Sequence>15</Sequence>
+                <Description>PACKAGE - STOCKROOM</Description>
+                <AllowProductScrapping>false</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>10.008</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>220 PACKSR</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Plant Photographs\A.pdf</Document>
+                            <Document>\\pitfs1\data\common\Plant Photographs\B.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>220 PACKSRFINAL PACKAGE.
+</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 220 PACKSR</Name>
+                        <ActivitiesCompleted>false</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>Rework</Name>
+                <Sequence>-1</Sequence>
+                <Description>Rework</Description>
+                <AllowProductScrapping>true</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>Rework</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents/>
+                        <Activities>
+                            <Activity>
+                                <Instruction>Rework</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to RMD</Name>
+                        <ActivitiesCompleted>true</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>RMD</Name>
+                <Sequence>-1</Sequence>
+                <Description>RMD</Description>
+                <AllowProductScrapping>true</AllowProductScrapping>
+                <AllowOperationRepeat>true</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>false</AllowBarcodeRanges>
+                <AllowMultipleUnits>false</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>RMD</Name>
+                        <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>true</AnyOrderMode>
+                        <Required>false</Required>
+                        <Documents/>
+                        <Activities>
+                            <Activity>
+                                <Instruction>RMD</Instruction>
+                                <WorkInstructionTemplate>TEST_WI</WorkInstructionTemplate>
+                                <Required>false</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Rework</Name>
+                        <ActivitiesCompleted>true</ActivitiesCompleted>
+                        <ChangeProductStatus>true</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+        </Operations>
+    </ProcessRevisionData>
+</ProcessRevision>

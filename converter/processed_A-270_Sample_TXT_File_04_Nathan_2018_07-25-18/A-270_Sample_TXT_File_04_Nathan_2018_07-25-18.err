@@ -1,0 +1,3 @@
+java.io.FileNotFoundException: /Users/nathanessel/Desktop/xml/converter/ProcessRevisionConverter.ini (No such file or directory)
+java.lang.NullPointerException
+java.nio.file.AccessDeniedException: /A-270_Sample_TXT_File_04_Nathan_2018_07-25-18.xml

@@ -2,12 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="assembliesElement" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
-		<item value="false" key="wholeword"/>
+		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="quotation"/>
+			<item value="processRevisionMap"/>
+			<item value="\\"/>
+			<item value="//"/>
+			<item value="part"/>
+			<item value="partExists"/>
+			<item value="PartElement"/>
 			<item value="assembliesElement"/>
 			<item value="hashset"/>
 			<item value="entr"/>
@@ -16,15 +23,12 @@
 			<item value="header+v"/>
 			<item value="new HashMap&lt;String, PartElement&gt;()"/>
 			<item value="HashPartElement"/>
-			<item value="Map&lt;String, PartElement&gt;"/>
-			<item value="partsMap.get(masterPartNumber)"/>
-			<item value="MachineSpecificAttributesElement"/>
-			<item value="PartNumber"/>
-			<item value="componentHandlingElement"/>
-			<item value="contin"/>
-			<item value="XMLCreators"/>
 		</list>
 		<list key="replacehistory">
+			<item value="processRevision"/>
+			<item value="assemblyExists"/>
+			<item value="aseemblyExists"/>
+			<item value="ProcessRevisionDataElement"/>
 			<item value="new PartElement();"/>
 			<item value="PartElement"/>
 			<item value="part"/>

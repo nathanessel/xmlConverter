@@ -371,6 +371,10 @@ public class XMLProcessRevisionCreator {
     public void readCSVToProcessRevisionData(List<ProcessRevisionDataElement> processRevisionElementList, String header, String value) {
     	if (!value.isEmpty())
 		{
+    		
+//    		if (header.equalsIgnoreCase("instruction"))
+//    			value = value.replace("\n", "\n").replace("\r", "\n");
+    		
     		ProcessRevisionDataElement currentElement = new ProcessRevisionDataElement(header,value);
     		processRevisionElementList.add(currentElement);
 		}
