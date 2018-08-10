@@ -210,8 +210,8 @@ public class XMLPartsCreator {
 
             FileWriter writer = null;
 
-       	String xmlDestination = "";
-          
+        	String xmlDestination = "";
+            
             try {
 
             	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
@@ -338,7 +338,6 @@ public class XMLPartsCreator {
        
     	if (addToXML && !data.isEmpty())
         	partDataElement.appendChild(parentElement);
-    	addToXML = true;
     	}
     }
     

@@ -101,10 +101,7 @@ public class XMLPartsCreator {
                 	partSet.add(masterPartNumber);
                 	
                 	if (part == null)
-                	{
                 		part = new Part();
-                		part.masterPartNumber = masterPartNumber;
-                	}
                 	else
                 	{
                 		partExists = true;
@@ -165,7 +162,6 @@ public class XMLPartsCreator {
                     }
                 }
 
-                System.out.println("Processing line " + line);
                 logWriter.println("Processing line " + line);
                 
                 if (line != 0)
@@ -210,8 +206,8 @@ public class XMLPartsCreator {
 
             FileWriter writer = null;
 
-       	String xmlDestination = "";
-          
+        	String xmlDestination = "";
+            
             try {
 
             	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
@@ -287,8 +283,6 @@ public class XMLPartsCreator {
     	Element parentElement = newDoc.createElement(parentTag);
 
     	HashSet<String> entrySet = new HashSet<String>();
-    	HashSet<String> manufacturerSet = new HashSet<String>();
-    	
     	
     	for (Map<String, PartElement> partElements : elementList)
     	{
@@ -310,10 +304,10 @@ public class XMLPartsCreator {
     			
     			String partNumber = partElements.get("PartNumber") != null ? partElements.get("PartNumber").getValue() : "";
     			
-    			if (manufacturerSet.contains(partNumber))
+    			if (partSet.contains(partNumber))
     				addToXML = false;
     			else
-    				manufacturerSet.add(partNumber);
+    				partSet.add(partNumber);
     		}
     		
 			if (addToXML)
@@ -338,7 +332,6 @@ public class XMLPartsCreator {
        
     	if (addToXML && !data.isEmpty())
         	partDataElement.appendChild(parentElement);
-    	addToXML = true;
     	}
     }
     

@@ -57,7 +57,13 @@ skip custom field
 
 8-4-2018 3:00 PM - 4:00 PM 1 hr - A-269 completed coding for the Job Import and sent followup to Paul.
 
-8-4-2018 5:00 PM - 7:00 PM 2 hrs - Added logic to place .xml in a location specified in an associated .ini file for all imports.  Re-enabled <CustomField> tag for A-267`
+8-4-2018 5:00 PM - 7:00 PM 2 hrs - Added logic to place .xml in a location specified in an associated .ini file for all imports.  Re-enabled <CustomField> tag for A-267
+
+8-7-2018 7:00 PM - 8:00 PM 1 hr - A-270 Spoke with Paul regarding the <instruction> not being imported correctly.  We generated .xml files that contained only line feed characters and one that contained no line feed or carriage return characters, and imported correctly. Appears to be an issue on the Aegis side.
+
+8-7-2018 10:30 PM - 11:00 PM .5 hrs A-269 Added logic to prevent empty <BatchData> tag.
+
+8-9 8:30 
 
 
 

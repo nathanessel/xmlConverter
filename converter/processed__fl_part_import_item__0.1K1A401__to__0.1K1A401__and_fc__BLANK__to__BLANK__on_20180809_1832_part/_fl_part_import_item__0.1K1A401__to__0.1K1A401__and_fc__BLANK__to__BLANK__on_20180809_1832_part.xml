@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Parts>
+    <PartData>
+        <IsAssembly>false</IsAssembly>
+        <PartType>ElectronicPart</PartType>
+        <PartNumber>0.1K1A401</PartNumber>
+        <Description>THERMISTOR,100-OHM,5%,COATED,RADIAL</Description>
+        <AllowSimultaneousLoading>true</AllowSimultaneousLoading>
+        <RoHS>false</RoHS>
+        <Customer>
+            <Name>MSA</Name>
+        </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>.1K1A401</PartNumber>
+                <Description>THERMISTOR,100-OHM,5%,COATED,RADIAL</Description>
+                <ManufacturerName>Betatherm Sensors</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>GA0.1K1A401</PartNumber>
+                <Description>THERMISTOR,100-OHM,5%,COATED,RADIAL</Description>
+                <ManufacturerName>Betatherm Sensors</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>0.1K1A401</PartNumber>
+                <Description>THERMISTOR,100-OHM,5%,COATED,RADIAL</Description>
+                <ManufacturerName>Betatherm Sensors</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
+        <CustomFields>
+            <Entry>
+                <Name>Alloy</Name>
+                <Value>LEADED 63/37</Value>
+            </Entry>
+            <Entry>
+                <Name>Workmanship Standards</Name>
+                <Value>IPC-A-610 CLASS II</Value>
+            </Entry>
+        </CustomFields>
+    </PartData>
+</Parts>
