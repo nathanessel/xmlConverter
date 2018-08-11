@@ -8741,6 +8741,13 @@
         <Customer>
             <Name>DV</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>01000056Z</PartNumber>
+                <Description>FUSECLIP,SINGLE-END,5X20MM,2PIN,THT</Description>
+                <ManufacturerName>Littelfuse</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -10613,6 +10620,16 @@
                 <Description>CABLE SJ 16AWG 3 CNDTR</Description>
                 <ManufacturerName>Carol Cable</ManufacturerName>
             </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>01342</PartNumber>
+                <Description>CABLE SJ 16AWG 3 CNDTR</Description>
+                <ManufacturerName>Carol Cable</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>01342.15.01</PartNumber>
+                <Description>CABLE SJ 16AWG 3 CNDTR</Description>
+                <ManufacturerName>Carol Cable</ManufacturerName>
+            </ManufacturerPart>
         </ManufacturerParts>
     </PartData>
     <PartData>
@@ -10660,6 +10677,13 @@
         <Customer>
             <Name>MM</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>01342.15.01</PartNumber>
+                <Description>CABLE,16AWG,3-CON,26/30-STRD,BLK-RUBBER</Description>
+                <ManufacturerName>Carol Cable</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -13209,6 +13233,13 @@
         <Customer>
             <Name>OI-ZZ</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>02011602101</PartNumber>
+                <Description>CONN 160POS MALE HEADER</Description>
+                <ManufacturerName>Harting</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -13270,6 +13301,13 @@
         <Customer>
             <Name>MM</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>02-08-2004</PartNumber>
+                <Description>##OM,CRIMP,MALE,CONTACT FOR PLUG</Description>
+                <ManufacturerName>Molex</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -27719,6 +27757,13 @@
         <Customer>
             <Name>+MISC</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>CC603KRX7R9BB103</PartNumber>
+                <Description>CAP, X7R, 0.01UF, 50V, 10%, 0603</Description>
+                <ManufacturerName>Yageo</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -27730,6 +27775,13 @@
         <Customer>
             <Name>+MISC</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>CC603KRX7R9BB682</PartNumber>
+                <Description>CAP, X7R, 6800PF, 50V, 10%, 0603</Description>
+                <ManufacturerName>Yageo</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -27898,6 +27950,18 @@
         <Customer>
             <Name>MM</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>06035A101JAT2A</PartNumber>
+                <Description>##OM,CAP, C0G, 100PF, 50V, 5%, 0603</Description>
+                <ManufacturerName>AVX Electronics</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>GRM39C0G101J050AD</PartNumber>
+                <Description>##OM,CAP, C0G, 100PF, 50V, 5%, 0603</Description>
+                <ManufacturerName>Murata-Erie</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -28117,6 +28181,13 @@
         <Customer>
             <Name>+MISC</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>C0603C220J5GAC</PartNumber>
+                <Description>##OM,CAP, C0G, 22PF, 50V, 5%, 0603</Description>
+                <ManufacturerName>Kemet</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -28637,6 +28708,13 @@
         <Customer>
             <Name>MM</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>06035C472KAT2A</PartNumber>
+                <Description>##OM,CAP, X7R, 4700PF, 50V, 5%, 0603</Description>
+                <ManufacturerName>AVX Electronics</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -28923,6 +29001,13 @@
         <Customer>
             <Name>QNA</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>0603CS-10NXJLW</PartNumber>
+                <Description>INDUCTOR,10NH,5%,250MHZ,.7A,WW,0603</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -29046,6 +29131,18 @@
         <Customer>
             <Name>MM</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>0603CS-6N8XJLU</PartNumber>
+                <Description>INDUCTOR SMT 0603 6.8nH 10% 500mA</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>0603CS-6N8XJLW</PartNumber>
+                <Description>INDUCTOR SMT 0603 6.8nH 10% 500mA</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -29057,6 +29154,18 @@
         <Customer>
             <Name>MM</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>0603CS-6N8XJLU</PartNumber>
+                <Description>##OM,INDUCTOR SMT 0603 6.8nH 10% 500mA</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>0603CS-6N8XJLW</PartNumber>
+                <Description>##OM,INDUCTOR SMT 0603 6.8nH 10% 500mA</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -30265,6 +30374,23 @@
         <Customer>
             <Name>OI-ZZ</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>07-418003-1072</PartNumber>
+                <Description>##OM,COMPACT-FLASH,8GB,HORIZONTAL-IS,DOM</Description>
+                <ManufacturerName>Portwell, Inc.</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>DHSMH-08GJ301C1QNF-B023</PartNumber>
+                <Description>##OM,COMPACT-FLASH,8GB,HORIZONTAL-IS,DOM</Description>
+                <ManufacturerName>Portwell, Inc.</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>DHSML-08GJ301C1QNF-B023</PartNumber>
+                <Description>##OM,COMPACT-FLASH,8GB,HORIZONTAL-IS,DOM</Description>
+                <ManufacturerName>Portwell, Inc.</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -31343,6 +31469,13 @@
         <Customer>
             <Name>AMAT</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>0801733</PartNumber>
+                <Description>DIN RAIL,35MMx7.5MMx2M (SEE NOTES)</Description>
+                <ManufacturerName>Phoenix Contact</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -31517,6 +31650,13 @@
         <Customer>
             <Name>+MISC</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>08051A330JAT2A</PartNumber>
+                <Description>CAP, C0G, 33PF, 100V, 5%, 0805</Description>
+                <ManufacturerName>Dale</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -32015,6 +32155,23 @@
         <Customer>
             <Name>DV</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>08055C103KAT2A</PartNumber>
+                <Description>CAP, X7R, 0.01UF, 50V, 10%, 0805</Description>
+                <ManufacturerName>AVX Electronics</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>C0805C103K5RAC-7210</PartNumber>
+                <Description>CAP, X7R, 0.01UF, 50V, 10%, 0805</Description>
+                <ManufacturerName>Kemet</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>CC0805KRX7R9BB103</PartNumber>
+                <Description>CAP, X7R, 0.01UF, 50V, 10%, 0805</Description>
+                <ManufacturerName>Yageo</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -32517,6 +32674,23 @@
         <Customer>
             <Name>MM</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>0805CS-680XGLC</PartNumber>
+                <Description>##OM,INDUCTOR WW SMT 0805 68nH 2% 500mA</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>P0805CS-680XGBC</PartNumber>
+                <Description>##OM,INDUCTOR WW SMT 0805 68nH 2% 500mA</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>P0805CS-680XGLC</PartNumber>
+                <Description>##OM,INDUCTOR WW SMT 0805 68nH 2% 500mA</Description>
+                <ManufacturerName>Coilcraft</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -35030,6 +35204,13 @@
         <Customer>
             <Name>+MISC</Name>
         </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>08B0-1X1T-36-F</PartNumber>
+                <Description>CONN,RJ-45,8POS,2.03MM,R/A,10/100B,THT</Description>
+                <ManufacturerName>Belfuse</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
     </PartData>
     <PartData>
         <IsAssembly>false</IsAssembly>
@@ -35201,6 +35382,11 @@
                 <Description>CONN,DIN 41612,H15,MALE,R/A,3.0MM</Description>
                 <ManufacturerName>Harting</ManufacturerName>
             </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>69001-865</PartNumber>
+                <Description>CONN,DIN 41612,H15,MALE,R/A,3.0MM</Description>
+                <ManufacturerName>Schroff</ManufacturerName>
+            </ManufacturerPart>
         </ManufacturerParts>
     </PartData>
     <PartData>
@@ -35353,6 +35539,11 @@
         <ManufacturerParts>
             <ManufacturerPart>
                 <PartNumber>09 14 006 0313</PartNumber>
+                <Description>CONN,FRAME,HINGED,2-POS</Description>
+                <ManufacturerName>Harting</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>09-14-006-0313</PartNumber>
                 <Description>CONN,FRAME,HINGED,2-POS</Description>
                 <ManufacturerName>Harting</ManufacturerName>
             </ManufacturerPart>

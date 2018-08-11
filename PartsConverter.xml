@@ -22,5 +22,6 @@
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
+    <maxHeapSize>1000</maxHeapSize>
   </jre>
 </launch4jConfig>
