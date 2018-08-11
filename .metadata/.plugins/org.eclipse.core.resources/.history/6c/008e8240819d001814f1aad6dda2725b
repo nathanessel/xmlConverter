@@ -140,11 +140,7 @@ public class XMLPartsCreator {
                         	readCSVToPartData(part.partDataElement, header, value);
                         
                         else if (col >= 42 && col < 47)
-                        {
-                        	if (header.equalsIgnoreCase("PartNumber"))
-                        		value = value + "_" + nextLine[45];
                         	readCSVToNestedPartData(part.manufacturerPartElement, header, value, masterPartNumber);
-                        }
                         
                         else if (col >= 47 && col < 51)
                         	readCSVToNestedPartData(part.vendorPartElement, header, value, masterPartNumber);
@@ -214,22 +210,22 @@ public class XMLPartsCreator {
 
             FileWriter writer = null;
 
-        	String xmlDestination = "";
-            
+//        	String xmlDestination = "";
+//            
             try {
-
-            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
-
-            	Scanner input = new Scanner(file);
-            	
-            	while (input.hasNextLine()) 
-            	{
-            		String iniLine = input.nextLine();
-            		if (iniLine.startsWith("xml_destination="))
-            			xmlDestination = iniLine.replace("xml_destination=", "");
-            	}
-            	
-            	input.close();
+//
+//            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
+//
+//            	Scanner input = new Scanner(file);
+//            	
+//            	while (input.hasNextLine()) 
+//            	{
+//            		String iniLine = input.nextLine();
+//            		if (iniLine.startsWith("xml_destination="))
+//            			xmlDestination = iniLine.replace("xml_destination=", "");
+//            	}
+//            	
+//            	input.close();
 
                 writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
 
@@ -263,9 +259,9 @@ public class XMLPartsCreator {
             logWriter.close();
             reader.close();
             
-    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
+//    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
+//    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
+//    				, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
             System.err.println(exp.toString());
@@ -325,9 +321,6 @@ public class XMLPartsCreator {
 				Element childElement = newDoc.createElement(childTag);
 				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
 					PartElement partElement = entry.getValue();
-
-					if (partElement.getValue().contains("_"))
-						partElement.setValue(partElement.getValue().split("_")[0]);
 					
 					if (partElement.getValue().isEmpty())
 						continue;
@@ -424,4 +417,7 @@ public class XMLPartsCreator {
     	PartElement currentElement = new PartElement (header,value);
    		partElementList.put(header, currentElement);
     }
+
+    
+
 }
