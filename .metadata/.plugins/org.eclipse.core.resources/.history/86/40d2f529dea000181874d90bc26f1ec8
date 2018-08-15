@@ -164,7 +164,7 @@ public class XMLPartsCreator {
                         else if (col >= 69 && col < 74)
                         	readCSVToNestedPartData(part.machineElement, header, value, masterPartNumber);
                         	
-                         System.out.println("col " + col);
+                        // System.out.println("col " + col);
                         col++;
                     }
                 }
@@ -326,9 +326,6 @@ public class XMLPartsCreator {
 				for (Map.Entry<String, PartElement> entry : partElements.entrySet()) {
 					PartElement partElement = entry.getValue();
 
-					if (partElement.getValue().equalsIgnoreCase("_"))
-						partElement.setValue("");
-					
 					if (partElement.getValue().contains("_"))
 						partElement.setValue(partElement.getValue().split("_")[0]);
 					
