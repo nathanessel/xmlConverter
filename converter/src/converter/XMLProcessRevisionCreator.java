@@ -126,9 +126,9 @@ public class XMLProcessRevisionCreator {
                         String header = headers.get(col);
                         
                         if (value.equalsIgnoreCase("Y") || value.equalsIgnoreCase("yes"))
-                        	value = "true";
+                        	value = "True";
                         else if (value.equalsIgnoreCase("N") || value.equalsIgnoreCase("no"))
-                        	value = "false";
+                        	value = "False";
                         
                         if (col <= 6 && !assemblyExists)
                         	readCSVToProcessRevisionData(processRevision.processRevisionDataList, header, value);

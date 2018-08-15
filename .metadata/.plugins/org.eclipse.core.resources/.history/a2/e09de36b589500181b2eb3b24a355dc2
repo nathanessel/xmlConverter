@@ -1,9 +1,0 @@
-package converter;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class AML {
-	String name = "";
-	Map<String, BOMItemElement> entryList = new HashMap<String, BOMItemElement>();
-}

@@ -65,7 +65,7 @@ skip custom field
 
 8-9 8:30 - 9:30 1 hour fixed issue with bringing in multiple Manufacturing Parts
 
-8-11-2018 11:30 AM 
+8-11-2018 11:30 AM - 12:30 PM - Increased heap space for all .exe files and modified A-267 to allow blank Manufacturing Part Numbers
  
 
 

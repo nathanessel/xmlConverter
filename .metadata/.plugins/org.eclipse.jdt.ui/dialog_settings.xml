@@ -6,13 +6,13 @@
 	<section name="FatJarPackageWizard">
 		<item value="/Users/nathanessel/Desktop/xml" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
 		<item value="CsvConverter - converter" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="/Users/nathanessel/Desktop/xml/JobConverter.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="/Users/nathanessel/Desktop/xml/PartsConverter.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/nathanessel/Desktop/xml/PartsConverter.jar"/>
 			<item value="/Users/nathanessel/Desktop/xml/JobConverter.jar"/>
 			<item value="/Users/nathanessel/Desktop/xml/BOMConverter.jar"/>
-			<item value="/Users/nathanessel/Desktop/xml/PartsConverter.jar"/>
 			<item value="/Users/nathanessel/Desktop/xml/ProcessRevisionConverter.jar"/>
 			<item value="/Users/nathanessel/Desktop/xml/ProcessRevWindowsConverter.jar"/>
 			<item value="/Users/nathanessel/Desktop/xml/ProcessRevConverter.jar"/>

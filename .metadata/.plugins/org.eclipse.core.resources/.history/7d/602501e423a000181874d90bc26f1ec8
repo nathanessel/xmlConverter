@@ -17,9 +17,10 @@ public class CsvConverter {
     	
     		if (filename.endsWith(".txt") || filename.endsWith(".TXT"))
     		{
-    			XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
-    			//XMLPartsCreator creator = new XMLPartsCreator();
+    			//XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
+    			XMLPartsCreator creator = new XMLPartsCreator();
     			//XMLBomImportCreator creator = new XMLBomImportCreator();
+    			//XMLJobCreator creator = new XMLJobCreator();
     		
     			
     			//----------------Windows------------------------------
@@ -39,17 +40,15 @@ public class CsvConverter {
     			// -------------------Unix-----------------------
 //    			File processed = new File(folder.getPath() + "/processed_" + filename.replace(".txt", ""));
 //    			processed.mkdir();
-//    			
+//
 //    			System.out.println("Converting " + filename + " to " + filename.replace(".txt", ".xml"));
-//    	    	creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "/", '|');
-//       			
-//       		Path path1 = Paths.get(folder.getPath() + "/" + filename);
-//       		Path path2 = Paths.get(processed.getPath() + "/" + filename);
-//       			
-//       		Files.move(path1, path2);
+//    			creator.convertFile(filename, filename.replace(".txt", ".xml"), processed.getAbsolutePath(), "/", '|');
+//
+//    			Path path1 = Paths.get(folder.getPath() + "/" + filename);
+//    			Path path2 = Paths.get(processed.getPath() + "/" + filename);
+//
+//    			Files.move(path1, path2);
     	    }
-    		
-    		
     	}
     }
 }
