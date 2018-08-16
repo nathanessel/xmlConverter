@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProcessRevision>
+    <ProcessRevisionData>
+        <Assembly>SE-3-017GR10</Assembly>
+        <AssemblyRevision>K</AssemblyRevision>
+        <Name>A01</Name>
+        <TrackingMode>Non-Serialized</TrackingMode>
+        <RouteEnforcement>Disabled</RouteEnforcement>
+        <ReleaseToProduction>True</ReleaseToProduction>
+        <Operations>
+            <Operation>
+                <Name>10 PICK-NS</Name>
+                <Sequence>1</Sequence>
+                <Description>PICK - STOREROOM NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>360</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>10 PICK-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Eng_documentation\Released Documentation\Owens-Brockway\Device Master Record\Cold end\SE\SE-3\SE-3-017_5_K.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PICK SMT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>40 PICK-NS</Name>
+                <Sequence>2</Sequence>
+                <Description>PICK - STOREROOM NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>360</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>40 PICK-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Eng_documentation\Released Documentation\Owens-Brockway\Device Master Record\Cold end\SE\SE-3\SE-3-017_5_K.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PICK POSTWAVE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>172 POSWAV-NS</Name>
+                <Sequence>3</Sequence>
+                <Description>POST WAVE NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>540</EstCycleTime>
+                <SetupTime>288</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>172 POSWAV-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>REMOVE R6, INSTALL NEW R6.
+HAND SOLDER THT PARTS.
+INSTALL 4" LONG PIECE OF INDEX 28 
+(RED WIRE) TO SQUARE HOLE OF J1. 
+INSTALL 4" LONG PIECE OF INDEX 27 
+(BLACK WIRE) TO ROUND HOLE OF J1. 
+NO TERMINATION FOR OTHER END OF WIRE 
+AT THIS ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>175 CLEANA-NS</Name>
+                <Sequence>4</Sequence>
+                <Description>AQEOUS CLEANER NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>28.8</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>175 CLEANA-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>200 INSPIP-NS</Name>
+                <Sequence>5</Sequence>
+                <Description>INSPECTION NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>61.2</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>200 INSPIP-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Eng_documentation\Released Documentation\Owens-Brockway\Device Master Record\Cold end\SE\SE-3\SE-3-017_5_K.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>INSPECTION.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>220 PACKSR-NS</Name>
+                <Sequence>6</Sequence>
+                <Description>PACKAGE - STOCKROOM NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>61.2</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>220 PACKSR-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Documents>
+                            <Document>\\pitfs1\data\common\Eng_documentation\Released Documentation\Owens-Brockway\Device Master Record\Cold end\SE\SE-3\SE-3-017_5_K.pdf</Document>
+                        </Documents>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PACKAGE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                            <Activity>
+                                <Instruction>PICK SMT PARTS.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                            <Activity>
+                                <Instruction>PICK POSTWAVE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                            <Activity>
+                                <Instruction>REMOVE R6, INSTALL NEW R6.
+HAND SOLDER THT PARTS.
+INSTALL 4" LONG PIECE OF INDEX 28 
+(RED WIRE) TO SQUARE HOLE OF J1. 
+INSTALL 4" LONG PIECE OF INDEX 27 
+(BLACK WIRE) TO ROUND HOLE OF J1. 
+NO TERMINATION FOR OTHER END OF WIRE 
+AT THIS ASSEMBLY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                            <Activity>
+                                <Instruction>AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                            <Activity>
+                                <Instruction>INSPECTION.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 10 PICK</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 40 PICK</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 172 POSWAV</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 175 CLEANA</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 200 INSPIP</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 220 PACKSR</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>Rework</Name>
+                <Sequence>-1</Sequence>
+                <Description>Rework</Description>
+                <AllowProductScrapping>True</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>Rework</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>Rework
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to RMD</Name>
+                        <ActivitiesCompleted>True</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>RMD</Name>
+                <Sequence>-1</Sequence>
+                <Description>RMD</Description>
+                <AllowProductScrapping>True</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>RMD</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>RMD
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Rework</Name>
+                        <ActivitiesCompleted>True</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+        </Operations>
+    </ProcessRevisionData>
+</ProcessRevision>

@@ -70,20 +70,29 @@ public class XMLProcessRevisionCreator {
             Element processRevisionElement = newDoc.createElement("ProcessRevision");
             newDoc.appendChild(processRevisionElement);
 
+            //Double quotes within the double quotes of the text delimiter were causing issues.  Used regex to replace " with "" to fix this.
+            //The escape character was changed to a '`' to allow bringing in directories that contained '\' characters.  The '\' character is the default
+            //the escape character in OpenCSV.
+            
             try {
-                Path path = Paths.get(new File("").getAbsoluteFile() + operatingSystemSeparator + txtFileName);
+            	
+        		Files.copy(Paths.get(new File("").getAbsoluteFile() + operatingSystemSeparator + txtFileName), 
+        				Paths.get(new File("").getAbsoluteFile() + operatingSystemSeparator + "temp_" + txtFileName)
+        				, StandardCopyOption.REPLACE_EXISTING);
+            	
+                Path path = Paths.get(new File("").getAbsoluteFile() + operatingSystemSeparator + "temp_" + txtFileName);
                 Stream <String> lines = Files.lines(path);
-                List <String> replaced = lines.map(line -> line.replaceAll("^\"", "{").replaceAll("$\"", "{").replace("\"|\"", "{|{").replace("\"|", "{|").replace("|\"", "|{")).collect(Collectors.toList());
+                List <String> replaced = lines.map(line -> line.replaceAll("(?<!^)(?<!\\|)\"(?!\\|)(?!$)", "\"\"")).collect(Collectors.toList());
                 Files.write(path, replaced);
                 lines.close();
-                System.out.println("Find and Replace done!!!");
             } catch (IOException e) {
+        		errWriter.println(e.toString());
                 e.printStackTrace();
             }
             
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withQuoteChar('{').build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withEscapeChar('`').build();
         	
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("temp_" + txtFileName), "utf-8"));
             
             CSVReader reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
 
@@ -148,6 +157,12 @@ public class XMLProcessRevisionCreator {
                         
                         else if (col >= 7 && col < 18)
                         {
+                        	if (nextLine[7].isEmpty())
+                        	{
+                        		col++;
+                        		continue;
+                        	}
+                        	
                         	if (processRevision.operationsMap.get(nextLine[7]) == null)
                         		readCSVToProcessRevisionData(operation.operationsList, header, value);
                         	else
@@ -156,6 +171,12 @@ public class XMLProcessRevisionCreator {
                         
                         else if (col >= 18 && col < 23)
                         {
+                        	if (nextLine[18].isEmpty())
+                        	{
+                        		col++;
+                        		continue;
+                        	}
+                        	
                         	if (operation.stepsMap.get(nextLine[18]) == null)
                         		readCSVToProcessRevisionData(steps.stepsList, header, value);
                         	else
@@ -175,6 +196,12 @@ public class XMLProcessRevisionCreator {
                         
                         else if (col >= 24 && col < 27)
                         {
+                        	if (nextLine[24].isEmpty() || nextLine[24].equalsIgnoreCase("\r") || nextLine[24].equalsIgnoreCase("\n") || nextLine[24].equalsIgnoreCase("\r\n"))
+                        	{
+                        		col++;
+                        		continue;
+                        	}
+                        	
                         	if (steps.activitiesMap.get(nextLine[24]) == null)
                         		readCSVToProcessRevisionData(activities.activitiesList, header, value);
                         	else
@@ -187,11 +214,12 @@ public class XMLProcessRevisionCreator {
                         	else
                         		exitPathways = operation.exitPathwaysMap.get(nextLine[27]);
 
-                         //System.out.println("col " + col);
+                         System.out.println("col " + col);
                         col++;
                     }
                 }
-                
+
+                System.out.println("Processing line " + line);
                 logWriter.println("Processing line " + line);
 
                 if (line != 0)
@@ -233,48 +261,54 @@ public class XMLProcessRevisionCreator {
                     
                     for (Map.Entry<String, Steps> step : operation.getValue().stepsMap.entrySet())
                     {
-                        Element stepElement = newDoc.createElement("Step");
+                    	Element stepElement = newDoc.createElement("Step");
 
-                        for (ProcessRevisionDataElement stepTag : step.getValue().stepsList)
-                        {
+                    	for (ProcessRevisionDataElement stepTag : step.getValue().stepsList)
+                    	{
                     		Element currentElement = newDoc.createElement(stepTag.getHeader());
                     		currentElement.appendChild(newDoc.createTextNode(stepTag.getValue()));
                     		stepElement.appendChild(currentElement);
-                        }
-                        
-                        if (operation.getValue().name.contains("10 PICK"))
-                        	System.out.println("test");
-                        
-                        Element documentsElement = newDoc.createElement("Documents");
-                        
-                        for (Map.Entry<String, Documents> document : step.getValue().documentsMap.entrySet())
-                        {
-                            for (ProcessRevisionDataElement documentTag : document.getValue().documentsList)
-                            {
-                        		Element currentElement = newDoc.createElement(documentTag.getHeader());
-                        		currentElement.appendChild(newDoc.createTextNode(documentTag.getValue()));
-                        		documentsElement.appendChild(currentElement);
-                            }
-                        }
-                        
-                        Element activitiesElement = newDoc.createElement("Activities");
-                        
-                        for (Map.Entry<String, Activities> activity : step.getValue().activitiesMap.entrySet())
-                        {
-                            Element activityElement = newDoc.createElement("Activity");
-                            
-                            for (ProcessRevisionDataElement activityTag : activity.getValue().activitiesList)
-                            {
-                        		Element currentElement = newDoc.createElement(activityTag.getHeader());
-                        		currentElement.appendChild(newDoc.createTextNode(activityTag.getValue()));
-                        		activityElement.appendChild(currentElement);
-                            }
-                            activitiesElement.appendChild(activityElement);
-                        }
+                    	}
 
-                        stepElement.appendChild(documentsElement);
-                        stepElement.appendChild(activitiesElement);
-                        stepsElement.appendChild(stepElement);
+                    	if (operation.getValue().name.contains("10 PICK"))
+                    		System.out.println("test");
+
+                    	Element documentsElement = newDoc.createElement("Documents");
+
+                    	for (Map.Entry<String, Documents> document : step.getValue().documentsMap.entrySet())
+                    	{
+                    		for (ProcessRevisionDataElement documentTag : document.getValue().documentsList)
+                    		{
+                    			Element currentElement = newDoc.createElement(documentTag.getHeader());
+                    			currentElement.appendChild(newDoc.createTextNode(documentTag.getValue()));
+                    			documentsElement.appendChild(currentElement);
+                    		}
+                    	}
+
+                    	Element activitiesElement = newDoc.createElement("Activities");
+
+                    	for (Map.Entry<String, Activities> activity : step.getValue().activitiesMap.entrySet())
+                    	{
+                    		Element activityElement = newDoc.createElement("Activity");
+
+                    		for (ProcessRevisionDataElement activityTag : activity.getValue().activitiesList)
+                    		{
+                    			Element currentElement = newDoc.createElement(activityTag.getHeader());
+                    			currentElement.appendChild(newDoc.createTextNode(activityTag.getValue()));
+                    			activityElement.appendChild(currentElement);
+                    		}
+                    		
+                    		if (activityElement.getChildNodes().getLength() > 0)
+                    			activitiesElement.appendChild(activityElement);
+                    	}
+
+
+                    	if (documentsElement.getChildNodes().getLength() > 0)
+                    		stepElement.appendChild(documentsElement);
+                    	if (activitiesElement.getChildNodes().getLength() > 0)
+                    		stepElement.appendChild(activitiesElement);
+                    	if (stepElement.getChildNodes().getLength() > 0)
+                    		stepsElement.appendChild(stepElement);
                     }
                     
                     Element exitPathwaysElement = newDoc.createElement("ExitPathways");
@@ -289,12 +323,17 @@ public class XMLProcessRevisionCreator {
                     		currentElement.appendChild(newDoc.createTextNode(exitPathwayTag.getValue()));
                     		exitPathwayElement.appendChild(currentElement);
                         }
-                        exitPathwaysElement.appendChild(exitPathwayElement);
+                        
+                        if (exitPathwayElement.getChildNodes().getLength() > 0)
+                        	exitPathwaysElement.appendChild(exitPathwayElement);
                     }
                     
-                    operationElement.appendChild(stepsElement);
-                    operationElement.appendChild(exitPathwaysElement);
-                    operationsElement.appendChild(operationElement);
+                	if (stepsElement.getChildNodes().getLength() > 0)
+                		operationElement.appendChild(stepsElement);
+                	if (exitPathwaysElement.getChildNodes().getLength() > 0)
+                		operationElement.appendChild(exitPathwaysElement);
+                	if (operationElement.getChildNodes().getLength() > 0)
+                		operationsElement.appendChild(operationElement);
                     processRevisionData.appendChild(operationsElement);
                 }
                 
@@ -305,22 +344,22 @@ public class XMLProcessRevisionCreator {
 
             FileWriter writer = null;
 
-//        	String xmlDestination = "";
-//            
+        	String xmlDestination = "";
+            
             try {
-//
-//            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "ProcessRevisionConverter.ini");
-//
-//            	Scanner input = new Scanner(file);
-//            	
-//            	while (input.hasNextLine()) 
-//            	{
-//            		String iniLine = input.nextLine();
-//            		if (iniLine.startsWith("xml_destination="))
-//            			xmlDestination = iniLine.replace("xml_destination=", "");
-//            	}
-//            	
-//            	input.close();
+
+            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "ProcessRevisionConverter.ini");
+
+            	Scanner input = new Scanner(file);
+            	
+            	while (input.hasNextLine()) 
+            	{
+            		String iniLine = input.nextLine();
+            		if (iniLine.startsWith("xml_destination="))
+            			xmlDestination = iniLine.replace("xml_destination=", "");
+            	}
+            	
+            	input.close();
             	
             	writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
 
@@ -354,10 +393,13 @@ public class XMLProcessRevisionCreator {
             logWriter.close();
             reader.close();
             
-//    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-//    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-//    				, StandardCopyOption.REPLACE_EXISTING);
+    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
+    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
+    				, StandardCopyOption.REPLACE_EXISTING);
 
+            new File("temp_" + txtFileName).delete();
+
+            
         } catch (IOException exp) {
             System.err.println(exp.toString());
             errWriter.println(exp.toString());
@@ -382,7 +424,7 @@ public class XMLProcessRevisionCreator {
     }
     
     public void readCSVToProcessRevisionData(List<ProcessRevisionDataElement> processRevisionElementList, String header, String value) {
-    	if (!value.isEmpty())
+    	if (!value.isEmpty() && !value.equalsIgnoreCase("\r") && !value.equalsIgnoreCase("\n") && !value.equalsIgnoreCase("\r\n"))
 		{
     		
 //    		if (header.equalsIgnoreCase("instruction"))
