@@ -8,16 +8,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -70,18 +66,7 @@ public class XMLProcessRevisionCreator {
             Element processRevisionElement = newDoc.createElement("ProcessRevision");
             newDoc.appendChild(processRevisionElement);
 
-            try {
-                Path path = Paths.get(new File("").getAbsoluteFile() + operatingSystemSeparator + txtFileName);
-                Stream <String> lines = Files.lines(path);
-                List <String> replaced = lines.map(line -> line.replaceAll("^\"", "{").replaceAll("$\"", "{").replace("\"|\"", "{|{").replace("\"|", "{|").replace("|\"", "|{")).collect(Collectors.toList());
-                Files.write(path, replaced);
-                lines.close();
-                System.out.println("Find and Replace done!!!");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withQuoteChar('{').build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withEscapeChar('`').build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             
@@ -130,6 +115,8 @@ public class XMLProcessRevisionCreator {
                 		assemblyExists = true;
                 	
                     int col = 0;
+                    
+                    
                     
                     for (String value : nextLine) 
                     {

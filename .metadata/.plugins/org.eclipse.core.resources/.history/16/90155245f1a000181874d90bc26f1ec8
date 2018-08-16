@@ -231,21 +231,21 @@ public class XMLPartsCreator {
             FileWriter writer = null;
 
         	String xmlDestination = "";
-            
+//            
             try {
-
-            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
-
-            	Scanner input = new Scanner(file);
-            	
-            	while (input.hasNextLine()) 
-            	{
-            		String iniLine = input.nextLine();
-            		if (iniLine.startsWith("xml_destination="))
-            			xmlDestination = iniLine.replace("xml_destination=", "");
-            	}
-            	
-            	input.close();
+//
+//            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "PartsConverter.ini");
+//
+//            	Scanner input = new Scanner(file);
+//            	
+//            	while (input.hasNextLine()) 
+//            	{
+//            		String iniLine = input.nextLine();
+//            		if (iniLine.startsWith("xml_destination="))
+//            			xmlDestination = iniLine.replace("xml_destination=", "");
+//            	}
+//            	
+//            	input.close();
 
                 writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
 
@@ -279,9 +279,9 @@ public class XMLPartsCreator {
             logWriter.close();
             reader.close();
             
-    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
+//    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
+//    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
+//    				, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
             System.err.println(exp.toString());

@@ -142,11 +142,7 @@ public class XMLPartsCreator {
                         else if (col >= 42 && col < 47)
                         {
                         	if(nextLine[42].isEmpty() && nextLine[45].isEmpty())
-                        	{
-                        		col++;
                         		continue;
-                        	}
-                        		
                         	
                         	else if (nextLine[42].isEmpty() || nextLine[45].isEmpty())
                         	{

@@ -73,7 +73,7 @@ public class XMLProcessRevisionCreator {
             try {
                 Path path = Paths.get(new File("").getAbsoluteFile() + operatingSystemSeparator + txtFileName);
                 Stream <String> lines = Files.lines(path);
-                List <String> replaced = lines.map(line -> line.replaceAll("^\"", "{").replaceAll("$\"", "{").replace("\"|\"", "{|{").replace("\"|", "{|").replace("|\"", "|{")).collect(Collectors.toList());
+                List <String> replaced = lines.map(line -> line.replaceAll("^\"", "'").replaceAll("$\"", "'").replace("\"|\"", "'|'").replace("\"|", "'|").replace("|\"", "|'")).collect(Collectors.toList());
                 Files.write(path, replaced);
                 lines.close();
                 System.out.println("Find and Replace done!!!");
@@ -81,7 +81,7 @@ public class XMLProcessRevisionCreator {
                 e.printStackTrace();
             }
             
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withQuoteChar('{').build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withQuoteChar('\'').build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             
