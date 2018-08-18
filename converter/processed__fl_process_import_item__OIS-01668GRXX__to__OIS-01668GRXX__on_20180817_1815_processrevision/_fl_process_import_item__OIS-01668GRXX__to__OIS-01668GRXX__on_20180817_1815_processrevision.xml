@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProcessRevision>
+    <ProcessRevisionData>
+        <Assembly>OIS-01668GRXX</Assembly>
+        <AssemblyRevision>BI</AssemblyRevision>
+        <Name>A01</Name>
+        <TrackingMode>Non-Serialized</TrackingMode>
+        <RouteEnforcement>Disabled</RouteEnforcement>
+        <ReleaseToProduction>True</ReleaseToProduction>
+        <Operations>
+            <Operation>
+                <Name>5 SERIAL-NS</Name>
+                <Sequence>1</Sequence>
+                <Description>SERIALIZATION NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>18</EstCycleTime>
+                <SetupTime>180</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>5 SERIAL-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>SERIALIZE BOARDS PER MFG-8000.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 5 SERIAL</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>20 PICK-NS</Name>
+                <Sequence>2</Sequence>
+                <Description>PICK - STOREROOM NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>216</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>20 PICK-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PICK VCD.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 20 PICK</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>40 PICK-NS</Name>
+                <Sequence>3</Sequence>
+                <Description>PICK - STOREROOM NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>2232</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>40 PICK-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PICK POSTWAVE.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 40 PICK</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>50 VCD-NS</Name>
+                <Sequence>4</Sequence>
+                <Description>AXIAL INSERTION NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>324</EstCycleTime>
+                <SetupTime>396</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>50 VCD-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>AXIAL INSERTION.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 50 VCD</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>60 PREP-NS</Name>
+                <Sequence>5</Sequence>
+                <Description>THT COMPONENT PREP NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>2412</EstCycleTime>
+                <SetupTime>288</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>60 PREP-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PREP.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 60 PREP</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>70 PREWAV-NS</Name>
+                <Sequence>6</Sequence>
+                <Description>THT PREWAVE NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>3600</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>70 PREWAV-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PREWAVE.
+DRILL OUT CONNECTOR MOUNTING HOLES USING
+LOCATING FIXTURE FOR ALIGNMENT.
+INSTALL PRESS NUTS INTO CONNECTOR
+MOUNTING FLANGES.
+INSERT PINS INTO CONNECTORS AND SEAT.
+           **IMPORTANT**
+OPERATOR VERIFY CORRECT ORIENTATION OF
+ALL DIODES BEFORE WAVE SOLDER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 70 PREWAV</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>80 SOLDRW-NS</Name>
+                <Sequence>7</Sequence>
+                <Description>WAVE SOLDER NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>252</EstCycleTime>
+                <SetupTime>180</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>80 SOLDRW-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>WAVE SOLDER.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 80 SOLDRW</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>90 CLEANA-NS</Name>
+                <Sequence>8</Sequence>
+                <Description>AQEOUS CLEANER NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>90 CLEANA-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>AQUEOUS WASH.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 90 CLEANA</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>100 POSWAV-NS</Name>
+                <Sequence>9</Sequence>
+                <Description>POST WAVE NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>540</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>100 POSWAV-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>POSTWAVE.
+TOUCH-UP AND COMPLETE ASSEMBLY, LESS
+JUMPERS.
+NOTE: USE AN INTERNAL TOOTH, #6 STAR
+WASHER ON THE COMPONENT SIDE OF THE
+"GND" AND "+28V" HARDWARE AND TIGHTEN
+LOCK-NUT SECURELY.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 100 POSWAV</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>110 INSPIP-NS</Name>
+                <Sequence>10</Sequence>
+                <Description>INSPECTION NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>180</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>110 INSPIP-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>FINAL INSPECTION.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 110 INSPIP</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>120 PACKSR-NS</Name>
+                <Sequence>11</Sequence>
+                <Description>PACKAGE - STOCKROOM NON-SERIALIZED</Description>
+                <AllowProductScrapping>False</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>120 PACKSR-NS</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>PACKAGING.
+</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to Rework</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <RouteTo>Rework</RouteTo>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                    <ExitPathway>
+                        <Name>JIT 120 PACKSR</Name>
+                        <ActivitiesCompleted>False</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>Rework</Name>
+                <Sequence>-1</Sequence>
+                <Description>Rework</Description>
+                <AllowProductScrapping>True</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>Rework</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>Rework</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Send to RMD</Name>
+                        <ActivitiesCompleted>True</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+            <Operation>
+                <Name>RMD</Name>
+                <Sequence>-1</Sequence>
+                <Description>RMD</Description>
+                <AllowProductScrapping>True</AllowProductScrapping>
+                <AllowOperationRepeat>True</AllowOperationRepeat>
+                <OperationMode>FullTracking</OperationMode>
+                <AllowBarcodeRanges>False</AllowBarcodeRanges>
+                <AllowMultipleUnits>False</AllowMultipleUnits>
+                <EstCycleTime>0</EstCycleTime>
+                <SetupTime>0</SetupTime>
+                <Steps>
+                    <Step>
+                        <Name>RMD</Name>
+                        <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                        <OperatorInterfaceTemplate>Assembly Operator Interface Template (Tracked)</OperatorInterfaceTemplate>
+                        <AnyOrderMode>True</AnyOrderMode>
+                        <Required>False</Required>
+                        <Activities>
+                            <Activity>
+                                <Instruction>RMD</Instruction>
+                                <WorkInstructionTemplate>Fitted Work Instruction Template (BOM Block w/ Bubble Nos)</WorkInstructionTemplate>
+                                <Required>False</Required>
+                            </Activity>
+                        </Activities>
+                    </Step>
+                </Steps>
+                <ExitPathways>
+                    <ExitPathway>
+                        <Name>Rework</Name>
+                        <ActivitiesCompleted>True</ActivitiesCompleted>
+                        <ChangeProductStatus>True</ChangeProductStatus>
+                        <Status>passed</Status>
+                        <ReturnTo>Current</ReturnTo>
+                    </ExitPathway>
+                </ExitPathways>
+            </Operation>
+        </Operations>
+    </ProcessRevisionData>
+</ProcessRevision>

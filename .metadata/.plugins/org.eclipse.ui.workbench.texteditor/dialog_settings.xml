@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="txtFile" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
-		<item value="true" key="wholeword"/>
+		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="txtFile"/>
+			<item value="txt"/>
+			<item value="txtfile"/>
+			<item value="documents"/>
+			<item value="test"/>
 			<item value="quotation"/>
 			<item value="processRevisionMap"/>
 			<item value="\\"/>
@@ -18,11 +23,6 @@
 			<item value="assembliesElement"/>
 			<item value="hashset"/>
 			<item value="entr"/>
-			<item value="91100"/>
-			<item value="customfie"/>
-			<item value="header+v"/>
-			<item value="new HashMap&lt;String, PartElement&gt;()"/>
-			<item value="HashPartElement"/>
 		</list>
 		<list key="replacehistory">
 			<item value="processRevision"/>
@@ -38,7 +38,7 @@
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="409" key="DIALOG_HEIGHT"/>
-		<item value="708" key="DIALOG_X_ORIGIN"/>
-		<item value="245" key="DIALOG_Y_ORIGIN"/>
+		<item value="1219" key="DIALOG_X_ORIGIN"/>
+		<item value="237" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

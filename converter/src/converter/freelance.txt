@@ -69,9 +69,13 @@ skip custom field
  
 8-14-2018 8:30 PM - 9:00 PM .5 hrs - Changed true and false values to True and False and created .exe file and sent followup email to Paul.
 
-8-15-2018 6:45 PM 
 
 
+8-15-2018 6:45 PM - 7:45 PM 1 hrs - A-267 added logic to allow for blank Manufacturing Part Number AND Manufacturing Part Name
+
+8-15-2018 7:45 PM - 11:45 PM 4 hrs - A-270 fixed issue with double quote appearing in Instruction Tag and fixed issue with Instruction tag only containing a carriage return character.
+
+8-16-2018 9:18 PM 
 
 
 

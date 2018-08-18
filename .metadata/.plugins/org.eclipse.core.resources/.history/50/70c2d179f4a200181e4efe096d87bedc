@@ -82,7 +82,7 @@ public class XMLProcessRevisionCreator {
             	
                 Path path = Paths.get(new File("").getAbsoluteFile() + operatingSystemSeparator + "temp_" + txtFileName);
                 Stream <String> lines = Files.lines(path);
-                List <String> replaced = lines.map(line -> line.replaceAll("(?!^)(?<!\\|)(?<!\")\"(?!\\|)(?!$)(?!\")", "\"\"")).collect(Collectors.toList());
+                List <String> replaced = lines.map(line -> line.replaceAll("(?<!^)(?<!\\|)\"(?!\\|)(?!$)", "\"\"")).collect(Collectors.toList());
                 Files.write(path, replaced);
                 lines.close();
             } catch (IOException e) {
