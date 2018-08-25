@@ -65,7 +65,7 @@ public class XMLJobCreator {
 
             newDoc.appendChild(batchesElement);
 
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withIgnoreQuotations(true).build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withIgnoreQuotations(true).withEscapeChar('\0').build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             

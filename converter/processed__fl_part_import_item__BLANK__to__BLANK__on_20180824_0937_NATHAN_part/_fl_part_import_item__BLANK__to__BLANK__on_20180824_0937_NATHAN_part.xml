@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Parts>
+    <PartData>
+        <IsAssembly>false</IsAssembly>
+        <PartType>ElectronicPart</PartType>
+        <PartNumber>MB81V18165A-60PFTN</PartNumber>
+        <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+        <AllowSimultaneousLoading>true</AllowSimultaneousLoading>
+        <RoHS>false</RoHS>
+        <Customer>
+            <Name>MM</Name>
+        </Customer>
+        <ManufacturerParts>
+            <ManufacturerPart>
+                <PartNumber>AS4LC1M16E5-60TC</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Alliance Semiconduct</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>A42L0616V-50</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Amic Technology</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>HM51W18165LTT-6</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Hitachi</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>HM51W18165TT-6</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Hitachi</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>MT4LC1M16E5TG-6</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Micron Technology</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>MSM51V18165F-60TSK-\</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Okidata Data Corp.</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>MSM51V1865F-50TS-K</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Okidata Data Corp.</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>Oki Semiconductor</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Oki Semiconductor</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>MSM51V18165F-50TS-K</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Oki Semiconductor</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>MSM51V18165F-60TS-K</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Oki Semiconductor</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>MSM51V18165F-60TSK</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Oki Semiconductor</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>K4E151612D-TC60000</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Samsung</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>K4E151612D-TI60000</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Samsung</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>TC51V18165CFTS-60</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Toshiba</ManufacturerName>
+            </ManufacturerPart>
+            <ManufacturerPart>
+                <PartNumber>Fujitsu</PartNumber>
+                <Description>IC MEMORY 1M X 16 DRAM EDO</Description>
+                <ManufacturerName>Fujitsu</ManufacturerName>
+            </ManufacturerPart>
+        </ManufacturerParts>
+        <CustomFields>
+            <Entry>
+                <Name>Alloy</Name>
+                <Value>LEADED 63/37</Value>
+            </Entry>
+            <Entry>
+                <Name>Workmanship Standards</Name>
+                <Value>IPC-A-610 CLASS II</Value>
+            </Entry>
+        </CustomFields>
+    </PartData>
+</Parts>

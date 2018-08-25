@@ -90,7 +90,7 @@ public class XMLProcessRevisionCreator {
                 e.printStackTrace();
             }
             
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withEscapeChar('`').build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withEscapeChar('\0').build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("temp_" + txtFileName), "utf-8"));
             

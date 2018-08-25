@@ -67,7 +67,7 @@ public class XMLBomImportCreator {
 
             newDoc.appendChild(assembliesElement);
             
-            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).build();
+            CSVParser parser = new CSVParserBuilder().withSeparator(delimiter).withEscapeChar('\0').build();
         	
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(txtFileName), "utf-8"));
             
