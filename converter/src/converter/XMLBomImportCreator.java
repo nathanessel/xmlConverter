@@ -89,6 +89,9 @@ public class XMLBomImportCreator {
             boolean revisionExists = false;
             boolean configurableExists = false;
             
+            String partNumber = "";
+            String revisionName = "";
+            
             while ((nextLine = reader.readNext()) != null) 
             {
             	AML aml = new AML();
@@ -151,6 +154,7 @@ public class XMLBomImportCreator {
                         			currentElement.appendChild(newDoc.createTextNode(value));
                         			assemblyElement.appendChild(currentElement);
                         			nameExists = true;
+                        			partNumber = value;
                         		}
                         		else if (header.equalsIgnoreCase("revision") && !revisionExists)
                         		{
@@ -158,6 +162,7 @@ public class XMLBomImportCreator {
                         			currentElement.appendChild(newDoc.createTextNode(value));
                         			assemblyElement.appendChild(currentElement);
                         			revisionExists = true;
+                        			revisionName = value;
                         		}
                         		
                         		else if (header.equalsIgnoreCase("configurable") && !configurableExists)
@@ -320,7 +325,13 @@ public class XMLBomImportCreator {
 
             FileWriter writer = null;
 
-        	String xmlDestination = "";
+            String originalBomPath = processedFolder + operatingSystemSeparator + xmlFileName;
+            String originalPartPath = processedFolder + operatingSystemSeparator + xmlFileName.replaceAll(".xml", "_part.xml");
+            
+        	String bomXmlDestination = "";
+        	String partXmlDestination = "";
+        	
+        	int secondsOfDelay = 0;
             
             try {
 
@@ -331,22 +342,55 @@ public class XMLBomImportCreator {
             	while (input.hasNextLine()) 
             	{
             		String iniLine = input.nextLine();
-            		if (iniLine.startsWith("xml_destination="))
-            			xmlDestination = iniLine.replace("xml_destination=", "");
+            		if (iniLine.startsWith("bom_xml_destination="))
+            			bomXmlDestination = iniLine.replace("bom_xml_destination=", "");
+            		else if (iniLine.startsWith("part_xml_destination="))
+            			partXmlDestination = iniLine.replace("part_xml_destination=", "");
+            		else if (iniLine.startsWith("timedelay="))
+            			secondsOfDelay = Integer.parseInt(iniLine.replace("timedelay=", ""));
             	}
             	
             	input.close();
-
-                writer = new FileWriter(new File(processedFolder + operatingSystemSeparator + xmlFileName));
 
                 TransformerFactory tranFactory = TransformerFactory.newInstance();
                 Transformer aTransformer = tranFactory.newTransformer();
                 aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
                 aTransformer.setOutputProperty(OutputKeys.METHOD, "xml");
                 aTransformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+            	
+                Document partDoc = domBuilder.newDocument();
+                
+                Element partsElement = partDoc.createElement("Parts");
+                partDoc.appendChild(partsElement);
 
-                Source src = new DOMSource(newDoc);
+                Element partDataElement = partDoc.createElement("PartData");
+                
+                Element currentElement = partDoc.createElement("IsAssembly");
+                currentElement.appendChild(partDoc.createTextNode("true"));
+                partDataElement.appendChild(currentElement);
+
+                currentElement = partDoc.createElement("PartNumber");
+                currentElement.appendChild(partDoc.createTextNode(partNumber));
+                partDataElement.appendChild(currentElement);
+
+                currentElement = partDoc.createElement("Revision");
+                currentElement.appendChild(partDoc.createTextNode(revisionName));
+                partDataElement.appendChild(currentElement);
+                
+                partsElement.appendChild(partDataElement);
+
+                writer = new FileWriter(new File(originalPartPath));
+
+                Source src = new DOMSource(partDoc);
                 Result result = new StreamResult(writer);
+                aTransformer.transform(src, result);
+
+                writer.flush();
+                
+                writer = new FileWriter(new File(originalBomPath));
+
+                src = new DOMSource(newDoc);
+                result = new StreamResult(writer);
                 aTransformer.transform(src, result);
 
                 writer.flush();
@@ -368,9 +412,16 @@ public class XMLBomImportCreator {
             logWriter.println("Conversion Completed");
             logWriter.close();
             reader.close();
+
+    		Files.copy(new File(originalPartPath).toPath(), 
+    				new File((partXmlDestination.endsWith(operatingSystemSeparator) ? partXmlDestination : partXmlDestination + operatingSystemSeparator) 
+    				+ xmlFileName.replaceAll(".xml", "_part.xml")).toPath()
+    				, StandardCopyOption.REPLACE_EXISTING);
             
-    		Files.copy(new File(processedFolder + operatingSystemSeparator + xmlFileName).toPath(), 
-    				new File((xmlDestination.endsWith(operatingSystemSeparator) ? xmlDestination : xmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
+    		Thread.sleep(secondsOfDelay * 1000);
+    		
+    		Files.copy(new File(originalBomPath).toPath(), 
+    				new File((bomXmlDestination.endsWith(operatingSystemSeparator) ? bomXmlDestination : bomXmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
     				, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
