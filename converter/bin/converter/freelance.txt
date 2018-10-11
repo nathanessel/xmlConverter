@@ -79,7 +79,10 @@ skip custom field
 
 10-8-2018 7:15 PM - 7:45 PM Talking with Paul about creating a Part.xml file from the current BOM import prior to creating the BOM.xml
 
-10-8-2018 8:15 PM - 
+10-8-2018 8:15 PM - 9:30 PM A-268 Added logic to BOM Import to create a Part.xml file before creating a BOM.xml file. Added logic for additional .ini variables to control output for Part.xml file and the delay between the Part and BOM files.
+
+10-10-2018 6:30 PM - A-268 - 8:00 PM
+
 
 
 

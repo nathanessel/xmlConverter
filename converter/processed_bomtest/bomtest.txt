@@ -1,0 +1,10 @@
+Customer|Name|Revision|Configurable|Name|Number|Revision|Description|Manufacturer|Name|Number|Revision|Description|ConfigurationOption|ConsolidatedReferences|CustomerPartNumber|Name|Value|Description|InternalPartNumber|IsSubAssembly|ItemNumber|Manufacturer|OptionCode|Package|PartLabel|PartRevision|PartType|Polarized|Quantity|Reference|RevisionMode|Socket|UnitOfIssue|
+REI-CCA|117167-REV3-REI|3_2|no||||PCBA,GPS EOS ROBUST|Assmann WSW Componen||||||||||WASHER,FLAT,0.089ID,0.175OD,K,U,XX,X,XX|WSP2KUXXXXX|no|184|Assmann WSW Componen|||||Generic||8||UseSpecific||EA|
+REI-CCA|117167-REV3-REI|3_2|no||||PCBA,GPS EOS ROBUST|Assmann WSW Componen||||||||||WASHER,FLAT,0.089ID,0.175OD,K,U,XX,X,XX|WSP2KUXXXXX|no|184|Assmann WSW Componen|||||Generic||8||UseSpecific||EA|
+REI-CCA|117167-REV3-REI|3_1|no||||PCBA,GPS EOS ROBUST|Assmann WSW Componen||||||||||LOCKWASHER,SPLIT,0.091 ID,0.172 OD,K,U|LW2KUXXXXX|no|183|Assmann WSW Componen|||||Generic||8||UseSpecific||EA|
+REI-CCA|117167-REV3-REI|3_1|no||||PCBA,GPS EOS ROBUST|Assmann WSW Componen||||||||||LOCKWASHER,SPLIT,0.091 ID,0.172 OD,K,U|LW2KUXXXXX|no|183|Assmann WSW Componen|||||Generic||8||UseSpecific||EA|
+REI-CCA|117167-REV3-REI|3_1|no||||PCBA,GPS EOS ROBUST|Assmann WSW Componen||||||||||LOCKWASHER,SPLIT,0.091 ID,0.172 OD,K,U|LW2KUXXXXX|no|183|Assmann WSW Componen|||||Generic||8||UseSpecific||EA|
+REI-CCA|999999-REV3-REI|3_2|no||||PCBA,GPS EOS ROBUST|Microtips Technology||||||||||SCREW,PAN-PHIL,2-56,0.312LG,K,U,XX,X,XX|GP2-56X5/16KUXXXXX|no|177|Microtips Technology|||||Generic||8||UseSpecific||EA|
+REI-CCA|999999-REV3-REI|3_2|no||||PCBA,GPS EOS ROBUST|Microtips Technology||||||||||SCREW,PAN-PHIL,2-56,0.312LG,K,U,XX,X,XX|GP2-56X5/16KUXXXXX|no|177|Microtips Technology|||||Generic||8||UseSpecific||EA|
+REI-CCA|999999-REV3-REI|3_2|no||||PCBA,GPS EOS ROBUST|Microtips Technology||||||||||STANDOFF,HEX,3/16"D,2.56X1/2"L,ALUM,CLR|2057-256-AL-7|no|178|Microtips Technology|||||Electronic||4||UseSpecific||EA|
+REI-CCA|999999-REV3-REI|3_2|no||||PCBA,GPS EOS ROBUST|Microtips Technology||||||||||STANDOFF,HEX,3/16"D,2.56X1/2"L,ALUM,CLR|2057-256-AL-7|no|178|Microtips Technology|||||Electronic||4||UseSpecific||EA|

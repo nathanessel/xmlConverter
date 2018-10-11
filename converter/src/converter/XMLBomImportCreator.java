@@ -62,8 +62,6 @@ public class XMLBomImportCreator {
             Document newDoc = domBuilder.newDocument();
 
             Element assembliesElement = newDoc.createElement("Assemblies");
-            Element assemblyElement = newDoc.createElement("Assembly");
-            Element bomItemsElement = newDoc.createElement("BOMItems");
 
             newDoc.appendChild(assembliesElement);
             
@@ -77,11 +75,14 @@ public class XMLBomImportCreator {
             int line = 0;
             List<String> headers = new ArrayList<String>();
             
+            Map<String, Assembly> assemblyMap = new HashMap<String, Assembly>();
+            
             Map<String, BomItem> bomItemsMap = new HashMap<String, BomItem>();
             Map<String, Map<String,AML>> amlMap = new HashMap<String, Map<String,AML>>();
 
         	BomItem bomItem = null;
-
+        	Assembly assembly = null;
+        	
             PrintWriter logWriter = new PrintWriter(processedFolder + operatingSystemSeparator + txtFileName.replace(".txt", ".log"), "UTF-8");
             
             boolean customerExists = false;
@@ -89,8 +90,7 @@ public class XMLBomImportCreator {
             boolean revisionExists = false;
             boolean configurableExists = false;
             
-            String partNumber = "";
-            String revisionName = "";
+            String assemblyNamePlusRevision = "";
             
             while ((nextLine = reader.readNext()) != null) 
             {
@@ -109,13 +109,24 @@ public class XMLBomImportCreator {
                 
                 else 
                 { 
-                	
+                	assemblyNamePlusRevision = nextLine[1] + "split" + nextLine[2];
                 	partName = nextLine[19] + "_" + line;
 
                 	bomItem = bomItemsMap.get(partName);
+                	assembly = assemblyMap.get(assemblyNamePlusRevision);
                 	
                 	if (bomItem == null)
                 		bomItem = new BomItem(partName);
+                	
+                	if (assembly == null)
+                	{
+                		assembly = new Assembly(assemblyNamePlusRevision);
+                		bomItemsMap = new HashMap<String, BomItem>();
+                        customerExists = false;
+                        nameExists = false;
+                        revisionExists = false;
+                        configurableExists = false;
+                	}
                 	
                 	else
                 		partExists = true;
@@ -140,37 +151,39 @@ public class XMLBomImportCreator {
                         {
                         	if (!value.isEmpty())
                         	{
-                        		if (header.equalsIgnoreCase("customer") && !customerExists)
+                        		if (header.equalsIgnoreCase("customer") && !customerExists && !value.isEmpty())
                         		{
-                        			Element currentElement = newDoc.createElement(header);
-                        			currentElement.appendChild(newDoc.createTextNode(value));
-                        			assemblyElement.appendChild(currentElement);
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			customerExists = true;
+                            		readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
                         		
-                        		else if (header.equalsIgnoreCase("name") && !nameExists)
+                        		else if (header.equalsIgnoreCase("name") && !nameExists && !value.isEmpty()) 
                         		{
-                        			Element currentElement = newDoc.createElement(header);
-                        			currentElement.appendChild(newDoc.createTextNode(value));
-                        			assemblyElement.appendChild(currentElement);
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			nameExists = true;
-                        			partNumber = value;
+                        			readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
-                        		else if (header.equalsIgnoreCase("revision") && !revisionExists)
+                        		else if (header.equalsIgnoreCase("revision") && !revisionExists && !value.isEmpty())
                         		{
-                        			Element currentElement = newDoc.createElement(header);
-                        			currentElement.appendChild(newDoc.createTextNode(value));
-                        			assemblyElement.appendChild(currentElement);
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			revisionExists = true;
-                        			revisionName = value;
+                        			readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
                         		
-                        		else if (header.equalsIgnoreCase("configurable") && !configurableExists)
+                        		else if (header.equalsIgnoreCase("configurable") && !configurableExists && !value.isEmpty())
                         		{
-                        			Element currentElement = newDoc.createElement(header);
-                        			currentElement.appendChild(newDoc.createTextNode(value));
-                        			assemblyElement.appendChild(currentElement);
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			configurableExists = true;
+                        			readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
                         	}
                         }
@@ -214,12 +227,15 @@ public class XMLBomImportCreator {
                         else if (col >= 18 && col < 34)
                         	readCSVToBomItem(bomItem.bomItemList, header, value);
 
-//                        System.out.println("col " + col);
+                        System.out.println("col " + col);
                         col++;
                     }
                 }
                 
                 logWriter.println("Processing line " + line);
+                if (line == 397)
+                	System.out.println("line " + line);
+
 
                 if (line != 0)
                 {
@@ -243,85 +259,105 @@ public class XMLBomImportCreator {
                 		bomItem.customFieldsMap.put(customFields.name, customFields);
                 	if (bomItem.bomItemList.size() > 0)
                 		bomItemsMap.put(partName, bomItem);
+                	assembly.bomMap.put(partName, bomItem);
+                	assemblyMap.put(assemblyNamePlusRevision, assembly);
                 }
                 
                 line++;
             }
-            
-            for (Map.Entry<String, BomItem> entry : bomItemsMap.entrySet()) {
-                String key = entry.getKey();
-                logWriter.println("XML creating for Internal Part Number " + key.split("_")[0]);
-                
-                Element bomItemElement = newDoc.createElement("BOMItem");
-                bomItem = entry.getValue();
 
-                if (amlMap.get(key.split("_")[0]) != null && amlMap.get(key.split("_")[0]).size() > 0)
-                {
-                	Element amlElement = newDoc.createElement("AML");
+        	Element assemblyElement = null;
 
-                	for (Map.Entry<String, AML> aml : amlMap.get(key.split("_")[0]).entrySet())
-                	{
-                		Element entryElement = newDoc.createElement("Entry");
+            for (Map.Entry<String, Assembly> entry : assemblyMap.entrySet()) {
+            	String key = entry.getKey();
+            	logWriter.println("XML creating for Assembly " + key.split("split")[0] + " Revision " + key.split("split")[1]);
+            	System.out.println("XML creating for Assembly " + key.split("split")[0] + " Revision " + key.split("split")[1]);
+            	assembly = entry.getValue();
+            	assemblyElement =  newDoc.createElement("Assembly");
+            	for (BOMItemElement assemblyItem : assembly.assemblyList)
+            	{
+            		Element currentElement = newDoc.createElement(assemblyItem.getHeader());
+            		currentElement.appendChild(newDoc.createTextNode(assemblyItem.getValue()));
+            		assemblyElement.appendChild(currentElement);
+            	}
 
-                		for (BOMItemElement entryTag : aml.getValue().entryList)
-                		{
-                			Element currentElement = newDoc.createElement(entryTag.getHeader());
-                			currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
-                			entryElement.appendChild(currentElement);
-                		}
-                		amlElement.appendChild(entryElement);
-                	}
-                    bomItemElement.appendChild(amlElement);
-                }
-                
-                if (bomItem.altlPNMap.size() > 0)
-                {
-                	Element altlPNElement = newDoc.createElement("AltlPN");
+                Element bomItemsElement = newDoc.createElement("BOMItems");
+            	
+            	for (Map.Entry<String, BomItem> bomEntry : assembly.bomMap.entrySet()) {
+            		String bomKey = bomEntry.getKey();
+            		System.out.println("XML creating for Internal Part Number " + bomKey.split("_")[0]);
+            		logWriter.println("XML creating for Internal Part Number " + bomKey.split("_")[0]);
 
-                	for (Map.Entry<String, AltlPN> altlPN : bomItem.altlPNMap.entrySet())
-                	{
-                		Element entryElement = newDoc.createElement("Entry");
+            		Element bomItemElement = newDoc.createElement("BOMItem");
+            		bomItem = bomEntry.getValue();
 
-                		for (BOMItemElement entryTag : altlPN.getValue().entryList)
-                		{
-                			Element currentElement = newDoc.createElement(entryTag.getHeader());
-                			currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
-                			entryElement.appendChild(currentElement);
-                		}
-                		altlPNElement.appendChild(entryElement);
-                	}
-                	bomItemElement.appendChild(altlPNElement);
-                }
+            		if (amlMap.get(bomKey.split("_")[0]) != null && amlMap.get(bomKey.split("_")[0]).size() > 0)
+            		{
+            			Element amlElement = newDoc.createElement("AML");
 
-                if (bomItem.customFieldsMap.size() > 0)
-                {
-                	Element customFieldsElement = newDoc.createElement("CustomFields");
+            			for (Map.Entry<String, AML> aml : amlMap.get(bomKey.split("_")[0]).entrySet())
+            			{
+            				Element entryElement = newDoc.createElement("Entry");
 
-                	for (Map.Entry<String, AML> aml : bomItem.amlMap.entrySet())
-                	{
-                		Element customFieldElement = newDoc.createElement("CustomField");
+            				for (BOMItemElement entryTag : aml.getValue().entryList)
+            				{
+            					Element currentElement = newDoc.createElement(entryTag.getHeader());
+            					currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
+            					entryElement.appendChild(currentElement);
+            				}
+            				amlElement.appendChild(entryElement);
+            			}
+            			bomItemElement.appendChild(amlElement);
+            		}
 
-                		for (BOMItemElement entryTag : aml.getValue().entryList)
-                		{
-                			Element currentElement = newDoc.createElement(entryTag.getHeader());
-                			currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
-                			customFieldElement.appendChild(currentElement);
-                		}
-                		customFieldsElement.appendChild(customFieldElement);
-                	}
-                    bomItemElement.appendChild(customFieldsElement);
-                }
+            		if (bomItem.altlPNMap.size() > 0)
+            		{
+            			Element altlPNElement = newDoc.createElement("AltlPN");
 
-                addToBomItemElement(newDoc, bomItemElement, bomItem.bomItemList);
-                
-                bomItemsElement.appendChild(bomItemElement);
+            			for (Map.Entry<String, AltlPN> altlPN : bomItem.altlPNMap.entrySet())
+            			{
+            				Element entryElement = newDoc.createElement("Entry");
 
-                
-                logWriter.println("Done");
+            				for (BOMItemElement entryTag : altlPN.getValue().entryList)
+            				{
+            					Element currentElement = newDoc.createElement(entryTag.getHeader());
+            					currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
+            					entryElement.appendChild(currentElement);
+            				}
+            				altlPNElement.appendChild(entryElement);
+            			}
+            			bomItemElement.appendChild(altlPNElement);
+            		}
+
+            		if (bomItem.customFieldsMap.size() > 0)
+            		{
+            			Element customFieldsElement = newDoc.createElement("CustomFields");
+
+            			for (Map.Entry<String, AML> aml : bomItem.amlMap.entrySet())
+            			{
+            				Element customFieldElement = newDoc.createElement("CustomField");
+
+            				for (BOMItemElement entryTag : aml.getValue().entryList)
+            				{
+            					Element currentElement = newDoc.createElement(entryTag.getHeader());
+            					currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
+            					customFieldElement.appendChild(currentElement);
+            				}
+            				customFieldsElement.appendChild(customFieldElement);
+            			}
+            			bomItemElement.appendChild(customFieldsElement);
+            		}
+
+            		addToBomItemElement(newDoc, bomItemElement, bomItem.bomItemList);
+
+            		bomItemsElement.appendChild(bomItemElement);
+
+
+            		logWriter.println("Done");
+            	}
+            	assemblyElement.appendChild(bomItemsElement);
+            	assembliesElement.appendChild(assemblyElement);
             }
-            
-            assemblyElement.appendChild(bomItemsElement);
-            assembliesElement.appendChild(assemblyElement);
 
             FileWriter writer = null;
 
@@ -363,22 +399,28 @@ public class XMLBomImportCreator {
                 Element partsElement = partDoc.createElement("Parts");
                 partDoc.appendChild(partsElement);
 
-                Element partDataElement = partDoc.createElement("PartData");
-                
-                Element currentElement = partDoc.createElement("IsAssembly");
-                currentElement.appendChild(partDoc.createTextNode("true"));
-                partDataElement.appendChild(currentElement);
+                for (Map.Entry<String, Assembly> entry : assemblyMap.entrySet()) {
+                	String key = entry.getKey();
+                	logWriter.println("Part XML creating for Assembly " + key.split("split")[0] + " Revision " + key.split("split")[1]);
+                	System.out.println("Part XML creating for Assembly " + key.split("split")[0] + " Revision " + key.split("split")[1]);
+                	assembly = entry.getValue();
 
-                currentElement = partDoc.createElement("PartNumber");
-                currentElement.appendChild(partDoc.createTextNode(partNumber));
-                partDataElement.appendChild(currentElement);
+                    Element partDataElement = partDoc.createElement("PartData");
+                    
+                    Element currentElement = partDoc.createElement("IsAssembly");
+                    currentElement.appendChild(partDoc.createTextNode("true"));
+                    partDataElement.appendChild(currentElement);
 
-                currentElement = partDoc.createElement("Revision");
-                currentElement.appendChild(partDoc.createTextNode(revisionName));
-                partDataElement.appendChild(currentElement);
-                
-                partsElement.appendChild(partDataElement);
+                    currentElement = partDoc.createElement("PartNumber");
+                    currentElement.appendChild(partDoc.createTextNode(key.split("split")[0]));
+                    partDataElement.appendChild(currentElement);
 
+                    currentElement = partDoc.createElement("Revision");
+                    currentElement.appendChild(partDoc.createTextNode(key.split("split")[1]));
+                    partDataElement.appendChild(currentElement);
+                    
+                    partsElement.appendChild(partDataElement);
+                }
                 writer = new FileWriter(new File(originalPartPath));
 
                 Source src = new DOMSource(partDoc);

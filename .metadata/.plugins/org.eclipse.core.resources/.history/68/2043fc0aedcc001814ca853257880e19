@@ -19,8 +19,8 @@ public class CsvConverter {
     		{
     			//XMLProcessRevisionCreator creator = new XMLProcessRevisionCreator();
     			//XMLPartsCreator creator = new XMLPartsCreator();
-    			//XMLBomImportCreator creator = new XMLBomImportCreator();
-    			XMLJobCreator creator = new XMLJobCreator();
+    			XMLBomImportCreator creator = new XMLBomImportCreator();
+    			//XMLJobCreator creator = new XMLJobCreator();
     		
     			
     			//----------------Windows------------------------------

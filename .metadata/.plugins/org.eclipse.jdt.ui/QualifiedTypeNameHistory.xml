@@ -54,4 +54,6 @@
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

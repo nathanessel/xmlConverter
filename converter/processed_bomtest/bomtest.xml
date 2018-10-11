@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Assemblies>
+    <Assembly>
+        <Customer>REI-CCA</Customer>
+        <Name>117167-REV3-REI</Name>
+        <Revision>3_1</Revision>
+        <Configurable>false</Configurable>
+        <BOMItems>
+            <BOMItem>
+                <Description>LOCKWASHER,SPLIT,0.091 ID,0.172 OD,K,U</Description>
+                <InternalPartNumber>LW2KUXXXXX</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>183</ItemNumber>
+                <Manufacturer>Assmann WSW Componen</Manufacturer>
+                <PartType>Generic</PartType>
+                <Quantity>8</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <Description>LOCKWASHER,SPLIT,0.091 ID,0.172 OD,K,U</Description>
+                <InternalPartNumber>LW2KUXXXXX</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>183</ItemNumber>
+                <Manufacturer>Assmann WSW Componen</Manufacturer>
+                <PartType>Generic</PartType>
+                <Quantity>8</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <Description>LOCKWASHER,SPLIT,0.091 ID,0.172 OD,K,U</Description>
+                <InternalPartNumber>LW2KUXXXXX</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>183</ItemNumber>
+                <Manufacturer>Assmann WSW Componen</Manufacturer>
+                <PartType>Generic</PartType>
+                <Quantity>8</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+        </BOMItems>
+    </Assembly>
+    <Assembly>
+        <Customer>REI-CCA</Customer>
+        <Name>117167-REV3-REI</Name>
+        <Revision>3_2</Revision>
+        <Configurable>false</Configurable>
+        <BOMItems>
+            <BOMItem>
+                <Description>WASHER,FLAT,0.089ID,0.175OD,K,U,XX,X,XX</Description>
+                <InternalPartNumber>WSP2KUXXXXX</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>184</ItemNumber>
+                <Manufacturer>Assmann WSW Componen</Manufacturer>
+                <PartType>Generic</PartType>
+                <Quantity>8</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <Description>WASHER,FLAT,0.089ID,0.175OD,K,U,XX,X,XX</Description>
+                <InternalPartNumber>WSP2KUXXXXX</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>184</ItemNumber>
+                <Manufacturer>Assmann WSW Componen</Manufacturer>
+                <PartType>Generic</PartType>
+                <Quantity>8</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+        </BOMItems>
+    </Assembly>
+    <Assembly>
+        <Customer>REI-CCA</Customer>
+        <Name>999999-REV3-REI</Name>
+        <Revision>3_2</Revision>
+        <Configurable>false</Configurable>
+        <BOMItems>
+            <BOMItem>
+                <AML>
+                    <Entry>
+                        <Description>PCBA,GPS EOS ROBUST</Description>
+                        <Manufacturer>Microtips Technology</Manufacturer>
+                    </Entry>
+                </AML>
+                <Description>SCREW,PAN-PHIL,2-56,0.312LG,K,U,XX,X,XX</Description>
+                <InternalPartNumber>GP2-56X5/16KUXXXXX</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>177</ItemNumber>
+                <Manufacturer>Microtips Technology</Manufacturer>
+                <PartType>Generic</PartType>
+                <Quantity>8</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <AML>
+                    <Entry>
+                        <Description>PCBA,GPS EOS ROBUST</Description>
+                        <Manufacturer>Microtips Technology</Manufacturer>
+                    </Entry>
+                </AML>
+                <Description>SCREW,PAN-PHIL,2-56,0.312LG,K,U,XX,X,XX</Description>
+                <InternalPartNumber>GP2-56X5/16KUXXXXX</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>177</ItemNumber>
+                <Manufacturer>Microtips Technology</Manufacturer>
+                <PartType>Generic</PartType>
+                <Quantity>8</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <AML>
+                    <Entry>
+                        <Description>PCBA,GPS EOS ROBUST</Description>
+                        <Manufacturer>Microtips Technology</Manufacturer>
+                    </Entry>
+                </AML>
+                <Description>STANDOFF,HEX,3/16"D,2.56X1/2"L,ALUM,CLR</Description>
+                <InternalPartNumber>2057-256-AL-7</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>178</ItemNumber>
+                <Manufacturer>Microtips Technology</Manufacturer>
+                <PartType>Electronic</PartType>
+                <Quantity>4</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <AML>
+                    <Entry>
+                        <Description>PCBA,GPS EOS ROBUST</Description>
+                        <Manufacturer>Microtips Technology</Manufacturer>
+                    </Entry>
+                </AML>
+                <Description>STANDOFF,HEX,3/16"D,2.56X1/2"L,ALUM,CLR</Description>
+                <InternalPartNumber>2057-256-AL-7</InternalPartNumber>
+                <IsSubAssembly>false</IsSubAssembly>
+                <ItemNumber>178</ItemNumber>
+                <Manufacturer>Microtips Technology</Manufacturer>
+                <PartType>Electronic</PartType>
+                <Quantity>4</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>EA</UnitOfIssue>
+            </BOMItem>
+        </BOMItems>
+    </Assembly>
+</Assemblies>
