@@ -24,4 +24,18 @@
     <runtimeBits>64/32</runtimeBits>
     <maxHeapSize>2000</maxHeapSize>
   </jre>
+  <versionInfo>
+    <fileVersion>1.0.5.6</fileVersion>
+    <txtFileVersion>October 11, 2018</txtFileVersion>
+    <fileDescription>BOM Converter</fileDescription>
+    <copyright>2018</copyright>
+    <productVersion>1.0.5.6</productVersion>
+    <txtProductVersion>October 11, 2018</txtProductVersion>
+    <productName>BOM Converter</productName>
+    <companyName></companyName>
+    <internalName>Intervala</internalName>
+    <originalFilename>BOMConverter.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
 </launch4jConfig>

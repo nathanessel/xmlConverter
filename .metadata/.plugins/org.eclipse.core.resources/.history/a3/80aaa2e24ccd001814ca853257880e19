@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -75,10 +75,10 @@ public class XMLBomImportCreator {
             int line = 0;
             List<String> headers = new ArrayList<String>();
             
-            Map<String, Assembly> assemblyMap = new LinkedHashMap<String, Assembly>();
+            Map<String, Assembly> assemblyMap = new HashMap<String, Assembly>();
             
-            Map<String, BomItem> bomItemsMap = new LinkedHashMap<String, BomItem>();
-            Map<String, Map<String,AML>> amlMap = new LinkedHashMap<String, Map<String,AML>>();
+            Map<String, BomItem> bomItemsMap = new HashMap<String, BomItem>();
+            Map<String, Map<String,AML>> amlMap = new HashMap<String, Map<String,AML>>();
 
         	BomItem bomItem = null;
         	Assembly assembly = null;
@@ -121,7 +121,7 @@ public class XMLBomImportCreator {
                 	if (assembly == null)
                 	{
                 		assembly = new Assembly(assemblyNamePlusRevision);
-                		bomItemsMap = new LinkedHashMap<String, BomItem>();
+                		bomItemsMap = new HashMap<String, BomItem>();
                         customerExists = false;
                         nameExists = false;
                         revisionExists = false;
@@ -153,23 +153,35 @@ public class XMLBomImportCreator {
                         	{
                         		if (header.equalsIgnoreCase("customer") && !customerExists && !value.isEmpty())
                         		{
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			customerExists = true;
                             		readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
                         		
                         		else if (header.equalsIgnoreCase("name") && !nameExists && !value.isEmpty()) 
                         		{
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			nameExists = true;
                         			readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
                         		else if (header.equalsIgnoreCase("revision") && !revisionExists && !value.isEmpty())
                         		{
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			revisionExists = true;
                         			readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
                         		
                         		else if (header.equalsIgnoreCase("configurable") && !configurableExists && !value.isEmpty())
                         		{
+//                        			Element currentElement = newDoc.createElement(header);
+//                        			currentElement.appendChild(newDoc.createTextNode(value));
+//                        			assemblyElement.appendChild(currentElement);
                         			configurableExists = true;
                         			readCSVToBomItem(assembly.assemblyList, header, value);
                         		}
@@ -221,13 +233,17 @@ public class XMLBomImportCreator {
                 }
                 
                 logWriter.println("Processing line " + line);
+                if (line == 397)
+                	System.out.println("line " + line);
+
 
                 if (line != 0)
                 {
+                	
                     Map<String,AML> existingAML = amlMap.get(nextLine[19]);
                     
                     if (existingAML == null)
-                    	existingAML = new LinkedHashMap<String, AML>();
+                    	existingAML = new HashMap<String, AML>();
                     
                     if (existingAML.get(aml.name) == null && !aml.name.isEmpty())
                     	existingAML.put(aml.name, aml);
