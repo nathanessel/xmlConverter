@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Assemblies>
+    <Assembly>
+        <Customer>REI</Customer>
+        <Name>019-100-NOREV-REI</Name>
+        <Revision>-_1</Revision>
+        <Configurable>false</Configurable>
+        <BOMItems>
+            <BOMItem>
+                <Description>INTERNAL LABLE FILE</Description>
+                <InternalPartNumber>019-100-REVX.U6.R0.LBL</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>5.1</ItemNumber>
+                <PartRevision>0</PartRevision>
+                <PartType>Generic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>INTERNAL PROGRAM FILE</Description>
+                <InternalPartNumber>019-100.BP</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.1</ItemNumber>
+                <PartRevision>NO REV</PartRevision>
+                <PartType>Generic</PartType>
+                <Quantity>0</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>ref</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <Description>PROGRAMMED PARTS APPROVAL FORM</Description>
+                <InternalPartNumber>019-100-REV-_1.DOC</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.2</ItemNumber>
+                <PartRevision>-_1</PartRevision>
+                <PartType>Generic</PartType>
+                <Quantity>0</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>ref</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <Description>IC,MCU,8BIT,768BYTE,EPROM,3.3/5V,8PDIP</Description>
+                <InternalPartNumber>PIC12C508A-04I/P</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.3</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+        </BOMItems>
+    </Assembly>
+</Assemblies>

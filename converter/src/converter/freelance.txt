@@ -81,12 +81,13 @@ skip custom field
 
 10-8-2018 8:15 PM - 9:30 PM A-268 Added logic to BOM Import to create a Part.xml file before creating a BOM.xml file. Added logic for additional .ini variables to control output for Part.xml file and the delay between the Part and BOM files.
 
-10-10-2018 6:30 PM - A-268 - 9:00 PM
-10-10-2018 10:00 PM - A-268 - 12:00 AM
+10-10-2018 6:30 PM - A-268 - 9:00 PM 
+10-10-2018 10:00 PM - A-268 - 12:00 AM - 4.50 hrs
 Added logic to BOM Import to allow for multiple assemblies.  Researched adding version information to the .exe file.
 
-
-026001006-AMF
+10-11-2018 8:40 PM - 9:20PM - 1 hr  Fixed issue with blank revision
+10:40 PM - 11:10 PM .5 hrs phone call with Paul.  We need to create multiple files for each assembly.
+11:10 PM - 12:10 AM 1 hr A-267 Changed logic to create a new file for each assembly and name them as follows: _fl_bom_import_item__[assemblypartnumber]__[revision]__on_20181009_2136_2_BOMS_bom
 
 
 

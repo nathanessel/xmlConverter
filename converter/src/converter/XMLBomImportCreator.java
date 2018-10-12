@@ -249,6 +249,9 @@ public class XMLBomImportCreator {
                 
                 line++;
             }
+            
+            //Create Part file and wait the amount of seconds listed in the .ini file
+            writePartFile(processedFolder + operatingSystemSeparator + xmlFileName, operatingSystemSeparator, xmlFileName, assemblyMap, logWriter, errWriter);
 
         	Element assemblyElement = null;
 
@@ -357,126 +360,26 @@ public class XMLBomImportCreator {
             	}
             	assemblyElement.appendChild(bomItemsElement);
             	assembliesElement.appendChild(assemblyElement);
-            }
 
-            FileWriter writer = null;
-
-            String originalBomPath = processedFolder + operatingSystemSeparator + xmlFileName;
-            String originalPartPath = processedFolder + operatingSystemSeparator + xmlFileName.replaceAll(".xml", "_part.xml");
-            
-        	String bomXmlDestination = "";
-        	String partXmlDestination = "";
-        	
-        	int secondsOfDelay = 0;
-            
-            try {
-
-            	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "BOMConverter.ini");
-
-            	Scanner input = new Scanner(file);
+            	//Write BOM file and create new one
+            	String newFileName = "";
             	
-            	while (input.hasNextLine()) 
-            	{
-            		String iniLine = input.nextLine();
-            		if (iniLine.startsWith("bom_xml_destination="))
-            			bomXmlDestination = iniLine.replace("bom_xml_destination=", "");
-            		else if (iniLine.startsWith("part_xml_destination="))
-            			partXmlDestination = iniLine.replace("part_xml_destination=", "");
-            		else if (iniLine.startsWith("timedelay="))
-            			secondsOfDelay = Integer.parseInt(iniLine.replace("timedelay=", ""));
+            	try {
+            		newFileName = xmlFileName.split("__")[0] + "__" + assemblyPart + "__" + assemblyRevision + "__" + xmlFileName.split("__")[4];
+            	}
+            	catch (ArrayIndexOutOfBoundsException e) {
+                    errWriter.println("Incorrect File Name. Expecting 4 instances of '__' as separators. "
+                    		+ "Ex. _fl_bom_import_item__BLANK__to__BLANK__on_20181009_2136_2_BOMS_bom\n" + e.toString());
+            		System.exit(0);
             	}
             	
-            	input.close();
-
-                TransformerFactory tranFactory = TransformerFactory.newInstance();
-                Transformer aTransformer = tranFactory.newTransformer();
-                aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
-                aTransformer.setOutputProperty(OutputKeys.METHOD, "xml");
-                aTransformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
-            	
-                Document partDoc = domBuilder.newDocument();
-                
-                Element partsElement = partDoc.createElement("Parts");
-                partDoc.appendChild(partsElement);
-
-                for (Map.Entry<String, Assembly> entry : assemblyMap.entrySet()) {
-                	String key = entry.getKey();
-                	
-                	String assemblyPart = "";
-                	String assemblyRevision = "";
-                	
-                	assemblyPart = key.split("split")[0];
-                	
-                	if (key.split("split").length > 1)
-                		assemblyRevision = key.split("split")[1];
-
-                	
-                	logWriter.println("Part XML creating for Assembly " + assemblyPart + " Revision " + assemblyRevision);
-                	System.out.println("Part XML creating for Assembly " + assemblyPart + " Revision " + assemblyRevision);
-                	assembly = entry.getValue();
-
-                    Element partDataElement = partDoc.createElement("PartData");
-                    
-                    Element currentElement = partDoc.createElement("IsAssembly");
-                    currentElement.appendChild(partDoc.createTextNode("true"));
-                    partDataElement.appendChild(currentElement);
-
-                    currentElement = partDoc.createElement("PartNumber");
-                    currentElement.appendChild(partDoc.createTextNode(assemblyPart));
-                    partDataElement.appendChild(currentElement);
-
-                    if (!assemblyRevision.isEmpty())
-                    {
-                    	currentElement = partDoc.createElement("Revision");
-                    	currentElement.appendChild(partDoc.createTextNode(key.split("split")[1]));
-                    	partDataElement.appendChild(currentElement);
-                    }
-                    partsElement.appendChild(partDataElement);
-                }
-                writer = new FileWriter(new File(originalPartPath));
-
-                Source src = new DOMSource(partDoc);
-                Result result = new StreamResult(writer);
-                aTransformer.transform(src, result);
-
-                writer.flush();
-                
-                writer = new FileWriter(new File(originalBomPath));
-
-                src = new DOMSource(newDoc);
-                result = new StreamResult(writer);
-                aTransformer.transform(src, result);
-
-                writer.flush();
-
-            } catch (Exception exp) {
-                exp.printStackTrace();
-                errWriter.println(exp.toString());
-            } finally {
-                try {
-                    writer.close();
-                } catch (Exception e) {
-                    errWriter.println(e.toString());
-                }
+            	writeBOMFile(processedFolder + operatingSystemSeparator + newFileName, operatingSystemSeparator, newFileName, assemblyMap, logWriter, errWriter, newDoc);
+            	newDoc = domBuilder.newDocument();
+                assembliesElement = newDoc.createElement("Assemblies");
+                newDoc.appendChild(assembliesElement);
             }
 
-            // Testing
-            // Result result = new StreamResult(System.out);
-            
-            logWriter.println("Conversion Completed");
-            logWriter.close();
             reader.close();
-
-    		Files.copy(new File(originalPartPath).toPath(), 
-    				new File((partXmlDestination.endsWith(operatingSystemSeparator) ? partXmlDestination : partXmlDestination + operatingSystemSeparator) 
-    				+ xmlFileName.replaceAll(".xml", "_part.xml")).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
-            
-    		Thread.sleep(secondsOfDelay * 1000);
-    		
-    		Files.copy(new File(originalBomPath).toPath(), 
-    				new File((bomXmlDestination.endsWith(operatingSystemSeparator) ? bomXmlDestination : bomXmlDestination + operatingSystemSeparator) + xmlFileName).toPath()
-    				, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException exp) {
             System.err.println(exp.toString());
@@ -508,5 +411,143 @@ public class XMLBomImportCreator {
     		bomItemElementList.add(currentElement);
 		}
 		
+    }
+
+    public void writeBOMFile(String originalBomPath, String operatingSystemSeparator, String newFileName, Map<String, Assembly> assemblyMap, 
+    		PrintWriter logWriter, PrintWriter errWriter, Document newDoc) 
+    {
+    	FileWriter writer = null;
+    	String bomXmlDestination = "";
+    	try {
+    		File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "BOMConverter.ini");
+    		Scanner input = new Scanner(file);
+    		while (input.hasNextLine()) 
+    		{
+    			String iniLine = input.nextLine();
+    			if (iniLine.startsWith("bom_xml_destination="))
+    				bomXmlDestination = iniLine.replace("bom_xml_destination=", "");
+    		}
+    		input.close();
+    		TransformerFactory tranFactory = TransformerFactory.newInstance();
+    		Transformer aTransformer = tranFactory.newTransformer();
+    		aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
+    		aTransformer.setOutputProperty(OutputKeys.METHOD, "xml");
+    		aTransformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+    		writer = new FileWriter(new File(originalBomPath));
+
+    		Source src = new DOMSource(newDoc);
+    		Result result = new StreamResult(writer);
+    		aTransformer.transform(src, result);
+
+    		writer.flush();
+
+    		Files.copy(new File(originalBomPath).toPath(), 
+    				new File((bomXmlDestination.endsWith(operatingSystemSeparator) ? bomXmlDestination : bomXmlDestination + operatingSystemSeparator) + newFileName).toPath()
+    				, StandardCopyOption.REPLACE_EXISTING);
+    		
+    	} catch (Exception exp) {
+    		exp.printStackTrace();
+    		errWriter.println(exp.toString());
+    	} finally {
+    		try {
+    			writer.close();
+    		} catch (Exception e) {
+    			errWriter.println(e.toString());
+    		}
+    	}
+    }
+    
+    public void writePartFile(String originalPartPath, String operatingSystemSeparator, String xmlFileName, Map<String, Assembly> assemblyMap,
+    		PrintWriter logWriter, PrintWriter errWriter) throws InterruptedException 
+    {
+        FileWriter writer = null;
+    	String partXmlDestination = "";
+    	int secondsOfDelay = 0;
+        try {
+        	File file = new File(new File("").getAbsoluteFile() + operatingSystemSeparator + "BOMConverter.ini");
+        	Scanner input = new Scanner(file);
+        	while (input.hasNextLine()) 
+        	{
+        		String iniLine = input.nextLine();
+        		if (iniLine.startsWith("part_xml_destination="))
+        			partXmlDestination = iniLine.replace("part_xml_destination=", "");
+        		else if (iniLine.startsWith("timedelay="))
+        			secondsOfDelay = Integer.parseInt(iniLine.replace("timedelay=", ""));
+        	}
+        	
+        	input.close();
+
+            TransformerFactory tranFactory = TransformerFactory.newInstance();
+            Transformer aTransformer = tranFactory.newTransformer();
+            aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            aTransformer.setOutputProperty(OutputKeys.METHOD, "xml");
+            aTransformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+        	
+            Document partDoc = domBuilder.newDocument();
+            
+            Element partsElement = partDoc.createElement("Parts");
+            partDoc.appendChild(partsElement);
+
+            for (Map.Entry<String, Assembly> entry : assemblyMap.entrySet()) {
+            	String key = entry.getKey();
+            	
+            	String assemblyPart = "";
+            	String assemblyRevision = "";
+            	
+            	assemblyPart = key.split("split")[0];
+            	
+            	if (key.split("split").length > 1)
+            		assemblyRevision = key.split("split")[1];
+
+            	logWriter.println("Part XML creating for Assembly " + assemblyPart + " Revision " + assemblyRevision);
+            	System.out.println("Part XML creating for Assembly " + assemblyPart + " Revision " + assemblyRevision);
+
+                Element partDataElement = partDoc.createElement("PartData");
+                
+                Element currentElement = partDoc.createElement("IsAssembly");
+                currentElement.appendChild(partDoc.createTextNode("true"));
+                partDataElement.appendChild(currentElement);
+
+                currentElement = partDoc.createElement("PartNumber");
+                currentElement.appendChild(partDoc.createTextNode(assemblyPart));
+                partDataElement.appendChild(currentElement);
+
+                if (!assemblyRevision.isEmpty())
+                {
+                	currentElement = partDoc.createElement("Revision");
+                	currentElement.appendChild(partDoc.createTextNode(key.split("split")[1]));
+                	partDataElement.appendChild(currentElement);
+                }
+                partsElement.appendChild(partDataElement);
+            }
+            writer = new FileWriter(new File(originalPartPath));
+
+            Source src = new DOMSource(partDoc);
+            Result result = new StreamResult(writer);
+            aTransformer.transform(src, result);
+
+            writer.flush();
+
+    		Files.copy(new File(originalPartPath).toPath(), 
+    				new File((partXmlDestination.endsWith(operatingSystemSeparator) ? partXmlDestination : partXmlDestination + operatingSystemSeparator) 
+    				+ xmlFileName.replaceAll(".xml", "_part.xml")).toPath()
+    				, StandardCopyOption.REPLACE_EXISTING);
+            
+        } catch (Exception exp) {
+            exp.printStackTrace();
+            errWriter.println(exp.toString());
+        } finally {
+            try {
+                writer.close();
+            } catch (Exception e) {
+                errWriter.println(e.toString());
+            }
+        }
+        
+        logWriter.println("Conversion Completed");
+        logWriter.close();
+        
+		Thread.sleep(secondsOfDelay * 1000);
     }
 }
