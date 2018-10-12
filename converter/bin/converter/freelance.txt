@@ -83,6 +83,10 @@ skip custom field
 
 10-10-2018 6:30 PM - A-268 - 9:00 PM
 10-10-2018 10:00 PM - A-268 - 12:00 AM
+Added logic to BOM Import to allow for multiple assemblies.  Researched adding version information to the .exe file.
+
+
+026001006-AMF
 
 
 

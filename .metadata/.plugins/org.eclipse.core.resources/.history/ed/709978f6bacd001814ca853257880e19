@@ -295,19 +295,18 @@ public class XMLBomImportCreator {
 
             				for (BOMItemElement entryTag : aml.getValue().entryList)
             				{
-            					if (!entryTag.getValue().isEmpty())
+            					if (entryTag.getValue().isEmpty())
             					{
             						Element currentElement = newDoc.createElement(entryTag.getHeader());
             						currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
             						entryElement.appendChild(currentElement);
             					}
             				}
-            				if (entryElement.getChildNodes().getLength() > 0)
-            					amlElement.appendChild(entryElement);
+            				amlElement.appendChild(entryElement);
             			}
             			
-            			if (amlElement.getChildNodes().getLength() > 0)
-            				bomItemElement.appendChild(amlElement);
+            			
+            			bomItemElement.appendChild(amlElement);
             		}
 
             		if (bomItem.altlPNMap.size() > 0)

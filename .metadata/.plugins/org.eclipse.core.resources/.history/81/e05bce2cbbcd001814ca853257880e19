@@ -295,7 +295,7 @@ public class XMLBomImportCreator {
 
             				for (BOMItemElement entryTag : aml.getValue().entryList)
             				{
-            					if (!entryTag.getValue().isEmpty())
+            					if (entryTag.getValue().isEmpty())
             					{
             						Element currentElement = newDoc.createElement(entryTag.getHeader());
             						currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));

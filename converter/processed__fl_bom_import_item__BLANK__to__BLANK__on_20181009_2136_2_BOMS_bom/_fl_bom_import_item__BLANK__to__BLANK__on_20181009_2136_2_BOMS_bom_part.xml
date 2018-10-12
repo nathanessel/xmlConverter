@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Parts>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>01-02066-001-REVB-WATT</PartNumber>
+        <Revision>B</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>019-100-NOREV-REI</PartNumber>
+        <Revision>-_1</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>026001002-REVB-AMF</PartNumber>
+        <Revision>B</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>026001006-AMF</PartNumber>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>026001007-AMF</PartNumber>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>026001010-REV-AMF</PartNumber>
+        <Revision>NO REV</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>026001012-REVA-AMF</PartNumber>
+        <Revision>A</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>03-02067-001-REVD-WATT</PartNumber>
+        <Revision>D</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>088-000-001-REVQ-AMF</PartNumber>
+        <Revision>Q</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>088-000-013-REVC-AMF</PartNumber>
+        <Revision>C_7</Revision>
+    </PartData>
+</Parts>

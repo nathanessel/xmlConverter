@@ -281,6 +281,9 @@ public class XMLBomImportCreator {
             		String bomKey = bomEntry.getKey();
 
             		System.out.println("XML creating for Internal Part Number " + bomKey.split("_")[0]);
+            		
+            		if (bomKey.split("_")[0].equalsIgnoreCase("608E0201"))
+            			logWriter.println("XML creating for Internal Part Number " + bomKey.split("_")[0]);
 
             		Element bomItemElement = newDoc.createElement("BOMItem");
             		bomItem = bomEntry.getValue();
@@ -295,19 +298,13 @@ public class XMLBomImportCreator {
 
             				for (BOMItemElement entryTag : aml.getValue().entryList)
             				{
-            					if (!entryTag.getValue().isEmpty())
-            					{
-            						Element currentElement = newDoc.createElement(entryTag.getHeader());
-            						currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
-            						entryElement.appendChild(currentElement);
-            					}
+            					Element currentElement = newDoc.createElement(entryTag.getHeader());
+            					currentElement.appendChild(newDoc.createTextNode(entryTag.getValue()));
+            					entryElement.appendChild(currentElement);
             				}
-            				if (entryElement.getChildNodes().getLength() > 0)
-            					amlElement.appendChild(entryElement);
+            				amlElement.appendChild(entryElement);
             			}
-            			
-            			if (amlElement.getChildNodes().getLength() > 0)
-            				bomItemElement.appendChild(amlElement);
+            			bomItemElement.appendChild(amlElement);
             		}
 
             		if (bomItem.altlPNMap.size() > 0)
@@ -422,15 +419,13 @@ public class XMLBomImportCreator {
                     partDataElement.appendChild(currentElement);
 
                     currentElement = partDoc.createElement("PartNumber");
-                    currentElement.appendChild(partDoc.createTextNode(assemblyPart));
+                    currentElement.appendChild(partDoc.createTextNode(key.split("split")[0]));
                     partDataElement.appendChild(currentElement);
 
-                    if (!assemblyRevision.isEmpty())
-                    {
-                    	currentElement = partDoc.createElement("Revision");
-                    	currentElement.appendChild(partDoc.createTextNode(key.split("split")[1]));
-                    	partDataElement.appendChild(currentElement);
-                    }
+                    currentElement = partDoc.createElement("Revision");
+                    currentElement.appendChild(partDoc.createTextNode(key.split("split")[1]));
+                    partDataElement.appendChild(currentElement);
+                    
                     partsElement.appendChild(partDataElement);
                 }
                 writer = new FileWriter(new File(originalPartPath));

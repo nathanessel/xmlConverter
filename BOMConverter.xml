@@ -25,12 +25,12 @@
     <maxHeapSize>2000</maxHeapSize>
   </jre>
   <versionInfo>
-    <fileVersion>1.0.5.6</fileVersion>
-    <txtFileVersion>October 11, 2018</txtFileVersion>
+    <fileVersion>1.0.5.7</fileVersion>
+    <txtFileVersion>October 10, 2018</txtFileVersion>
     <fileDescription>BOM Converter</fileDescription>
     <copyright>2018</copyright>
-    <productVersion>1.0.5.6</productVersion>
-    <txtProductVersion>October 11, 2018</txtProductVersion>
+    <productVersion>1.0.5.7</productVersion>
+    <txtProductVersion>October 10, 2018</txtProductVersion>
     <productName>BOM Converter</productName>
     <companyName></companyName>
     <internalName>Intervala</internalName>
