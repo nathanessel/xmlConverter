@@ -139,10 +139,6 @@ public class XMLBomImportCreator {
                     
                     for (String value : nextLine) 
                     {
-                    	// This needed added because we have more columns than we have headers.
-                    	if (col > headers.size()-1)
-                    		break;
-                    	
                         String header = headers.get(col);
                         
                         if (value.equalsIgnoreCase("Y") || value.equalsIgnoreCase("yes"))
@@ -219,8 +215,7 @@ public class XMLBomImportCreator {
                         else if (col >= 18 && col < 34)
                         	readCSVToBomItem(bomItem.bomItemList, header, value);
 
-                        if (col == 34)
-                        	System.out.println("col " + col);
+                        System.out.println("col " + col);
                         col++;
                     }
                 }

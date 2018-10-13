@@ -89,6 +89,8 @@ Added logic to BOM Import to allow for multiple assemblies.  Researched adding v
 10:40 PM - 11:10 PM .5 hrs phone call with Paul.  We need to create multiple files for each assembly.
 11:10 PM - 12:10 AM 1 hr A-267 Changed logic to create a new file for each assembly and name them as follows: _fl_bom_import_item__[assemblypartnumber]__[revision]__on_20181009_2136_2_BOMS_bom
 
+10-13-2018 8:00 AM 
+
 
 
 

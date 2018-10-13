@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Parts>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>019-100-NOREV-REI</PartNumber>
+        <Revision>-_1</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>088-000-013-REVC-AMF</PartNumber>
+        <Revision>C_7</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>088-003-011CE-REVA-AMF</PartNumber>
+        <Revision>A_1</Revision>
+    </PartData>
+</Parts>

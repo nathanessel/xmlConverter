@@ -139,7 +139,6 @@ public class XMLBomImportCreator {
                     
                     for (String value : nextLine) 
                     {
-                    	// This needed added because we have more columns than we have headers.
                     	if (col > headers.size()-1)
                     		break;
                     	

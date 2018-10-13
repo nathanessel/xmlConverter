@@ -85,13 +85,11 @@ skip custom field
 10-10-2018 10:00 PM - A-268 - 12:00 AM - 4.50 hrs
 Added logic to BOM Import to allow for multiple assemblies.  Researched adding version information to the .exe file.
 
-10-11-2018 8:40 PM - 9:20PM - .67 hrs  Fixed issue with blank revision
+10-11-2018 8:40 PM - 9:20PM - 1 hr  Fixed issue with blank revision
+10:40 PM - 11:10 PM .5 hrs phone call with Paul.  We need to create multiple files for each assembly.
+11:10 PM - 12:10 AM 1 hr A-267 Changed logic to create a new file for each assembly and name them as follows: _fl_bom_import_item__[assemblypartnumber]__[revision]__on_20181009_2136_2_BOMS_bom
 
-10:50 PM - 11:10 PM phone call with Paul.  We need to create multiple files for each assembly.
-
-
-
-keep file name the same _fl_bom_import_item__[assemblypartnumber]__[revision]__on_20181009_2136_2_BOMS_bom
+10-13-2018 8:00 AM 
 
 
 
