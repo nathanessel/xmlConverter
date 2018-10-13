@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Assemblies>
+    <Assembly>
+        <Customer>OI-ELEC</Customer>
+        <Name>FPE-3-057GR02</Name>
+        <Revision>B</Revision>
+        <Configurable>false</Configurable>
+        <BOMItems>
+            <BOMItem>
+                <Description>DWG,SOLID STATE AIR WARP GAUGE CABLE</Description>
+                <InternalPartNumber>FPE-3-057-DWG</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.1</ItemNumber>
+                <PartRevision>B</PartRevision>
+                <PartType>Generic</PartType>
+                <Quantity>0</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>ref</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <Description>CABLE  PVC 22-AWG 7/30 STRAND</Description>
+                <InternalPartNumber>8761</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.2</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>14</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>ft</UnitOfIssue>
+            </BOMItem>
+            <BOMItem>
+                <Description>CONNECTOR, CIRCULAR STRAIGHT CABLE PLUG</Description>
+                <InternalPartNumber>P-202-CCT</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.3</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>2</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>CONNECTOR,90 DEG ELBOW WATER TIGHT</Description>
+                <InternalPartNumber>CG90-2550</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.4</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>CONN,HOUSING,IDC,8 POS,22AWG,2.54MM</Description>
+                <InternalPartNumber>640440-8</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.5</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>O-RING HUBBELL</Description>
+                <InternalPartNumber>205-09-001</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.6</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>BUSHING  RUBBER FOR MS3057 CLAMP</Description>
+                <InternalPartNumber>9779-513-6</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.7</ItemNumber>
+                <PartType>Generic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+        </BOMItems>
+    </Assembly>
+</Assemblies>

@@ -56,6 +56,7 @@ public class XMLBomImportCreator {
     public int convertFile(String txtFileName, String xmlFileName, String processedFolder, String operatingSystemSeparator, char delimiter) throws Exception
     {
         PrintWriter errWriter = new PrintWriter(processedFolder + operatingSystemSeparator + txtFileName.replace(".txt", ".err"), "UTF-8");
+        PrintWriter logWriter = new PrintWriter(processedFolder + operatingSystemSeparator + txtFileName.replace(".txt", ".log"), "UTF-8");
 
         int rowsCount = -1;
         try {
@@ -83,8 +84,6 @@ public class XMLBomImportCreator {
         	BomItem bomItem = null;
         	Assembly assembly = null;
         	
-            PrintWriter logWriter = new PrintWriter(processedFolder + operatingSystemSeparator + txtFileName.replace(".txt", ".log"), "UTF-8");
-            
             boolean customerExists = false;
             boolean nameExists = false;
             boolean revisionExists = false;
@@ -141,7 +140,7 @@ public class XMLBomImportCreator {
                     {
                     	// This needed added because we have more columns than we have headers.
                     	if (col > headers.size()-1)
-                    		break;
+                    		throw new Exception ("Row " + line + " contains more columns than there are header columns");
                     	
                         String header = headers.get(col);
                         
@@ -219,8 +218,7 @@ public class XMLBomImportCreator {
                         else if (col >= 18 && col < 34)
                         	readCSVToBomItem(bomItem.bomItemList, header, value);
 
-                        if (col == 34)
-                        	System.out.println("col " + col);
+                       	System.out.println("col " + col);
                         col++;
                     }
                 }
@@ -371,6 +369,8 @@ public class XMLBomImportCreator {
             	
             	try {
             		newFileName = xmlFileName.split("__")[0] + "__" + assemblyPart + "__" + assemblyRevision + "__" + xmlFileName.split("__")[4];
+            		if (newFileName.contains("/"))
+            			newFileName = newFileName.replaceAll("/", "∕");
             	}
             	catch (ArrayIndexOutOfBoundsException e) {
                     errWriter.println("Incorrect File Name. Expecting 4 instances of '__' as separators. "
@@ -383,9 +383,8 @@ public class XMLBomImportCreator {
                 assembliesElement = newDoc.createElement("Assemblies");
                 newDoc.appendChild(assembliesElement);
             }
-
             reader.close();
-
+            logWriter.close();
         } catch (IOException exp) {
             System.err.println(exp.toString());
             errWriter.println(exp.toString());

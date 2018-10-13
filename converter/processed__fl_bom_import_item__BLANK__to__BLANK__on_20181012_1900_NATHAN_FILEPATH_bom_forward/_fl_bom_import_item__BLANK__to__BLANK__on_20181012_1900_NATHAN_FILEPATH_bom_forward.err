@@ -1,0 +1,2 @@
+java.io.FileNotFoundException: /Users/nathanessel/Desktop/xml/converter/processed__fl_bom_import_item__BLANK__to__BLANK__on_20181012_1900_NATHAN_FILEPATH_bom_forward/_fl_bom_import_item__2P1658/0/2-8INCH__NO REV__on_20181012_1900_NATHAN_FILEPATH_bom_forward.xml (No such file or directory)
+java.lang.NullPointerException

@@ -87,9 +87,9 @@ Added logic to BOM Import to allow for multiple assemblies.  Researched adding v
 
 10-11-2018 8:40 PM - 9:20PM - 1 hr  Fixed issue with blank revision
 10:40 PM - 11:10 PM .5 hrs phone call with Paul.  We need to create multiple files for each assembly.
-11:10 PM - 12:10 AM 1 hr A-267 Changed logic to create a new file for each assembly and name them as follows: _fl_bom_import_item__[assemblypartnumber]__[revision]__on_20181009_2136_2_BOMS_bom
+11:10 PM - 12:10 AM 1 hr A-268 Changed logic to create a new file for each assembly and name them as follows: _fl_bom_import_item__[assemblypartnumber]__[revision]__on_20181009_2136_2_BOMS_bom
 
-10-13-2018 8:00 AM 
+10-13-2018 8:00 AM 8:30 AM - .5 hrs A-268 Added logic to not process columns beyond the header columns.
 
 
 

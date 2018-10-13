@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Parts>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>FPE-3-057GR02</PartNumber>
+        <Revision>B</Revision>
+    </PartData>
+    <PartData>
+        <IsAssembly>true</IsAssembly>
+        <PartNumber>FPE-3-058GR01</PartNumber>
+        <Revision>A</Revision>
+    </PartData>
+</Parts>

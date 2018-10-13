@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Assemblies>
+    <Assembly>
+        <Customer>OI-ELEC</Customer>
+        <Name>2P1658/0/2-8INCH</Name>
+        <Revision>NO REV</Revision>
+        <Configurable>false</Configurable>
+        <BOMItems>
+            <BOMItem>
+                <Description>WIRE,22 AWG,BLACK/RED,PRE-TWISTED</Description>
+                <InternalPartNumber>2P1658/0/2</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>10.1</ItemNumber>
+                <PartType>Generic</PartType>
+                <Quantity>.71</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+                <UnitOfIssue>ft</UnitOfIssue>
+            </BOMItem>
+        </BOMItems>
+    </Assembly>
+</Assemblies>

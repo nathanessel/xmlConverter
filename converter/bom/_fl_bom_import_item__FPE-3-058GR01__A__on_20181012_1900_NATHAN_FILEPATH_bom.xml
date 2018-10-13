@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Assemblies>
+    <Assembly>
+        <Customer>OI-ELEC</Customer>
+        <Name>FPE-3-058GR01</Name>
+        <Revision>A</Revision>
+        <Configurable>false</Configurable>
+        <BOMItems>
+            <BOMItem>
+                <Description>POWER INTERFACE BOARD</Description>
+                <InternalPartNumber>FPE-3-88</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.1</ItemNumber>
+                <PartRevision>NO REV</PartRevision>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>POWER SUPPLY</Description>
+                <InternalPartNumber>OFM-1503</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.2</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>WIRE,22 AWG,BLACK/RED,8" PIECE</Description>
+                <InternalPartNumber>2P1658/0/2-8INCH</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.3</ItemNumber>
+                <PartRevision>NO REV</PartRevision>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>CONTACT  MALE/FEMALE 30-22 AWG  CRIMP (M</Description>
+                <InternalPartNumber>08-50-0114</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.4</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>2</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>CONNECTOR HOUSING,0.100,2 POS</Description>
+                <InternalPartNumber>22-01-2027</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.5</ItemNumber>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>TERMINAL  QUICK DISC 22-18 WIRE  STRAIGH</Description>
+                <InternalPartNumber>640917-1</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.6</ItemNumber>
+                <PartType>Generic</PartType>
+                <Quantity>2</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>TERM,QUICK,.250X.032",FEMALE,22-18AWG</Description>
+                <InternalPartNumber>640903-1</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.7</ItemNumber>
+                <PartType>Generic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>WIRE,18 AWG,105C,300V,WHITE,3" PIECE</Description>
+                <InternalPartNumber>CW1318/1-3INCH</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.8</ItemNumber>
+                <PartRevision>NO REV</PartRevision>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>WIRE,18 AWG,105C,300V,GREEN,3" PIECE</Description>
+                <InternalPartNumber>CW1318/4-3INCH</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.9</ItemNumber>
+                <PartRevision>NO REV</PartRevision>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+            <BOMItem>
+                <Description>WIRE,18 AWG,105C,300V,BLACK,6" PIECE</Description>
+                <InternalPartNumber>CW1318/2-6INCH</InternalPartNumber>
+                <IsSubAssembly>true</IsSubAssembly>
+                <ItemNumber>40.10</ItemNumber>
+                <PartRevision>NO REV</PartRevision>
+                <PartType>Electronic</PartType>
+                <Quantity>1</Quantity>
+                <RevisionMode>UseSpecific</RevisionMode>
+            </BOMItem>
+        </BOMItems>
+    </Assembly>
+</Assemblies>
