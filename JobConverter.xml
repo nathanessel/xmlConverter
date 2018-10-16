@@ -24,4 +24,18 @@
     <runtimeBits>64/32</runtimeBits>
     <maxHeapSize>2000</maxHeapSize>
   </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.1</fileVersion>
+    <txtFileVersion>October 15, 2018</txtFileVersion>
+    <fileDescription>Job Converter</fileDescription>
+    <copyright>2018</copyright>
+    <productVersion>1.0.0.1</productVersion>
+    <txtProductVersion>October 15, 2018</txtProductVersion>
+    <productName>Job Converter</productName>
+    <companyName></companyName>
+    <internalName>Intervala</internalName>
+    <originalFilename>JobConverter.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
 </launch4jConfig>

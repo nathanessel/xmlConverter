@@ -147,9 +147,9 @@ public class XMLProcessRevisionCreator {
                     	
                         String header = headers.get(col);
                         
-                        if (value.equalsIgnoreCase("yes"))
+                        if (value.equalsIgnoreCase("Y") || value.equalsIgnoreCase("yes"))
                         	value = "True";
-                        else if (value.equalsIgnoreCase("no"))
+                        else if (value.equalsIgnoreCase("N") || value.equalsIgnoreCase("no"))
                         	value = "False";
                         
                         if (col <= 6 && !assemblyExists)

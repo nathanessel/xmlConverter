@@ -116,9 +116,9 @@ public class XMLPartsCreator {
                     {
                         String header = headers.get(col);
                         
-                        if (value.equalsIgnoreCase("yes"))
+                        if (value.equalsIgnoreCase("Y") || value.equalsIgnoreCase("yes"))
                         	value = "true";
-                        else if (value.equalsIgnoreCase("no"))
+                        else if (value.equalsIgnoreCase("N") || value.equalsIgnoreCase("no"))
                         	value = "false";
                         
                         //if (header.equalsIgnoreCase("revision") && value.isEmpty())

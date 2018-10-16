@@ -91,6 +91,8 @@ Added logic to BOM Import to allow for multiple assemblies.  Researched adding v
 
 10-13-2018 8:00 AM 8:30 AM - .5 hrs A-268 Added logic to not process columns beyond the header columns.
 
+10-13-2018 3:30 PM - 4:30 PM 1 hr A-268 - Added logic to replace forward slashes with division slashes in order to resolve an error with BOM .xml files that contain a forward slash in the part number used for the filename. Removed allowing files with extra columns to be processed.  Instead the conversion will throw a better error explaining that there are extra columns.
+
 
 
 
