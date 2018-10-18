@@ -525,12 +525,12 @@ public class XMLBomImportCreator {
                 }
                 partsElement.appendChild(partDataElement);
             }
-            
-            originalPartPath = originalPartPath.replace(".xml", "_part.xml");
             writer = new FileWriter(new File(originalPartPath));
+
             Source src = new DOMSource(partDoc);
             Result result = new StreamResult(writer);
             aTransformer.transform(src, result);
+
             writer.flush();
 
     		Files.copy(new File(originalPartPath).toPath(), 

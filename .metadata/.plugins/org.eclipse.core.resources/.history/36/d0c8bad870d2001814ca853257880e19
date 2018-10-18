@@ -525,15 +525,15 @@ public class XMLBomImportCreator {
                 }
                 partsElement.appendChild(partDataElement);
             }
-            
-            originalPartPath = originalPartPath.replace(".xml", "_part.xml");
-            writer = new FileWriter(new File(originalPartPath));
+            writer = new FileWriter(new File(originalPartPath.replaceAll(".xml", "_part.xml")));
+
             Source src = new DOMSource(partDoc);
             Result result = new StreamResult(writer);
             aTransformer.transform(src, result);
+
             writer.flush();
 
-    		Files.copy(new File(originalPartPath).toPath(), 
+    		Files.copy(new File(originalPartPath.replaceAll(".xml", "_part.xml")).toPath(), 
     				new File((partXmlDestination.endsWith(operatingSystemSeparator) ? partXmlDestination : partXmlDestination + operatingSystemSeparator) 
     				+ xmlFileName.replaceAll(".xml", "_part.xml")).toPath()
     				, StandardCopyOption.REPLACE_EXISTING);

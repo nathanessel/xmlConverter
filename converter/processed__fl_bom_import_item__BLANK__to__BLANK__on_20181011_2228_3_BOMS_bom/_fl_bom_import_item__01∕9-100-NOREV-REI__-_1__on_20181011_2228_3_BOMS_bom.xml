@@ -2,7 +2,7 @@
 <Assemblies>
     <Assembly>
         <Customer>REI</Customer>
-        <Name>019-100-NOREV-REI</Name>
+        <Name>01/9-100-NOREV-REI</Name>
         <Revision>-_1</Revision>
         <Configurable>false</Configurable>
         <BOMItems>
@@ -46,8 +46,6 @@
                 <PartType>Electronic</PartType>
                 <Quantity>1</Quantity>
                 <RevisionMode>UseSpecific</RevisionMode>
-                <Socket>"AMF-PIN</Socket>
-                <UnitOfIssue>088-000-013-REVC-AMF</UnitOfIssue>
             </BOMItem>
         </BOMItems>
     </Assembly>

@@ -2,7 +2,7 @@
 <Assemblies>
     <Assembly>
         <Customer>REI</Customer>
-        <Name>019-100-NOREV-REI</Name>
+        <Name>01/9-100-NOREV-REI</Name>
         <Revision>-_1</Revision>
         <Configurable>false</Configurable>
         <BOMItems>
