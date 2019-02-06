@@ -201,7 +201,7 @@ public class XMLBomImportCreator {
                         }
 
                         //BOMItem
-                        else if (col >= 13 && col < 16)
+                        else if (col >= 13 && col < 16 && !partExists)
                         	readCSVToBomItem(bomItem.bomItemList, header, value);
                         
                         //CustomFields

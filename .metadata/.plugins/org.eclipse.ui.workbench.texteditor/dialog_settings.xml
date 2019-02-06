@@ -8,21 +8,21 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="issub"/>
-			<item value="txtFile"/>
-			<item value="txt"/>
-			<item value="txtfile"/>
-			<item value="documents"/>
-			<item value="test"/>
-			<item value="quotation"/>
-			<item value="processRevisionMap"/>
-			<item value="\\"/>
-			<item value="//"/>
-			<item value="part"/>
-			<item value="partExists"/>
-			<item value="PartElement"/>
-			<item value="assembliesElement"/>
-			<item value="hashset"/>
+			<item value="delete"/>
+			<item value="$"/>
+			<item value="writePartFile"/>
+			<item value="xml"/>
+			<item value="errWriter"/>
+			<item value="writer"/>
+			<item value="errwr"/>
+			<item value="error"/>
+			<item value="logWriter"/>
+			<item value="xml creating for int"/>
+			<item value="hashmap"/>
+			<item value="9999"/>
+			<item value="_"/>
+			<item value="split"/>
+			<item value="entry"/>
 		</list>
 		<list key="replacehistory">
 			<item value="processRevision"/>

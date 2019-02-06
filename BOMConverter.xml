@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>/Users/nathanessel/Desktop/xml/BOMConverter.jar</jar>
-  <outfile>/Users/nathanessel/Desktop/xml/BOMConverter.exe</outfile>
+  <outfile>/Users/nathanessel/Desktop/xml/BomConverter.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -25,12 +25,12 @@
     <maxHeapSize>2000</maxHeapSize>
   </jre>
   <versionInfo>
-    <fileVersion>1.0.6.2</fileVersion>
-    <txtFileVersion>October 17, 2018</txtFileVersion>
-    <fileDescription>Job Converter</fileDescription>
-    <copyright>2018</copyright>
-    <productVersion>1.0.6.2</productVersion>
-    <txtProductVersion>October 17, 2018</txtProductVersion>
+    <fileVersion>1.0.6.3</fileVersion>
+    <txtFileVersion>February 5, 2019</txtFileVersion>
+    <fileDescription>Bom Converter</fileDescription>
+    <copyright>2019</copyright>
+    <productVersion>1.0.6.3</productVersion>
+    <txtProductVersion>February 5, 2019</txtProductVersion>
     <productName>BOM Converter</productName>
     <companyName></companyName>
     <internalName>Intervala</internalName>
